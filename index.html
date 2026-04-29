@@ -64,15 +64,10 @@ background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(59,130,246,0.12) 0%,
 radial-gradient(ellipse 40% 40% at 80% 80%, rgba(45,212,191,0.08) 0%, transparent 60%);
 }
 .hero-tag {
-display: inline-flex; align-items: center; gap: 8px;
-background: rgba(45,212,191,0.1); border: 1px solid rgba(45,212,191,0.25);
-color: var(--teal-400); font-size: 12px; font-weight: 600;
-padding: 6px 14px; border-radius: 20px; letter-spacing: 0.5px;
+color: var(--teal-400); font-size: 13px; font-weight: 600;
+letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
 }
-.hero-tag-wrap {
-display: flex; justify-content: center; width: 100%; margin-bottom: 28px;
-}
-.hero-tag span { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-400); animation: pulse 2s infinite; }
+.hero-tag span { display: none; }
 @keyframes pulse { 0%,100% {opacity:1;transform:scale(1)} 50% {opacity:0.5;transform:scale(1.4)} }
 .hero h1 {
 font-size: clamp(36px, 6vw, 72px); font-weight: 900;
@@ -376,8 +371,7 @@ footer strong { color: rgba(255,255,255,0.7); }
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-tag-wrap"><div class="hero-tag"><span></span> <span data-i18n="hero-tag">Ongoing Project · Patient-First Health Tech</span></div>
-  </div>
+  <div class="hero-tag"><span></span> <span data-i18n="hero-tag">Ongoing Project · Patient-First Health Tech</span></div>
   <h1 data-i18n="hero-h1">Your health data should work <em>for you.</em> Not against you.</h1>
   <p data-i18n="hero-p">Tracing Care is a patient-first platform that gives people real control over their health data — who sees it, when, and why. This is what healthcare should look like.</p>
   <div class="hero-cta">
