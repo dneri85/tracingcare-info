@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="description" content="Tracing Care is a hands-on practice platform that looks and works like a real patient portal and EHR. Every name and record is made up."/>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Tracing Care, Patient-First Health Platform</title>
+<title>Tracing Care, Patient Portal &amp; EHR Practice</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -390,6 +391,30 @@ footer strong { color: rgba(255,255,255,0.7); }
   .role-grid { grid-template-columns: 1fr; }
 }
 
+/* ── TRAINING PROGRAM ADDITIONS ── */
+.feature-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: .3px; white-space: nowrap; }
+.badge-live { background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
+.badge-soon { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+.roles-h { font-size: 20px; font-weight: 800; color: var(--navy); margin-top: 56px; }
+.roles-note { font-size: 14px; color: var(--gray); margin-top: 4px; }
+.roles-h + .roles-note + .role-grid { margin-top: 20px; }
+#demo .practice-cta { margin-top: 40px; }
+.ph-faded { opacity: .35; }
+.ph-helper { background: #fff; border: 2px solid #3b6cf6; border-radius: 14px; padding: 10px 11px; margin-top: 10px; box-shadow: 0 10px 26px rgba(15,23,42,.18); }
+.ph-helper-top { display: flex; justify-content: space-between; align-items: center; }
+.ph-helper-top b { color: #2f5fe0; font-size: 10px; }
+.ph-helper-top span { border: 1px solid #cbd5e1; border-radius: 6px; padding: 1px 6px; font-size: 8px; font-weight: 700; }
+.ph-helper-top big { font-size: 10px; }
+.ph-dots { display: flex; gap: 3px; margin: 8px 0; }
+.ph-dots i { flex: 1; height: 4px; border-radius: 9px; background: #e2e8f0; }
+.ph-dots i.ok { background: #22c55e; } .ph-dots i.now { background: #3b6cf6; }
+.ph-task { font-size: 13px; font-weight: 800; line-height: 1.25; margin-bottom: 4px; }
+.ph-why { font-size: 9px; color: #64748b; margin-bottom: 6px; line-height: 1.4; }
+.ph-helper ol { padding-left: 14px; font-size: 9.5px; line-height: 1.45; display: grid; gap: 3px; margin-bottom: 8px; }
+.ph-show { background: #2f5fe0; color: #fff; text-align: center; border-radius: 8px; padding: 7px; font-size: 10px; font-weight: 700; }
+.ph-safe { font-size: 8px; color: #64748b; margin-top: 8px; padding-top: 6px; border-top: 1px solid #eef0f4; }
+
 @media (max-width: 900px) {
   nav { padding: 14px 20px; }
   .nav-links { display: none; }
@@ -431,12 +456,12 @@ footer strong { color: rgba(255,255,255,0.7); }
     <span class="nav-wordmark">Tracing Care</span>
   </div>
   <div class="nav-links">
-    <a href="#problem" data-i18n="nav-problem">The Problem</a>
-    <a href="#solution" data-i18n="nav-solution">The Solution</a>
+    <a href="#problem" data-i18n="nav-problem">The Need</a>
+    <a href="#solution" data-i18n="nav-solution">How It Works</a>
     <a href="#screens" data-i18n="nav-platform">Platform</a>
-    <a href="#demo" data-i18n="nav-demo">Try the Demo</a>
-    <a href="#manifesto" data-i18n="nav-philosophy">Philosophy</a>
-    <a href="#progress" data-i18n="nav-progress">Progress</a>
+    <a href="#demo" data-i18n="nav-demo">Try It</a>
+    <a href="#manifesto" data-i18n="nav-philosophy">Our Approach</a>
+    <a href="#progress" data-i18n="nav-progress">Roadmap</a>
     <a href="#references" data-i18n="nav-sources">Sources</a>
   </div>
   <div style="display:flex;align-items:center;gap:10px;">
@@ -451,74 +476,68 @@ footer strong { color: rgba(255,255,255,0.7); }
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-tag"><span></span> <span data-i18n="hero-tag">Ongoing Project · Patient-First Health Tech</span></div>
-  <h1 data-i18n="hero-h1">Your health data should work <em>for you.</em> Not against you.</h1>
-  <p data-i18n="hero-p">Tracing Care is a patient-first platform that gives people real control over their health data, who sees it, when, and why. This is what healthcare should look like.</p>
+  <div class="hero-tag"><span></span> <span data-i18n="hero-tag">Training Program · Patient Portal &amp; EHR Practice</span></div>
+  <h1 data-i18n="hero-h1">Practice health tech <em>safely.</em> Then use it with confidence.</h1>
+  <p data-i18n="hero-p">Tracing Care is a hands-on practice platform that looks and works like a real patient portal and EHR. Patients and families learn to find results, message their care team, and manage appointments. A track for students learning EHRs for school or work is in progress.</p>
   <div class="hero-cta">
-    <a href="https://tracingcare-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+    <a href="https://tracingcare-demo.vercel.app/practice" target="_blank" rel="noopener noreferrer" class="btn-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-      <span data-i18n="hero-btn-demo">View Live Demo</span>
+      <span data-i18n="hero-btn-demo">Start Portal Practice</span>
     </a>
-    <a href="#screens" class="btn-ghost">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-      <span data-i18n="hero-btn-primary">See the Platform</span>
+    <a href="#demo" class="btn-ghost">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      <span data-i18n="hero-btn-primary">Explore the Demo</span>
     </a>
-    <a href="#manifesto" class="btn-ghost" data-i18n="hero-btn-ghost">Our Philosophy →</a>
+    <a href="#solution" class="btn-ghost" data-i18n="hero-btn-ghost">How It Works →</a>
   </div>
-  <p class="hero-note" data-i18n="hero-note">No login needed. Explore as a clinician, biller, administrator, or patient.</p>
+  <p class="hero-note" data-i18n="hero-note">No login needed. Every name and record is made up, so you can't break anything.</p>
 </section>
 
 <!-- STAT BAR -->
 <div class="stat-bar">
   <div class="stat">
-    <div class="stat-num"><span>170M</span></div>
-    <div class="stat-label" data-i18n="stat-1-label">Patient records exposed in 2024 alone, more than double the number from a decade ago</div>
-    <div class="stat-source"><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833977" target="_blank" rel="noreferrer">Seh et al., JAMA Network Open, 2025</a></div>
+    <div class="stat-num"><span>77%</span></div>
+    <div class="stat-label" data-i18n="stat-1-label">Of people were offered online access to their medical records in 2024</div>
+    <div class="stat-source"><a href="https://www.healthit.gov/sites/default/files/2025-06/2024-HINTS-Patient-Access-DB77_508.pdf" target="_blank" rel="noreferrer">ASTP Data Brief No. 77, 2025</a></div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span>$78B</span></div>
-    <div class="stat-label" data-i18n="stat-2-label">Wasted annually in the U.S. due to failures of care coordination</div>
-    <div class="stat-source"><a href="https://pubmed.ncbi.nlm.nih.gov/31589283/" target="_blank" rel="noreferrer">Shrank et al., JAMA, 2019</a></div>
+    <div class="stat-num"><span>35%</span></div>
+    <div class="stat-label" data-i18n="stat-2-label">Of adults 50 to 80 who don't use a portal aren't confident they could log in and get around</div>
+    <div class="stat-source"><a href="https://ihpi.umich.edu/national-poll-healthy-aging/national-findings/use-and-experiences-patient-portals-among-older" target="_blank" rel="noreferrer">U-M National Poll on Healthy Aging, 2023</a></div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span>92%</span></div>
-    <div class="stat-label" data-i18n="stat-3-label">Of patients say health data privacy is a right and their data should not be available for purchase</div>
-    <div class="stat-source"><a href="https://www.ama-assn.org/press-center/ama-press-releases/patient-survey-shows-unresolved-tension-over-health-data-privacy" target="_blank" rel="noreferrer">AMA Patient Privacy Survey, 2022</a></div>
+    <div class="stat-num"><span>59%</span></div>
+    <div class="stat-label" data-i18n="stat-3-label">Of adults 65 and older have basic or below-basic health literacy</div>
+    <div class="stat-source"><a href="https://nces.ed.gov/pubs2006/2006483.pdf" target="_blank" rel="noreferrer">NCES, National Assessment of Adult Literacy</a></div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span>0</span></div>
-    <div class="stat-label" data-i18n="stat-4-label">Major EHR platforms provide patients a real-time self-service view of who accessed their records</div>
-    <div class="stat-source"><a href="https://www.healthit.gov/buzz-blog/a-decade-of-data-examined/a-decade-of-data-examined-patient-access-to-electronic-health-information" target="_blank" rel="noreferrer">ONC Health IT Buzz, 2023</a></div>
+    <div class="stat-num"><span>5.9 hrs</span></div>
+    <div class="stat-label" data-i18n="stat-4-label">Of a primary care doctor's 11.4-hour workday are spent in the EHR</div>
+    <div class="stat-source"><a href="https://www.annfammed.org/content/15/5/419" target="_blank" rel="noreferrer">Arndt et al., Annals of Family Medicine, 2017</a></div>
   </div>
 </div>
 
 <!-- PROBLEM -->
 <div class="problem-strip" id="problem">
   <div class="problem-inner">
-    <div class="section-tag" data-i18n="problem-tag">The Problem</div>
-    <h2 class="section-title" style="color:#fff" data-i18n="problem-title">Healthcare data is broken.<br/>Patients are the last to know.</h2>
-    <p class="section-sub" data-i18n="problem-sub">The current system treats patients as passive recipients of care, not active participants. Data flows freely between providers, insurers, and researchers without meaningful patient awareness or control.</p>
+    <div class="section-tag" data-i18n="problem-tag">The Need</div>
+    <h2 class="section-title" style="color:#fff" data-i18n="problem-title">Health care moved online.<br/>Not everyone was shown how.</h2>
+    <p class="section-sub" data-i18n="problem-sub">Results, refills, bills, and messages now live in portals and electronic records. Most people are expected to figure them out alone, and the first try usually happens with their real health information on the line.</p>
     <div class="problem-grid">
       <div class="problem-card">
-        <div class="problem-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h3 data-i18n="problem-1-title">No visibility into access</h3>
-        <p data-i18n="problem-1-p">Patients have no way to see who accessed their records, when, or why. Data moves invisibly through a fragmented system.</p>
+        <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h3 data-i18n="problem-1-title">Patients are expected to self-serve</h3>
+        <p data-i18n="problem-1-p">Portals ask people to find results, request refills, and pay bills on their own. Many older adults were never shown how, and some avoid portals altogether.</p>
       </div>
       <div class="problem-card">
-        <div class="problem-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3 data-i18n="problem-2-title">Data shared without consent</h3>
-        <p data-i18n="problem-2-p">Health records are routinely shared between providers, insurers, and researchers, often without explicit patient understanding or agreement.</p>
+        <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <h3 data-i18n="problem-2-title">No safe place to practice</h3>
+        <p data-i18n="problem-2-p">In a real portal, every click touches real records. Fear of pressing the wrong button keeps people from trying, and from asking for help.</p>
       </div>
       <div class="problem-card">
-        <div class="problem-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-        </div>
-        <h3 data-i18n="problem-3-title">Caregivers left in the dark</h3>
-        <p data-i18n="problem-3-p">Families managing care for loved ones navigate a maze of siloed systems, rigid proxy access, and provider-controlled permissions.</p>
+        <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+        <h3 data-i18n="problem-3-title">Students learn EHRs late</h3>
+        <p data-i18n="problem-3-p">Nursing and allied health students often get view-only access during clinicals. Many new hires say they feel unprepared to work in an EHR on day one.</p>
       </div>
     </div>
   </div>
@@ -526,59 +545,52 @@ footer strong { color: rgba(255,255,255,0.7); }
 
 <!-- SOLUTION / FEATURES -->
 <section id="solution">
-  <div class="section-tag" data-i18n="solution-tag">The Solution</div>
-  <h2 class="section-title" data-i18n="solution-title">Transparency, control, and trust , <br/>built into every screen.</h2>
-  <p class="section-sub" data-i18n="solution-sub">Tracing Care reimagines the patient experience from the ground up. Every feature is designed around one principle: patients deserve to be active participants in their healthcare.</p>
+  <div class="section-tag" data-i18n="solution-tag">How It Works</div>
+  <h2 class="section-title" data-i18n="solution-title">Real screens. Made-up records.<br/>Step-by-step guidance.</h2>
+  <p class="section-sub" data-i18n="solution-sub">Tracing Care recreates the tools people meet in real health care, then adds the support a real system never gives you: hints, plain language, and room to make mistakes.</p>
   <div class="features-grid">
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-      </div>
-      <h3 data-i18n="f1-title">Unified Health Dashboard</h3>
-      <p data-i18n="f1-p">One place to see your providers, medications with full clinical detail, insurance, and alerts, with a Data Trust Score that shows your privacy posture at a glance.</p>
+      <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 .5c0 1.5-2.5 2-2.5 3.5"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><span class="badge badge-live" data-i18n="badge-live">Live</span></div>
+      <h3 data-i18n="f1-title">Guided Practice Mode</h3>
+      <p data-i18n="f1-p">A helper panel gives one task at a time, explains why it matters, and shows where to click if you get stuck. Finish all six tasks to print a certificate of practice.</p>
       <ul class="feature-list">
-        <li data-i18n="f1-l1">Medication dosage, risk level &amp; side effects</li>
-        <li data-i18n="f1-l2">Provider access status at a glance</li>
-        <li data-i18n="f1-l3">Real-time alerts for refills and access events</li>
-        <li data-i18n="f1-l4">Insurance plan details and coverage summary</li>
+        <li data-i18n="f1-l1">Find test results and read flagged values</li>
+        <li data-i18n="f1-l2">Message the care team and request refills</li>
+        <li data-i18n="f1-l3">Confirm appointments and pay a bill</li>
+        <li data-i18n="f1-l4">Add a family member as a helper</li>
       </ul>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-      </div>
-      <h3 data-i18n="f2-title">Real-Time Data Access Log</h3>
-      <p data-i18n="f2-p">The first patient-facing feature of its kind, a live, readable feed showing exactly who accessed your data, what they viewed, and when. No more invisible data flows.</p>
+      <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div><span class="badge badge-live" data-i18n="badge-live">Live</span></div>
+      <h3 data-i18n="f2-title">Realistic Patient Portal</h3>
+      <p data-i18n="f2-p">Robin Merriweather's portal has 15 sections that mirror what people see in real portals, from vital signs and immunizations to an emergency card.</p>
       <ul class="feature-list">
-        <li data-i18n="f2-l1">Filter by Provider, Caregiver, Research, Insurance</li>
-        <li data-i18n="f2-l2">Plain-language descriptions of every access event</li>
-        <li data-i18n="f2-l3">Timestamped and always up to date</li>
+        <li data-i18n="f2-l1">Test results, vitals, and visit history</li>
+        <li data-i18n="f2-l2">Medications, refills, and referrals</li>
+        <li data-i18n="f2-l3">Billing, documents, and care team</li>
+        <li data-i18n="f2-l4">Works on computers, tablets, and phones</li>
       </ul>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-      </div>
-      <h3 data-i18n="f3-title">Granular Sharing &amp; Permissions</h3>
-      <p data-i18n="f3-p">Toggle exactly what each provider, insurer, or researcher can see. Revoke access instantly. Delete your data entirely. You are always in control.</p>
+      <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><span class="badge badge-live" data-i18n="badge-live">Live</span></div>
+      <h3 data-i18n="f3-title">Care-Team Views</h3>
+      <p data-i18n="f3-p">Explore the other side of the screen: what clinical, billing, and front-office staff work with every day.</p>
       <ul class="feature-list">
-        <li data-i18n="f3-l1">Per-entity permission toggles (Records, Labs, Notes, Imaging)</li>
-        <li data-i18n="f3-l2">One-tap Revoke All with confirmation</li>
-        <li data-i18n="f3-l3">Full data deletion on demand</li>
-        <li data-i18n="f3-l4">Instant effect, no delays, no forms</li>
+        <li data-i18n="f3-l1">Command Center and patient census</li>
+        <li data-i18n="f3-l2">Referrals and provider calendar</li>
+        <li data-i18n="f3-l3">Claims, denials, and prior authorizations</li>
+        <li data-i18n="f3-l4">Analytics for administrators</li>
       </ul>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-      </div>
-      <h3 data-i18n="f4-title">Caregiver Hub</h3>
-      <p data-i18n="f4-p">Manage care for loved ones with role-based permissions built around real relationships, not just clinical roles. Built for families, not just providers.</p>
+      <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><span class="badge badge-soon" data-i18n="badge-soon">In progress</span></div>
+      <h3 data-i18n="f4-title">Student EHR Track</h3>
+      <p data-i18n="f4-p">Guided lessons for students and career changers learning EHR navigation for school or work, built on the same care-team screens.</p>
       <ul class="feature-list">
-        <li data-i18n="f4-l1">13 relationship types (Mom, Partner, Nurse, Friend…)</li>
-        <li data-i18n="f4-l2">5 access roles from View Only to Full Access</li>
-        <li data-i18n="f4-l3">Toggle caregiver access on/off instantly</li>
-        <li data-i18n="f4-l4">Manage care for loved ones with their own profile</li>
+        <li data-i18n="f4-l1">Front desk: check-in, scheduling, insurance</li>
+        <li data-i18n="f4-l2">Billing: claims and denials</li>
+        <li data-i18n="f4-l3">Clinical: finding charts, results, and referrals</li>
+        <li data-i18n="f4-l4">For medical assistant, health admin, and nursing students</li>
       </ul>
     </div>
   </div>
@@ -588,8 +600,8 @@ footer strong { color: rgba(255,255,255,0.7); }
 <div class="showcase" id="screens">
   <div class="showcase-inner">
     <div class="section-tag" data-i18n="showcase-tag">The Platform</div>
-    <h2 class="section-title" data-i18n="showcase-title">Designed for real patients.<br/>Not clinical workflows.</h2>
-    <p class="section-sub" data-i18n="showcase-sub">Every screen prioritizes clarity, trust, and accessibility, meeting WCAG standards so no one is left behind.</p>
+    <h2 class="section-title" data-i18n="showcase-title">Looks like the real thing.<br/>Safe to practice on.</h2>
+    <p class="section-sub" data-i18n="showcase-sub">Familiar layouts, plain language, and clear labels, so the skills carry over to the portal at a learner's own doctor's office.</p>
     <div class="screens-col">
 
       <!-- Screen 1: My Health (portal home) -->
@@ -779,8 +791,8 @@ footer strong { color: rgba(255,255,255,0.7); }
     <!-- IN YOUR POCKET (mobile) -->
     <div class="pocket">
       <div class="section-tag" data-i18n="pocket-tag">In Your Pocket</div>
-      <h2 class="section-title" data-i18n="pocket-title">Your health, always with you.</h2>
-      <p class="section-sub" data-i18n="pocket-sub">Tracing Care is built for real life, on the go, between appointments, at the pharmacy. Everything patients need, exactly when they need it.</p>
+      <h2 class="section-title" data-i18n="pocket-title">Practice anywhere.</h2>
+      <p class="section-sub" data-i18n="pocket-sub">Learners can practice on a library computer, a tablet at home, or their own phone, with bigger text whenever they need it.</p>
       <div class="phones">
       <div class="phone-wrap">
         <div class="phone">
@@ -832,17 +844,22 @@ footer strong { color: rgba(255,255,255,0.7); }
         <div class="phone">
           <div class="phone-screen">
             <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div>
-            <div class="ph-h" style="margin-top:4px">Who Accessed My Data</div>
-            <div class="ph-mute"><span class="ph-live"></span>Live · Updated in real time</div>
-            <div class="ph-chips"><span class="on">All</span><span>Provider</span><span>Insurance</span><span>Research</span></div>
-            <div class="ph-card ph-log"><b>Dr. Sarah Chen</b><span>Viewed: Lab results, Medications</span><div class="ph-foot"><span>Today · 8:47 AM</span><em class="blue">Provider</em></div></div>
-            <div class="ph-card ph-log"><b>BlueCross BlueShield</b><span>Viewed: Claims, Diagnoses</span><div class="ph-foot"><span>Yesterday · 2:13 PM</span><em class="violet">Insurance</em></div></div>
-            <div class="ph-card ph-log"><b>Dr. Patel · Endocrinology</b><span>Viewed: Vitals, A1C results</span><div class="ph-foot"><span>Jun 2 · 11:05 AM</span><em class="blue">Provider</em></div></div>
-            <div class="ph-card ph-log"><b>UChicago Research Group</b><span>Viewed: Anonymized records</span><div class="ph-foot"><span>Jun 1 · Consented by you</span><em class="green">Research</em></div></div>
+            <div class="ph-top"><div class="ph-brand">Tracing Care</div><div class="ph-av">RM</div></div>
+            <div class="ph-faded"><div class="ph-h">Hello, Robin 👋</div><div class="ph-stats"><div><b>4</b>Conditions</div><div><b>6</b>Meds</div><div><b>2</b>Appts</div><div><b>3</b>Actions</div></div></div>
+            <div class="ph-helper">
+              <div class="ph-helper-top"><b>✦ Practice mode</b><span>A<big>A</big></span></div>
+              <div class="ph-dots"><i class="ok"></i><i class="now"></i><i></i><i></i><i></i><i></i></div>
+              <div class="ph-k">Task 2 of 6</div>
+              <div class="ph-task">Send a message to your care team</div>
+              <p class="ph-why">Messages are a good way to ask non-urgent questions without waiting on the phone.</p>
+              <ol><li>Click <b>Secure Messages</b> in the menu.</li><li>Type a short question in the big box.</li><li>Click the blue <b>Send message</b> button.</li></ol>
+              <div class="ph-show">👁 Show me where</div>
+              <div class="ph-safe">🛡 Nothing here is real, so you can't break anything.</div>
+            </div>
           </div>
         </div>
-        <div class="screen-label" data-i18n="phone-3-label">Data Access Log</div>
-        <div class="screen-label-sub" data-i18n="phone-3-sub">See exactly who accessed your records, what they viewed, and when, in plain language</div>
+        <div class="screen-label" data-i18n="phone-3-label">Guided Practice</div>
+        <div class="screen-label-sub" data-i18n="phone-3-sub">A helper walks learners through each task and shows where to click</div>
       </div>
       </div>
     </div>
@@ -851,9 +868,20 @@ footer strong { color: rgba(255,255,255,0.7); }
 
 <!-- LIVE DEMO -->
 <section id="demo">
-  <div class="section-tag" data-i18n="demo-tag">Live Demo</div>
-  <h2 class="section-title" data-i18n="demo-title">Try it yourself.<br/>No login needed.</h2>
-  <p class="section-sub" data-i18n="demo-sub">Pick a role and click straight in. Every name and number is made up, so explore freely.</p>
+  <div class="section-tag" data-i18n="demo-tag">Try It</div>
+  <h2 class="section-title" data-i18n="demo-title">Two ways to practice.<br/>No login needed.</h2>
+  <p class="section-sub" data-i18n="demo-sub">Start with guided practice if you're new to portals. Explore the care-team side to see what staff work with.</p>
+  <div class="practice-cta">
+    <div class="practice-ico">🎓</div>
+    <div class="practice-txt">
+      <h3 data-i18n="practice-title">For patients and families: guided portal practice</h3>
+      <p data-i18n="practice-p">A guided mode built for older adults and the people who help them. Six everyday tasks, like finding a test result or requesting a refill, with hints, bigger text, and a printable certificate of practice.</p>
+      <p class="practice-note" data-i18n="practice-note">A practice space with made-up information, not a medical record. Learners never enter their own details.</p>
+    </div>
+    <a class="btn-primary" href="https://tracingcare-demo.vercel.app/practice" target="_blank" rel="noopener noreferrer"><span data-i18n="practice-btn">Start Portal Practice</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+  <h3 class="roles-h" data-i18n="demo-roles-h">Or explore freely by role</h3>
+  <p class="roles-note" data-i18n="demo-roles-note">Guided lessons for students on these screens are in progress.</p>
   <div class="role-grid">
     <a class="role" href="https://tracingcare-demo.vercel.app/overview?as=clinical" target="_blank" rel="noopener noreferrer">
       <div class="role-ico">🩺</div>
@@ -880,81 +908,71 @@ footer strong { color: rgba(255,255,255,0.7); }
       <span class="role-go"><span data-i18n="role-open">Open demo</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
     </a>
   </div>
-  <div class="practice-cta">
-    <div class="practice-ico">🎓</div>
-    <div class="practice-txt">
-      <h3 data-i18n="practice-title">New to patient portals? Practice step by step.</h3>
-      <p data-i18n="practice-p">A guided mode built for older adults and the people who help them. Six everyday tasks, like finding a test result or requesting a refill, with hints, bigger text, and a printable certificate of practice.</p>
-      <p class="practice-note" data-i18n="practice-note">A practice space with made-up information, not a medical record. Learners never enter their own details.</p>
-    </div>
-    <a class="btn-primary" href="https://tracingcare-demo.vercel.app/practice" target="_blank" rel="noopener noreferrer"><span data-i18n="practice-btn">Start Portal Practice</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-  </div>
 </section>
 
 <!-- COMPARISON -->
 <section>
-  <div class="section-tag" data-i18n="comp-tag">Why It Matters</div>
-  <h2 class="section-title" data-i18n="comp-title">This should be the norm.<br/>Not the exception.</h2>
-  <p class="section-sub" data-i18n="comp-sub">Every feature in Tracing Care exists because patients deserve it, not because a regulation requires it. Here's how we compare to the status quo.</p>
+  <div class="section-tag" data-i18n="comp-tag">Why Practice</div>
+  <h2 class="section-title" data-i18n="comp-title">Learning on the real thing is stressful.<br/>It doesn't have to be.</h2>
+  <p class="section-sub" data-i18n="comp-sub">How practicing in Tracing Care compares with learning on a live portal or EHR.</p>
   <div class="comparison-wrap">
     <div class="comparison-header">
-      <div class="comp-col-head feature" data-i18n="comp-head-feature">Feature</div>
+      <div class="comp-col-head feature" data-i18n="comp-head-feature">What learners need</div>
       <div class="comp-col-head tracing">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         Tracing Care
       </div>
-      <div class="comp-col-head status-quo" data-i18n="comp-head-status">Status Quo (EHRs)</div>
+      <div class="comp-col-head status-quo" data-i18n="comp-head-status">Learning on a live system</div>
     </div>
-    <div class="comp-row"><div class="comp-cell feature-name">Real-time data access log</div><div class="comp-cell yes">✓ Always visible</div><div class="comp-cell no">✗ Not available</div></div>
-    <div class="comp-row"><div class="comp-cell feature-name">Per-entity permission toggles</div><div class="comp-cell yes">✓ Granular control</div><div class="comp-cell no">✗ Not available</div></div>
-    <div class="comp-row"><div class="comp-cell feature-name">Instant access revocation</div><div class="comp-cell yes">✓ One tap</div><div class="comp-cell no">✗ Requires provider action</div></div>
-    <div class="comp-row"><div class="comp-cell feature-name">Caregiver role management</div><div class="comp-cell yes">✓ Relationship-based</div><div class="comp-cell partial">~ Rigid proxy access</div></div>
-    <div class="comp-row"><div class="comp-cell feature-name">Medication risk &amp; side effects</div><div class="comp-cell yes">✓ Built into dashboard</div><div class="comp-cell partial">~ Separate portal</div></div>
-    <div class="comp-row"><div class="comp-cell feature-name">Research opt-in with data control</div><div class="comp-cell yes">✓ Granular, transparent</div><div class="comp-cell partial">~ Limited or absent</div></div>
-    <div class="comp-row"><div class="comp-cell feature-name">Data deletion on demand</div><div class="comp-cell yes">✓ Patient-initiated</div><div class="comp-cell no">✗ Requires legal process</div></div>
-    <div class="comp-row"><div class="comp-cell feature-name">Plain-language explanations</div><div class="comp-cell yes">✓ Every screen</div><div class="comp-cell no">✗ Clinical jargon</div></div>
-    <div class="comp-row"><div class="comp-cell feature-name">WCAG accessibility compliance</div><div class="comp-cell yes">✓ Built from day one</div><div class="comp-cell partial">~ Inconsistent</div></div>
+    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r1-a">Safe to make mistakes</div><div class="comp-cell yes" data-i18n="comp-r1-b">✓ All records are made up</div><div class="comp-cell no" data-i18n="comp-r1-c">✗ Every click is real</div></div>
+    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r2-a">Step-by-step guidance</div><div class="comp-cell yes" data-i18n="comp-r2-b">✓ Built-in hints</div><div class="comp-cell no" data-i18n="comp-r2-c">✗ Figure it out alone</div></div>
+    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r3-a">Shows where to click</div><div class="comp-cell yes" data-i18n="comp-r3-b">✓ "Show me where" button</div><div class="comp-cell no" data-i18n="comp-r3-c">✗ Not available</div></div>
+    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r4-a">Bigger text on demand</div><div class="comp-cell yes" data-i18n="comp-r4-b">✓ One tap</div><div class="comp-cell partial" data-i18n="comp-r4-c">~ Depends on the system</div></div>
+    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r5-a">Start over anytime</div><div class="comp-cell yes" data-i18n="comp-r5-b">✓ Reset for the next learner</div><div class="comp-cell no" data-i18n="comp-r5-c">✗ Changes are permanent</div></div>
+    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r6-a">Practice the staff side</div><div class="comp-cell yes" data-i18n="comp-r6-b">✓ Clinical, billing, admin views</div><div class="comp-cell partial" data-i18n="comp-r6-c">~ Usually only after hiring</div></div>
+    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r7-a">Proof of practice</div><div class="comp-cell yes" data-i18n="comp-r7-b">✓ Printable certificate of practice</div><div class="comp-cell no" data-i18n="comp-r7-c">✗ None</div></div>
+    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r8-a">Real-world safety tips</div><div class="comp-cell yes" data-i18n="comp-r8-b">✓ Built into each task</div><div class="comp-cell partial" data-i18n="comp-r8-c">~ Rarely explained</div></div>
   </div>
 </section>
 
 <!-- MANIFESTO -->
 <div class="manifesto" id="manifesto">
   <div class="manifesto-inner">
-    <div class="section-tag" style="color:var(--teal-400)" data-i18n="manifesto-tag">Our Philosophy</div>
-    <h2 data-i18n="manifesto-h2">Patients are not passengers.<br/>They are <em>pilots.</em></h2>
-    <p data-i18n="manifesto-p1">The healthcare system was built for institutions, not for the people it serves. Tracing Care is built on the belief that when patients have real visibility, real control, and real trust, outcomes improve for everyone.</p>
-    <p data-i18n="manifesto-p2">This isn't just a product philosophy. It's a moral position. Health data transparency should be the standard, not a premium feature, not a regulatory checkbox, not a future consideration.</p>
+    <div class="section-tag" style="color:var(--teal-400)" data-i18n="manifesto-tag">Our Approach</div>
+    <h2 data-i18n="manifesto-h2">Confidence comes from <em>practice.</em><br/>Not from a manual.</h2>
+    <p data-i18n="manifesto-p1">Most people learn health technology the hard way: alone, in a hurry, with their own records on the screen. Tracing Care gives them a calm place to learn first, so the real visit, the real bill, or the first day on the job feels familiar.</p>
+    <p data-i18n="manifesto-p2">Patients have a right to see their health information. Knowing how to use it is what makes that right real.</p>
     <div class="manifesto-divider"></div>
     <div class="principle-grid">
       <div class="principle">
         <div class="principle-num">01</div>
-        <h4 data-i18n="p1-title">Ownership, not access</h4>
-        <p data-i18n="p1-p">Giving patients a portal to view their records is not the same as giving them ownership. True ownership means control, transparency, and the right to revoke.</p>
+        <h4 data-i18n="p1-title">Safe to make mistakes</h4>
+        <p data-i18n="p1-p">Nothing in Tracing Care is real, so learners can click, explore, and get it wrong without consequences. That's how confidence starts.</p>
       </div>
       <div class="principle">
         <div class="principle-num">02</div>
-        <h4 data-i18n="p2-title">Transparency by default</h4>
-        <p data-i18n="p2-p">Every data access event should be visible to the patient. Not on request, not after a delay, in real time, in plain language, always.</p>
+        <h4 data-i18n="p2-title">Plain language first</h4>
+        <p data-i18n="p2-p">Instructions use everyday words. Medical terms get explained, not assumed.</p>
       </div>
       <div class="principle">
         <div class="principle-num">03</div>
-        <h4 data-i18n="p3-title">Trust must be earned, not assumed</h4>
-        <p data-i18n="p3-p">Patients should choose to share their data with researchers, not be opted in by default. Informed consent is not a legal formality, it's a design requirement.</p>
+        <h4 data-i18n="p3-title">Teach finding, not following</h4>
+        <p data-i18n="p3-p">Hints point to the menu first, then the button, so learners build skills they can use in any portal.</p>
       </div>
       <div class="principle">
         <div class="principle-num">04</div>
-        <h4 data-i18n="p4-title">Caregiving is a relationship</h4>
-        <p data-i18n="p4-p">The people who help us navigate illness, partners, parents, friends, nurses, deserve tools built for human relationships, not clinical hierarchies.</p>
+        <h4 data-i18n="p4-title">Built for every age</h4>
+        <p data-i18n="p4-p">Bigger text, large buttons, and phone-friendly screens. Older adults are the first audience, not an afterthought.</p>
       </div>
       <div class="principle">
         <div class="principle-num">05</div>
-        <h4 data-i18n="p5-title">Accessibility is not optional</h4>
-        <p data-i18n="p5-p">A health platform that isn't accessible to people with disabilities, low literacy, or limited tech fluency has already failed its most vulnerable users.</p>
+        <h4 data-i18n="p5-title">Real-world habits</h4>
+        <p data-i18n="p5-p">Each task ends with a practical tip, like never paying a bill through a link in a text message.</p>
       </div>
       <div class="principle">
         <div class="principle-num">06</div>
-        <h4 data-i18n="p6-title">The exception should become the norm</h4>
-        <p data-i18n="p6-p">Everything in Tracing Care should be unremarkable, because patients having control of their health data should be completely, utterly normal.</p>
+        <h4 data-i18n="p6-title">Honest about what it is</h4>
+        <p data-i18n="p6-p">Tracing Care is a practice environment. It is not a medical record, and its certificate of practice is not a professional certification.</p>
       </div>
     </div>
   </div>
@@ -963,7 +981,7 @@ footer strong { color: rgba(255,255,255,0.7); }
 <!-- PROGRESS -->
 <div class="progress-section" id="progress">
   <div class="progress-inner">
-    <div class="section-tag" data-i18n="prog-tag">Project Progress</div>
+    <div class="section-tag" data-i18n="prog-tag">Roadmap</div>
     <h2 class="section-title" data-i18n="prog-title">Where we are today.</h2>
     <p class="section-sub" data-i18n="prog-sub">Tracing Care is an active, ongoing project. Here's an honest look at what's been built, what's in progress, and what's next.</p>
     <div class="progress-grid">
@@ -971,13 +989,7 @@ footer strong { color: rgba(255,255,255,0.7); }
         <div class="progress-dot dot-done"></div>
         <div class="progress-status status-done" data-i18n="prog-status-done">✓ Complete</div>
         <h4 data-i18n="prog1-h4">Working Demo</h4>
-        <p data-i18n="prog1-p">Clickable demo with four one-click roles (clinical, billing, administrator, patient) across 12 screens, live at tracingcare-demo.vercel.app.</p>
-      </div>
-      <div class="progress-card done">
-        <div class="progress-dot dot-done"></div>
-        <div class="progress-status status-done" data-i18n="prog-status-done">✓ Complete</div>
-        <h4 data-i18n="prog2-h4">Brand &amp; Strategy</h4>
-        <p data-i18n="prog2-p">Visual identity, logo system, color palette, differentiation strategy, and competitive positioning documented.</p>
+        <p data-i18n="prog1-p">Clickable practice platform with four one-click roles (clinical, billing, administrator, patient) across 12 screens.</p>
       </div>
       <div class="progress-card done">
         <div class="progress-dot dot-done"></div>
@@ -985,41 +997,47 @@ footer strong { color: rgba(255,255,255,0.7); }
         <h4 data-i18n="prog9-h4">Patient Portal Practice</h4>
         <p data-i18n="prog9-p">Guided practice mode for older adults: six step-by-step tasks, hints, bigger text, and a printable certificate of practice.</p>
       </div>
-      <div class="progress-card active">
-        <div class="progress-dot dot-active"></div>
-        <div class="progress-status status-active" data-i18n="prog-status-active">⬤ In Progress</div>
-        <h4 data-i18n="prog3-h4">Beta Testing</h4>
-        <p data-i18n="prog3-p">Patient and clinician testers evaluating the prototype. Feedback collection live via branded feedback system.</p>
+      <div class="progress-card done">
+        <div class="progress-dot dot-done"></div>
+        <div class="progress-status status-done" data-i18n="prog-status-done">✓ Complete</div>
+        <h4 data-i18n="prog2-h4">Brand &amp; Design</h4>
+        <p data-i18n="prog2-p">Visual identity, logo, color palette, and a clear, phone-friendly design system.</p>
       </div>
       <div class="progress-card active">
         <div class="progress-dot dot-active"></div>
         <div class="progress-status status-active" data-i18n="prog-status-active">⬤ In Progress</div>
-        <h4 data-i18n="prog4-h4">Legal &amp; IP</h4>
-        <p data-i18n="prog4-p">Trademark filing, Delaware C-Corp formation, and startup attorney engagement underway.</p>
+        <h4 data-i18n="prog3-h4">Student EHR Track</h4>
+        <p data-i18n="prog3-p">Guided lessons on the care-team screens for front desk, billing, and clinical navigation.</p>
+      </div>
+      <div class="progress-card active">
+        <div class="progress-dot dot-active"></div>
+        <div class="progress-status status-active" data-i18n="prog-status-active">⬤ In Progress</div>
+        <h4 data-i18n="prog4-h4">Learner Testing</h4>
+        <p data-i18n="prog4-p">Planning first sessions with older adult learners to see where they get stuck and fix it.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
-        <h4 data-i18n="prog5-h4">HIPAA Compliance</h4>
-        <p data-i18n="prog5-p">Vanta implementation, BAA execution with AWS and Google Workspace, Security Risk Assessment.</p>
+        <h4 data-i18n="prog5-h4">Spanish &amp; Portuguese Practice</h4>
+        <p data-i18n="prog5-p">Guided tasks and the certificate of practice in Spanish and Portuguese.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
-        <h4 data-i18n="prog6-h4">Production Build</h4>
-        <p data-i18n="prog6-p">Moving from prototype to production-grade app with FHIR R4 API, real auth, and HIPAA-eligible hosting.</p>
+        <h4 data-i18n="prog6-h4">Instructor Tools</h4>
+        <p data-i18n="prog6-p">Simple tools for teachers and workshop leaders, like class codes and a way to see who finished.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
-        <h4 data-i18n="prog7-h4">Epic App Orchard</h4>
-        <p data-i18n="prog7-p">Developer program application and integration build to reach Epic's 305M+ patient network.</p>
+        <h4 data-i18n="prog7-h4">Accessibility Review</h4>
+        <p data-i18n="prog7-p">A formal check against WCAG accessibility guidelines, including screen reader testing.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
-        <h4 data-i18n="prog8-h4">First Customers</h4>
-        <p data-i18n="prog8-p">Targeting 3–5 paying health systems or clinics to validate product-market fit before pre-seed raise.</p>
+        <h4 data-i18n="prog8-h4">Community &amp; School Partners</h4>
+        <p data-i18n="prog8-p">Working with libraries, aging services, and training programs to bring practice to more learners.</p>
       </div>
     </div>
   </div>
@@ -1033,93 +1051,66 @@ footer strong { color: rgba(255,255,255,0.7); }
     <p class="references-sub" data-i18n="ref-sub">All statistics and claims on this page are supported by peer-reviewed research, government data, or credible institutional sources. Citations are provided for full transparency.</p>
     <div class="ref-grid">
       <div class="ref-card">
-        <div class="ref-badge">Peer-Reviewed · JAMA Network Open 2025</div>
-        <div class="ref-num">01: Healthcare Data Breach Epidemic</div>
-        <div class="ref-title">Trends in US Healthcare Data Breaches, 2010–2024</div>
-        <div class="ref-authors">Seh AH, Zarour M, Alenezi M, et al.</div>
-        <div class="ref-journal">JAMA Network Open. 2025. doi:10.1001/jamanetworkopen.2025.XXXXX</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Peer-reviewed analysis of HHS OCR data finding healthcare breaches more than doubled in a decade, from 216 incidents affecting 6M records in 2010, to 566 incidents affecting <strong>170 million records in 2024</strong>. Non-ransomware hacking now accounts for 81% of breaches.</p>
-        <div class="ref-link"><a href="https://www.paubox.com/blog/healthcare-data-breaches-exposed-170-million-records-in-2024" target="_blank" rel="noreferrer">paubox.com, JAMA Network Open coverage, 2025</a></div>
+        <div class="ref-badge">Government · ASTP / HHS 2025</div>
+        <div class="ref-num">01: Portals Are Now the Norm</div>
+        <div class="ref-title">Individuals' Access and Use of Patient Portals and Smartphone Health Apps, 2024</div>
+        <div class="ref-authors">Richwine C. Office of the Assistant Secretary for Technology Policy (ASTP).</div>
+        <div class="ref-journal">ASTP Data Brief No. 77. July 2025.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">National survey data showing <strong>77% of individuals were offered online access</strong> to their medical records in 2024 and 65% accessed a portal at least once. 59% had more than one portal, and 51% used proxy access to help someone else.</p>
+        <div class="ref-link"><a href="https://www.healthit.gov/sites/default/files/2025-06/2024-HINTS-Patient-Access-DB77_508.pdf" target="_blank" rel="noreferrer">healthit.gov, ASTP Data Brief No. 77</a></div>
       </div>
       <div class="ref-card">
-        <div class="ref-badge">Institutional Survey · AMA 2022</div>
-        <div class="ref-num">02: Patients Demand Privacy as a Right</div>
-        <div class="ref-title">Patient Survey Shows Unresolved Tension Over Health Data Privacy</div>
-        <div class="ref-authors">American Medical Association / Savvy Cooperative</div>
-        <div class="ref-journal">AMA Patient Privacy Survey. Survey of 1,000 U.S. patients. January 2022.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Survey of 1,000 patients finding <strong>92% believe health data privacy is a right</strong>, 94% want companies legally accountable for data use, 93% want app developers to be transparent, and 80% want the ability to opt-out of data sharing.</p>
-        <div class="ref-link"><a href="https://www.ama-assn.org/press-center/ama-press-releases/patient-survey-shows-unresolved-tension-over-health-data-privacy" target="_blank" rel="noreferrer">ama-assn.org, Patient Privacy Survey</a></div>
+        <div class="ref-badge">Institutional Survey · University of Michigan 2023</div>
+        <div class="ref-num">02: Older Adults and Patient Portals</div>
+        <div class="ref-title">Use and Experiences with Patient Portals Among Older Adults</div>
+        <div class="ref-authors">Anthony D, Singer D, Kirch M, Solway E, Roberts S, Smith E, Hutchens L, Malani P, Kullgren J.</div>
+        <div class="ref-journal">National Poll on Healthy Aging. May 2023. 2,563 adults aged 50 to 80.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Found 78% of adults 50 to 80 have a patient portal, but <strong>35% of non-users were not confident they could log in and navigate one</strong>. About half of portal users had given someone else access to help them.</p>
+        <div class="ref-link"><a href="https://ihpi.umich.edu/national-poll-healthy-aging/national-findings/use-and-experiences-patient-portals-among-older" target="_blank" rel="noreferrer">ihpi.umich.edu, National Poll on Healthy Aging</a></div>
       </div>
       <div class="ref-card">
-        <div class="ref-badge">Peer-Reviewed · npj Digital Medicine 2025</div>
-        <div class="ref-num">03: Global: Privacy &amp; Transparency Are Non-Negotiable</div>
-        <div class="ref-title">Worldwide Willingness to Share Health Data High but Privacy, Consent and Transparency Paramount: A Meta-Analysis</div>
-        <div class="ref-authors">Krahe MA, Pole JD, et al.</div>
-        <div class="ref-journal">npj Digital Medicine. 2025;8:540. Nature Publishing Group.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Meta-analysis of studies published since 2020 finding patients worldwide are broadly willing to share data, but only when <strong>transparency, consent, and individual control</strong> are guaranteed. Without these, trust collapses entirely.</p>
-        <div class="ref-link"><a href="https://www.nature.com/articles/s41746-025-01868-9" target="_blank" rel="noreferrer">nature.com/articles/s41746-025-01868-9</a></div>
+        <div class="ref-badge">Government · NCES 2006</div>
+        <div class="ref-num">03: Health Literacy by Age</div>
+        <div class="ref-title">The Health Literacy of America's Adults: Results From the 2003 National Assessment of Adult Literacy</div>
+        <div class="ref-authors">Kutner M, Greenberg E, Jin Y, Paulsen C.</div>
+        <div class="ref-journal">U.S. Department of Education, NCES 2006-483.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">The most recent national measure of health literacy. Only 12% of adults scored proficient. Among adults 65 and older, <strong>59% scored basic or below basic</strong> and only 3% were proficient.</p>
+        <div class="ref-link"><a href="https://nces.ed.gov/pubs2006/2006483.pdf" target="_blank" rel="noreferrer">nces.ed.gov/pubs2006/2006483.pdf</a></div>
       </div>
       <div class="ref-card">
-        <div class="ref-badge">Peer-Reviewed · JAMA 2019</div>
-        <div class="ref-num">04: Care Coordination Waste</div>
-        <div class="ref-title">Waste in the US Health Care System: Estimated Costs and Potential for Savings</div>
-        <div class="ref-authors">Shrank WH, Rogstad TL, Parekh N.</div>
-        <div class="ref-journal">JAMA. 2019;322(15):1501–1509. doi:10.1001/jama.2019.13978</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">The landmark peer-reviewed estimate of U.S. healthcare waste across six domains. Failure of care coordination, the specific problem Tracing Care addresses, costs <strong>$27.2B–$78.2B annually</strong>. Remains the authoritative citation as of 2026.</p>
-        <div class="ref-link"><a href="https://pubmed.ncbi.nlm.nih.gov/31589283/" target="_blank" rel="noreferrer">pubmed.ncbi.nlm.nih.gov/31589283</a></div>
+        <div class="ref-badge">Peer-Reviewed · Annals of Family Medicine 2017</div>
+        <div class="ref-num">04: EHR Skills Shape the Workday</div>
+        <div class="ref-title">Tethered to the EHR: Primary Care Physician Workload Assessment Using EHR Event Log Data and Time-Motion Observations</div>
+        <div class="ref-authors">Arndt BG, Beasley JW, Watkinson MD, Temte JL, Tuan WJ, Sinsky CA, Gilchrist VJ.</div>
+        <div class="ref-journal">Ann Fam Med. 2017;15(5):419-426. doi:10.1370/afm.2121</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Primary care physicians spent <strong>5.9 hours of an 11.4-hour workday in the EHR</strong>, with about two-thirds of that time on clerical work and inbox management.</p>
+        <div class="ref-link"><a href="https://www.annfammed.org/content/15/5/419" target="_blank" rel="noreferrer">annfammed.org/content/15/5/419</a></div>
       </div>
       <div class="ref-card">
-        <div class="ref-badge">Peer-Reviewed · SAGE Digital Health 2025</div>
-        <div class="ref-num">05: Global Healthcare Data Privacy Challenges</div>
-        <div class="ref-title">Data Privacy in Healthcare: Global Challenges and Solutions</div>
-        <div class="ref-authors">Conduah AK, Ofoe S, Siaw-Marfo D.</div>
-        <div class="ref-journal">Digital Health. 2025;11:20552076251343959. doi:10.1177/20552076251343959</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Drawing on 90+ policy and scholarly documents, this 2025 review affirms that <strong>patients share data when trust is established</strong>, and that transparency and ethical safeguards are the decisive factors in building that trust.</p>
-        <div class="ref-link"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12138216/" target="_blank" rel="noreferrer">pmc.ncbi.nlm.nih.gov/articles/PMC12138216</a></div>
+        <div class="ref-badge">Professional Journal · American Journal of Nursing 2023</div>
+        <div class="ref-num">05: Students Get Little EHR Practice</div>
+        <div class="ref-title">Preparing Nurses to Use Electronic Health Records</div>
+        <div class="ref-authors">Velez K, John J.</div>
+        <div class="ref-journal">American Journal of Nursing. April 2023.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Nurse informaticists who onboard 200+ new hires a month report that students often get <strong>view-only EHR access during clinical rotations</strong>, and many new graduates feel unprepared to document. The authors recommend academic EHR practice tools.</p>
+        <div class="ref-link"><a href="https://www.qgdigitalpublishing.com/article/Preparing+Nurses+to+Use+Electronic+Health+Records/4536959/786229/article.html" target="_blank" rel="noreferrer">American Journal of Nursing, April 2023</a></div>
       </div>
       <div class="ref-card">
-        <div class="ref-badge">Peer-Reviewed · SAGE Journals 2024</div>
-        <div class="ref-num">06: Health Professionals on Patient Data Control</div>
-        <div class="ref-title">Data Professionals' Attitudes on Data Privacy, Sharing, and Consent in Healthcare and Research</div>
-        <div class="ref-authors">Kaplow K, Downey M, Stewart D, Massie AB, et al.</div>
-        <div class="ref-journal">Digital Health. 2024. doi:10.1177/20552076241290964</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">U.S. survey of health data professionals finding <strong>97.3% believe individuals should have complete control</strong> over their health data, and 92% say specific consent should be obtained for each use.</p>
-        <div class="ref-link"><a href="https://journals.sagepub.com/doi/10.1177/20552076241290964" target="_blank" rel="noreferrer">journals.sagepub.com/doi/10.1177/20552076241290964</a></div>
-      </div>
-      <div class="ref-card">
-        <div class="ref-badge">Peer-Reviewed · J Med Internet Res 2024</div>
-        <div class="ref-num">07: Systematic Review: Patient Data Sharing</div>
-        <div class="ref-title">Patient and Public Willingness to Share Personal Health Data for Third-Party or Secondary Uses: Systematic Review</div>
-        <div class="ref-authors">Baines R, Stevens S, Austin D, Anil K, Bradwell H, et al.</div>
-        <div class="ref-journal">J Med Internet Res. 2024;26:e50421. doi:10.2196/50421</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Systematic review of 135+ studies confirming that <strong>transparency, individual control, and clear explanation of purpose</strong> are essential prerequisites for patients to support health data sharing for research.</p>
-        <div class="ref-link"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10951832/" target="_blank" rel="noreferrer">pmc.ncbi.nlm.nih.gov/articles/PMC10951832</a></div>
-      </div>
-      <div class="ref-card">
-        <div class="ref-badge">Government · ONC / HHS 2023</div>
-        <div class="ref-num">08: Patient Portal Access Gap</div>
-        <div class="ref-title">A Decade of Data Examined: Patient Access to Electronic Health Information</div>
-        <div class="ref-authors">Office of the National Coordinator for Health Information Technology (ONC)</div>
-        <div class="ref-journal">Health IT Buzz. December 2023. U.S. Department of Health &amp; Human Services.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Documents rapid growth in portal access (50%+ by 2022) with extensive detail on what patients can view, and <strong>no mention of real-time access audit logs</strong> available to patients in any major EHR platform.</p>
-        <div class="ref-link"><a href="https://www.healthit.gov/buzz-blog/a-decade-of-data-examined/a-decade-of-data-examined-patient-access-to-electronic-health-information" target="_blank" rel="noreferrer">healthit.gov, Patient Access to Electronic Health Information</a></div>
-      </div>
-      <div class="ref-card">
-        <div class="ref-badge">Peer-Reviewed · PMC / JAMIA 2014</div>
-        <div class="ref-num">09: Patient Demand for Granular EHR Control</div>
-        <div class="ref-title">Patient Preferences in Controlling Access to Their Electronic Health Records: A Prospective Cohort Study</div>
-        <div class="ref-authors">Caine K, Hanania R.</div>
-        <div class="ref-journal">J Am Med Inform Assoc. 2013;20(e1):e139–e147. doi:10.1136/amiajnl-2012-001381</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Clinical study finding <strong>43% of patients restricted at least one provider's access</strong> when actually given the option, demonstrating strong latent demand for the granular permissions Tracing Care provides.</p>
-        <div class="ref-link"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4265220/" target="_blank" rel="noreferrer">pmc.ncbi.nlm.nih.gov/articles/PMC4265220</a></div>
+        <div class="ref-badge">Government · Bureau of Labor Statistics</div>
+        <div class="ref-num">06: Growing Demand for EHR Users</div>
+        <div class="ref-title">Occupational Outlook Handbook: Medical Assistants</div>
+        <div class="ref-authors">U.S. Bureau of Labor Statistics.</div>
+        <div class="ref-journal">Employment projections 2025 to 2035.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Medical assistant jobs are projected to grow <strong>13% from 2025 to 2035</strong>, much faster than average, with about 109,700 openings a year. Duties include entering patient information into medical records and helping with billing.</p>
+        <div class="ref-link"><a href="https://www.bls.gov/OOH/healthcare/medical-assistants.htm" target="_blank" rel="noreferrer">bls.gov, Medical Assistants</a></div>
       </div>
       <div class="ref-card">
         <div class="ref-badge">Government · HHS / ONC</div>
-        <div class="ref-num">10: 21st Century Cures Act &amp; Information Blocking</div>
+        <div class="ref-num">07: Patients' Right to Their Data</div>
         <div class="ref-title">Information Blocking Rule, 21st Century Cures Act (45 CFR Part 171)</div>
-        <div class="ref-authors">U.S. Department of Health &amp; Human Services, Office of the National Coordinator for Health IT</div>
+        <div class="ref-authors">U.S. Department of Health &amp; Human Services, Office of the National Coordinator for Health IT.</div>
         <div class="ref-journal">Enforced April 5, 2021. Updated 2024.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">The federal law requiring EHRs to provide patients access to their data and prohibiting information blocking. <strong>The legislative foundation of Tracing Care's market opportunity</strong>, the law exists but the patient experience of exercising these rights remains broken.</p>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Federal law requiring that patients can access their electronic health information without blocking. <strong>The right exists, but people still need the skills to use it</strong>, which is the gap Tracing Care helps close.</p>
         <div class="ref-link"><a href="https://www.healthit.gov/topic/information-blocking" target="_blank" rel="noreferrer">healthit.gov/topic/information-blocking</a></div>
       </div>
     </div>
@@ -1137,463 +1128,512 @@ footer strong { color: rgba(255,255,255,0.7); }
     <span class="nav-wordmark">Tracing Care</span>
   </div>
   <p><strong data-i18n="footer-by">An ongoing project by Dani Neri</strong></p>
-  <p style="margin-top:8px" data-i18n="footer-tagline">Patient-first health data transparency · Built with care · © 2026</p>
+  <p style="margin-top:8px" data-i18n="footer-tagline">Hands-on practice for patient portals and EHRs · Built with care · © 2026</p>
   <p style="margin-top:8px"><a href="mailto:daniza.neri@gmail.com" style="color:rgba(255,255,255,0.4);text-decoration:none;">daniza.neri@gmail.com</a></p>
 </footer>
 
 <script>
 const translations = {
   en: {
-    /* UPDATES: live demo, portal practice, mobile */
-    "nav-demo": "Try the Demo",
-    "hero-note": "No login needed. Explore as a clinician, biller, administrator, or patient.",
+    "nav-problem": "The Need",
+    "nav-solution": "How It Works",
+    "nav-platform": "Platform",
+    "nav-demo": "Try It",
+    "nav-philosophy": "Our Approach",
+    "nav-progress": "Roadmap",
+    "nav-sources": "Sources",
+    "nav-badge": "In Development",
+    "hero-tag": "Training Program · Patient Portal &amp; EHR Practice",
+    "hero-h1": "Practice health tech <em>safely.</em> Then use it with confidence.",
+    "hero-p": "Tracing Care is a hands-on practice platform that looks and works like a real patient portal and EHR. Patients and families learn to find results, message their care team, and manage appointments. A track for students learning EHRs for school or work is in progress.",
+    "hero-btn-demo": "Start Portal Practice",
+    "hero-btn-primary": "Explore the Demo",
+    "hero-btn-ghost": "How It Works →",
+    "hero-note": "No login needed. Every name and record is made up, so you can't break anything.",
+    "stat-1-label": "Of people were offered online access to their medical records in 2024",
+    "stat-2-label": "Of adults 50 to 80 who don't use a portal aren't confident they could log in and get around",
+    "stat-3-label": "Of adults 65 and older have basic or below-basic health literacy",
+    "stat-4-label": "Of a primary care doctor's 11.4-hour workday are spent in the EHR",
+    "problem-tag": "The Need",
+    "problem-title": "Health care moved online.<br/>Not everyone was shown how.",
+    "problem-sub": "Results, refills, bills, and messages now live in portals and electronic records. Most people are expected to figure them out alone, and the first try usually happens with their real health information on the line.",
+    "problem-1-title": "Patients are expected to self-serve",
+    "problem-1-p": "Portals ask people to find results, request refills, and pay bills on their own. Many older adults were never shown how, and some avoid portals altogether.",
+    "problem-2-title": "No safe place to practice",
+    "problem-2-p": "In a real portal, every click touches real records. Fear of pressing the wrong button keeps people from trying, and from asking for help.",
+    "problem-3-title": "Students learn EHRs late",
+    "problem-3-p": "Nursing and allied health students often get view-only access during clinicals. Many new hires say they feel unprepared to work in an EHR on day one.",
+    "solution-tag": "How It Works",
+    "solution-title": "Real screens. Made-up records.<br/>Step-by-step guidance.",
+    "solution-sub": "Tracing Care recreates the tools people meet in real health care, then adds the support a real system never gives you: hints, plain language, and room to make mistakes.",
+    "badge-live": "Live",
+    "f1-title": "Guided Practice Mode",
+    "f1-p": "A helper panel gives one task at a time, explains why it matters, and shows where to click if you get stuck. Finish all six tasks to print a certificate of practice.",
+    "f1-l1": "Find test results and read flagged values",
+    "f1-l2": "Message the care team and request refills",
+    "f1-l3": "Confirm appointments and pay a bill",
+    "f1-l4": "Add a family member as a helper",
+    "f2-title": "Realistic Patient Portal",
+    "f2-p": "Robin Merriweather's portal has 15 sections that mirror what people see in real portals, from vital signs and immunizations to an emergency card.",
+    "f2-l1": "Test results, vitals, and visit history",
+    "f2-l2": "Medications, refills, and referrals",
+    "f2-l3": "Billing, documents, and care team",
+    "f2-l4": "Works on computers, tablets, and phones",
+    "f3-title": "Care-Team Views",
+    "f3-p": "Explore the other side of the screen: what clinical, billing, and front-office staff work with every day.",
+    "f3-l1": "Command Center and patient census",
+    "f3-l2": "Referrals and provider calendar",
+    "f3-l3": "Claims, denials, and prior authorizations",
+    "f3-l4": "Analytics for administrators",
+    "badge-soon": "In progress",
+    "f4-title": "Student EHR Track",
+    "f4-p": "Guided lessons for students and career changers learning EHR navigation for school or work, built on the same care-team screens.",
+    "f4-l1": "Front desk: check-in, scheduling, insurance",
+    "f4-l2": "Billing: claims and denials",
+    "f4-l3": "Clinical: finding charts, results, and referrals",
+    "f4-l4": "For medical assistant, health admin, and nursing students",
+    "showcase-tag": "The Platform",
+    "showcase-title": "Looks like the real thing.<br/>Safe to practice on.",
+    "showcase-sub": "Familiar layouts, plain language, and clear labels, so the skills carry over to the portal at a learner's own doctor's office.",
+    "screen-1-label": "My Health, Patient Home",
+    "screen-1-sub": "Everything in one place: vitals, appointments, conditions, medications, and alerts",
+    "screen-2-label": "Medications &amp; Refills",
+    "screen-2-sub": "Active medications, refill request status, and supplement log",
     "pocket-tag": "In Your Pocket",
-    "pocket-title": "Your health, always with you.",
-    "pocket-sub": "Tracing Care is built for real life, on the go, between appointments, at the pharmacy. Everything patients need, exactly when they need it.",
+    "pocket-title": "Practice anywhere.",
+    "pocket-sub": "Learners can practice on a library computer, a tablet at home, or their own phone, with bigger text whenever they need it.",
     "phone-1-label": "My Health",
     "phone-1-sub": "Everything at a glance, vitals, appointments, actions needed",
     "phone-2-label": "Medications &amp; Refills",
     "phone-2-sub": "Track every medication, request refills, and see exactly what's pending",
-    "phone-3-label": "Data Access Log",
-    "phone-3-sub": "See exactly who accessed your records, what they viewed, and when, in plain language",
-    "demo-tag": "Live Demo",
-    "demo-title": "Try it yourself.<br/>No login needed.",
-    "demo-sub": "Pick a role and click straight in. Every name and number is made up, so explore freely.",
+    "phone-3-label": "Guided Practice",
+    "phone-3-sub": "A helper walks learners through each task and shows where to click",
+    "demo-tag": "Try It",
+    "demo-title": "Two ways to practice.<br/>No login needed.",
+    "demo-sub": "Start with guided practice if you're new to portals. Explore the care-team side to see what staff work with.",
+    "practice-title": "For patients and families: guided portal practice",
+    "practice-p": "A guided mode built for older adults and the people who help them. Six everyday tasks, like finding a test result or requesting a refill, with hints, bigger text, and a printable certificate of practice.",
+    "practice-note": "A practice space with made-up information, not a medical record. Learners never enter their own details.",
+    "practice-btn": "Start Portal Practice",
+    "demo-roles-h": "Or explore freely by role",
+    "demo-roles-note": "Guided lessons for students on these screens are in progress.",
     "role-1-title": "Clinical Staff",
     "role-1-p": "Command Center, patient census, referrals, and the provider calendar.",
+    "role-open": "Open demo",
     "role-2-title": "Billing Team",
     "role-2-p": "Claims queue, denials, prior authorizations, and the insurance and payer hub.",
     "role-3-title": "Administrator",
     "role-3-p": "Every staff view, plus analytics on revenue, patient flow, and compliance.",
     "role-4-title": "Patient",
     "role-4-p": "Robin Merriweather's portal: results, messages, refills, bills, and family helpers.",
-    "role-open": "Open demo",
-    "practice-title": "New to patient portals? Practice step by step.",
-    "practice-p": "A guided mode built for older adults and the people who help them. Six everyday tasks, like finding a test result or requesting a refill, with hints, bigger text, and a printable certificate of practice.",
-    "practice-note": "A practice space with made-up information, not a medical record. Learners never enter their own details.",
-    "practice-btn": "Start Portal Practice",
+    "comp-tag": "Why Practice",
+    "comp-title": "Learning on the real thing is stressful.<br/>It doesn't have to be.",
+    "comp-sub": "How practicing in Tracing Care compares with learning on a live portal or EHR.",
+    "comp-head-feature": "What learners need",
+    "comp-head-status": "Learning on a live system",
+    "comp-r1-a": "Safe to make mistakes",
+    "comp-r1-b": "✓ All records are made up",
+    "comp-r1-c": "✗ Every click is real",
+    "comp-r2-a": "Step-by-step guidance",
+    "comp-r2-b": "✓ Built-in hints",
+    "comp-r2-c": "✗ Figure it out alone",
+    "comp-r3-a": "Shows where to click",
+    "comp-r3-b": "✓ \"Show me where\" button",
+    "comp-r3-c": "✗ Not available",
+    "comp-r4-a": "Bigger text on demand",
+    "comp-r4-b": "✓ One tap",
+    "comp-r4-c": "~ Depends on the system",
+    "comp-r5-a": "Start over anytime",
+    "comp-r5-b": "✓ Reset for the next learner",
+    "comp-r5-c": "✗ Changes are permanent",
+    "comp-r6-a": "Practice the staff side",
+    "comp-r6-b": "✓ Clinical, billing, admin views",
+    "comp-r6-c": "~ Usually only after hiring",
+    "comp-r7-a": "Proof of practice",
+    "comp-r7-b": "✓ Printable certificate of practice",
+    "comp-r7-c": "✗ None",
+    "comp-r8-a": "Real-world safety tips",
+    "comp-r8-b": "✓ Built into each task",
+    "comp-r8-c": "~ Rarely explained",
+    "manifesto-tag": "Our Approach",
+    "manifesto-h2": "Confidence comes from <em>practice.</em><br/>Not from a manual.",
+    "manifesto-p1": "Most people learn health technology the hard way: alone, in a hurry, with their own records on the screen. Tracing Care gives them a calm place to learn first, so the real visit, the real bill, or the first day on the job feels familiar.",
+    "manifesto-p2": "Patients have a right to see their health information. Knowing how to use it is what makes that right real.",
+    "p1-title": "Safe to make mistakes",
+    "p1-p": "Nothing in Tracing Care is real, so learners can click, explore, and get it wrong without consequences. That's how confidence starts.",
+    "p2-title": "Plain language first",
+    "p2-p": "Instructions use everyday words. Medical terms get explained, not assumed.",
+    "p3-title": "Teach finding, not following",
+    "p3-p": "Hints point to the menu first, then the button, so learners build skills they can use in any portal.",
+    "p4-title": "Built for every age",
+    "p4-p": "Bigger text, large buttons, and phone-friendly screens. Older adults are the first audience, not an afterthought.",
+    "p5-title": "Real-world habits",
+    "p5-p": "Each task ends with a practical tip, like never paying a bill through a link in a text message.",
+    "p6-title": "Honest about what it is",
+    "p6-p": "Tracing Care is a practice environment. It is not a medical record, and its certificate of practice is not a professional certification.",
+    "prog-tag": "Roadmap",
+    "prog-title": "Where we are today.",
+    "prog-sub": "Tracing Care is an active, ongoing project. Here's an honest look at what's been built, what's in progress, and what's next.",
+    "prog-status-done": "✓ Complete",
     "prog1-h4": "Working Demo",
-    "prog1-p": "Clickable demo with four one-click roles (clinical, billing, administrator, patient) across 12 screens, live at tracingcare-demo.vercel.app.",
+    "prog1-p": "Clickable practice platform with four one-click roles (clinical, billing, administrator, patient) across 12 screens.",
     "prog9-h4": "Patient Portal Practice",
     "prog9-p": "Guided practice mode for older adults: six step-by-step tasks, hints, bigger text, and a printable certificate of practice.",
-    /* NAV */
-    'nav-problem': 'The Problem',
-    'nav-solution': 'The Solution',
-    'nav-platform': 'Platform',
-    'nav-philosophy': 'Philosophy',
-    'nav-progress': 'Progress',
-    'nav-sources': 'Sources',
-    'nav-badge': 'In Development',
-    /* HERO */
-    'hero-tag': 'Ongoing Project · Patient-First Health Tech',
-    'hero-h1': 'Your health data should work <em>for you.</em> Not against you.',
-    'hero-p': 'Tracing Care is a patient-first platform that gives people real control over their health data, who sees it, when, and why. This is what healthcare should look like.',
-    'hero-btn-demo': 'View Live Demo',
-    'hero-btn-primary': 'See the Platform',
-    'hero-btn-ghost': 'Our Philosophy →',
-    /* STATS */
-    'stat-1-label': 'Patient records exposed in 2024 alone, more than double the number from a decade ago',
-    'stat-2-label': 'Wasted annually in the U.S. due to failures of care coordination',
-    'stat-3-label': 'Of patients say health data privacy is a right and their data should not be available for purchase',
-    'stat-4-label': 'Major EHR platforms provide patients a real-time self-service view of who accessed their records',
-    /* PROBLEM */
-    'problem-tag': 'The Problem',
-    'problem-title': 'Healthcare data is broken.<br/>Patients are the last to know.',
-    'problem-sub': 'The current system treats patients as passive recipients of care, not active participants. Data flows freely between providers, insurers, and researchers without meaningful patient awareness or control.',
-    'problem-1-title': 'No visibility into access',
-    'problem-1-p': 'Patients have no way to see who accessed their records, when, or why. Data moves invisibly through a fragmented system.',
-    'problem-2-title': 'Data shared without consent',
-    'problem-2-p': 'Health records are routinely shared between providers, insurers, and researchers, often without explicit patient understanding or agreement.',
-    'problem-3-title': 'Caregivers left in the dark',
-    'problem-3-p': 'Families managing care for loved ones navigate a maze of siloed systems, rigid proxy access, and provider-controlled permissions.',
-    /* SOLUTION / FEATURES */
-    'solution-tag': 'The Solution',
-    'solution-title': 'Transparency, control, and trust , <br/>built into every screen.',
-    'solution-sub': 'Tracing Care reimagines the patient experience from the ground up. Every feature is designed around one principle: patients deserve to be active participants in their healthcare.',
-    'f1-title': 'Unified Health Dashboard',
-    'f1-p': 'One place to see your providers, medications with full clinical detail, insurance, and alerts, with a Data Trust Score that shows your privacy posture at a glance.',
-    'f1-l1': 'Medication dosage, risk level &amp; side effects',
-    'f1-l2': 'Provider access status at a glance',
-    'f1-l3': 'Real-time alerts for refills and access events',
-    'f1-l4': 'Insurance plan details and coverage summary',
-    'f2-title': 'Real-Time Data Access Log',
-    'f2-p': 'The first patient-facing feature of its kind, a live, readable feed showing exactly who accessed your data, what they viewed, and when. No more invisible data flows.',
-    'f2-l1': 'Filter by Provider, Caregiver, Research, Insurance',
-    'f2-l2': 'Plain-language descriptions of every access event',
-    'f2-l3': 'Timestamped and always up to date',
-    'f3-title': 'Granular Sharing &amp; Permissions',
-    'f3-p': 'Toggle exactly what each provider, insurer, or researcher can see. Revoke access instantly. Delete your data entirely. You are always in control.',
-    'f3-l1': 'Per-entity permission toggles (Records, Labs, Notes, Imaging)',
-    'f3-l2': 'One-tap Revoke All with confirmation',
-    'f3-l3': 'Full data deletion on demand',
-    'f3-l4': 'Instant effect, no delays, no forms',
-    'f4-title': 'Caregiver Hub',
-    'f4-p': 'Manage care for loved ones with role-based permissions built around real relationships, not just clinical roles. Built for families, not just providers.',
-    'f4-l1': '13 relationship types (Mom, Partner, Nurse, Friend…)',
-    'f4-l2': '5 access roles from View Only to Full Access',
-    'f4-l3': 'Toggle caregiver access on/off instantly',
-    'f4-l4': 'Manage care for loved ones with their own profile',
-    /* SHOWCASE */
-    'showcase-tag': 'The Platform',
-    'showcase-title': 'Designed for real patients.<br/>Not clinical workflows.',
-    'showcase-sub': 'Every screen prioritizes clarity, trust, and accessibility, meeting WCAG standards so no one is left behind.',
-    'screen-1-label': 'My Health, Patient Home',
-    'screen-1-sub': 'Everything in one place: vitals, appointments, conditions, medications, and alerts',
-    'screen-2-label': 'Medications &amp; Refills',
-    'screen-2-sub': 'Active medications, refill request status, and supplement log',
-    /* COMPARISON */
-    'comp-tag': 'Why It Matters',
-    'comp-title': 'This should be the norm.<br/>Not the exception.',
-    'comp-sub': "Every feature in Tracing Care exists because patients deserve it, not because a regulation requires it. Here's how we compare to the status quo.",
-    'comp-head-feature': 'Feature',
-    'comp-head-status': 'Status Quo (EHRs)',
-    /* MANIFESTO */
-    'manifesto-tag': 'Our Philosophy',
-    'manifesto-h2': 'Patients are not passengers.<br/>They are <em>pilots.</em>',
-    'manifesto-p1': 'The healthcare system was built for institutions, not for the people it serves. Tracing Care is built on the belief that when patients have real visibility, real control, and real trust, outcomes improve for everyone.',
-    'manifesto-p2': "This isn't just a product philosophy. It's a moral position. Health data transparency should be the standard, not a premium feature, not a regulatory checkbox, not a future consideration.",
-    'p1-title': 'Ownership, not access',
-    'p1-p': 'Giving patients a portal to view their records is not the same as giving them ownership. True ownership means control, transparency, and the right to revoke.',
-    'p2-title': 'Transparency by default',
-    'p2-p': 'Every data access event should be visible to the patient. Not on request, not after a delay, in real time, in plain language, always.',
-    'p3-title': 'Trust must be earned, not assumed',
-    'p3-p': "Patients should choose to share their data with researchers, not be opted in by default. Informed consent is not a legal formality, it's a design requirement.",
-    'p4-title': 'Caregiving is a relationship',
-    'p4-p': 'The people who help us navigate illness, partners, parents, friends, nurses, deserve tools built for human relationships, not clinical hierarchies.',
-    'p5-title': 'Accessibility is not optional',
-    'p5-p': "A health platform that isn't accessible to people with disabilities, low literacy, or limited tech fluency has already failed its most vulnerable users.",
-    'p6-title': 'The exception should become the norm',
-    'p6-p': 'Everything in Tracing Care should be unremarkable, because patients having control of their health data should be completely, utterly normal.',
-    /* PROGRESS */
-    'prog-tag': 'Project Progress',
-    'prog-title': 'Where we are today.',
-    'prog-sub': "Tracing Care is an active, ongoing project. Here's an honest look at what's been built, what's in progress, and what's next.",
-    'prog-status-done': '✓ Complete',
-    'prog-status-active': '⬤ In Progress',
-    'prog-status-next': '→ Up Next',
-    'prog2-h4': 'Brand &amp; Strategy',
-    'prog2-p': 'Visual identity, logo system, color palette, differentiation strategy, and competitive positioning documented.',
-    'prog3-h4': 'Beta Testing',
-    'prog3-p': 'Patient and clinician testers evaluating the prototype. Feedback collection live via branded feedback system.',
-    'prog4-h4': 'Legal &amp; IP',
-    'prog4-p': 'Trademark filing, Delaware C-Corp formation, and startup attorney engagement underway.',
-    'prog5-h4': 'HIPAA Compliance',
-    'prog5-p': 'Vanta implementation, BAA execution with AWS and Google Workspace, Security Risk Assessment.',
-    'prog6-h4': 'Production Build',
-    'prog6-p': 'Moving from prototype to production-grade app with FHIR R4 API, real auth, and HIPAA-eligible hosting.',
-    'prog7-h4': 'Epic App Orchard',
-    'prog7-p': "Developer program application and integration build to reach Epic's 305M+ patient network.",
-    'prog8-h4': 'First Customers',
-    'prog8-p': '3–5 paying health systems or clinics to validate product-market fit before pre-seed raise.',
-    /* REFERENCES */
-    'ref-tag': 'Evidence Base',
-    'ref-title': 'Sources &amp; References',
-    'ref-sub': 'All statistics and claims on this page are supported by peer-reviewed research, government data, or credible institutional sources. Citations are provided for full transparency.',
-    /* FOOTER */
-    'footer-by': 'An ongoing project by Dani Neri',
-    'footer-tagline': 'Patient-first health data transparency · Built with care · © 2026',
+    "prog2-h4": "Brand &amp; Design",
+    "prog2-p": "Visual identity, logo, color palette, and a clear, phone-friendly design system.",
+    "prog-status-active": "⬤ In Progress",
+    "prog3-h4": "Student EHR Track",
+    "prog3-p": "Guided lessons on the care-team screens for front desk, billing, and clinical navigation.",
+    "prog4-h4": "Learner Testing",
+    "prog4-p": "Planning first sessions with older adult learners to see where they get stuck and fix it.",
+    "prog-status-next": "→ Up Next",
+    "prog5-h4": "Spanish &amp; Portuguese Practice",
+    "prog5-p": "Guided tasks and the certificate of practice in Spanish and Portuguese.",
+    "prog6-h4": "Instructor Tools",
+    "prog6-p": "Simple tools for teachers and workshop leaders, like class codes and a way to see who finished.",
+    "prog7-h4": "Accessibility Review",
+    "prog7-p": "A formal check against WCAG accessibility guidelines, including screen reader testing.",
+    "prog8-h4": "Community &amp; School Partners",
+    "prog8-p": "Working with libraries, aging services, and training programs to bring practice to more learners.",
+    "ref-tag": "Evidence Base",
+    "ref-title": "Sources &amp; References",
+    "ref-sub": "All statistics and claims on this page are supported by peer-reviewed research, government data, or credible institutional sources. Citations are provided for full transparency.",
+    "footer-by": "An ongoing project by Dani Neri",
+    "footer-tagline": "Hands-on practice for patient portals and EHRs · Built with care · © 2026"
   },
-
   es: {
-    /* UPDATES: live demo, portal practice, mobile */
-    "nav-demo": "Prueba la demo",
-    "hero-note": "Sin iniciar sesión. Explora como personal clínico, facturación, administración o paciente.",
+    "nav-problem": "La necesidad",
+    "nav-solution": "Cómo funciona",
+    "nav-platform": "Plataforma",
+    "nav-demo": "Pruébalo",
+    "nav-philosophy": "Nuestro enfoque",
+    "nav-progress": "Hoja de ruta",
+    "nav-sources": "Fuentes",
+    "nav-badge": "En Desarrollo",
+    "hero-tag": "Programa de capacitación · Práctica de portal del paciente y EHR",
+    "hero-h1": "Practica la tecnología de salud <em>sin riesgos.</em> Luego úsala con confianza.",
+    "hero-p": "Tracing Care es una plataforma de práctica que se ve y funciona como un portal del paciente y un EHR reales. Pacientes y familias aprenden a encontrar resultados, escribir a su equipo de atención y manejar citas. Una ruta para estudiantes que aprenden EHR para la escuela o el trabajo está en desarrollo.",
+    "hero-btn-demo": "Empezar la práctica",
+    "hero-btn-primary": "Explorar la demo",
+    "hero-btn-ghost": "Cómo funciona →",
+    "hero-note": "Sin iniciar sesión. Todos los nombres y registros son ficticios, así que no puedes romper nada.",
+    "stat-1-label": "De las personas recibieron acceso en línea a sus expedientes médicos en 2024",
+    "stat-2-label": "De los adultos de 50 a 80 años que no usan un portal no se sienten seguros de poder entrar y navegarlo",
+    "stat-3-label": "De los adultos de 65 años o más tienen una alfabetización en salud básica o inferior",
+    "stat-4-label": "De la jornada de 11.4 horas de un médico de atención primaria se pasan en el EHR",
+    "problem-tag": "La necesidad",
+    "problem-title": "La atención médica se mudó a internet.<br/>No a todos les enseñaron cómo.",
+    "problem-sub": "Resultados, resurtidos, facturas y mensajes ahora viven en portales y expedientes electrónicos. A la mayoría se le pide que los descifre sola, y el primer intento suele ser con su información de salud real en juego.",
+    "problem-1-title": "Se espera que el paciente se atienda solo",
+    "problem-1-p": "Los portales piden encontrar resultados, pedir resurtidos y pagar facturas por cuenta propia. A muchos adultos mayores nunca les enseñaron cómo, y algunos evitan los portales por completo.",
+    "problem-2-title": "No hay un lugar seguro para practicar",
+    "problem-2-p": "En un portal real, cada clic toca registros reales. El miedo a presionar el botón equivocado impide intentarlo, y también pedir ayuda.",
+    "problem-3-title": "Los estudiantes aprenden EHR tarde",
+    "problem-3-p": "Los estudiantes de enfermería y ciencias de la salud a menudo solo pueden ver los expedientes durante sus prácticas. Muchos recién contratados dicen sentirse poco preparados para usar un EHR desde el primer día.",
+    "solution-tag": "Cómo funciona",
+    "solution-title": "Pantallas reales. Registros ficticios.<br/>Guía paso a paso.",
+    "solution-sub": "Tracing Care recrea las herramientas que la gente encuentra en la atención médica real y añade el apoyo que un sistema real nunca da: pistas, lenguaje sencillo y espacio para equivocarse.",
+    "badge-live": "Disponible",
+    "f1-title": "Modo de práctica guiada",
+    "f1-p": "Un panel de ayuda da una tarea a la vez, explica por qué importa y muestra dónde hacer clic si te atoras. Completa las seis tareas para imprimir un certificado de práctica.",
+    "f1-l1": "Encontrar resultados y leer valores marcados",
+    "f1-l2": "Escribir al equipo de atención y pedir resurtidos",
+    "f1-l3": "Confirmar citas y pagar una factura",
+    "f1-l4": "Agregar a un familiar como ayudante",
+    "f2-title": "Portal del paciente realista",
+    "f2-p": "El portal de Robin Merriweather tiene 15 secciones que reflejan lo que la gente ve en portales reales, desde signos vitales y vacunas hasta una tarjeta de emergencia.",
+    "f2-l1": "Resultados, signos vitales e historial de visitas",
+    "f2-l2": "Medicamentos, resurtidos y referidos",
+    "f2-l3": "Facturación, documentos y equipo de atención",
+    "f2-l4": "Funciona en computadoras, tabletas y teléfonos",
+    "f3-title": "Vistas del equipo de atención",
+    "f3-p": "Explora el otro lado de la pantalla: con qué trabaja a diario el personal clínico, de facturación y de recepción.",
+    "f3-l1": "Centro de mando y censo de pacientes",
+    "f3-l2": "Referidos y calendario de proveedores",
+    "f3-l3": "Reclamos, denegaciones y autorizaciones previas",
+    "f3-l4": "Análisis para administradores",
+    "badge-soon": "En desarrollo",
+    "f4-title": "Ruta de EHR para estudiantes",
+    "f4-p": "Lecciones guiadas para estudiantes y personas que cambian de carrera y aprenden a navegar un EHR para la escuela o el trabajo, sobre las mismas pantallas del equipo de atención.",
+    "f4-l1": "Recepción: registro, citas y seguros",
+    "f4-l2": "Facturación: reclamos y denegaciones",
+    "f4-l3": "Clínica: encontrar expedientes, resultados y referidos",
+    "f4-l4": "Para estudiantes de asistente médico, administración de salud y enfermería",
+    "showcase-tag": "La Plataforma",
+    "showcase-title": "Se ve como el real.<br/>Seguro para practicar.",
+    "showcase-sub": "Diseños conocidos, lenguaje sencillo y etiquetas claras, para que lo aprendido sirva en el portal del consultorio de cada persona.",
+    "screen-1-label": "Mi Salud, Inicio del Paciente",
+    "screen-1-sub": "Todo en un solo lugar: signos vitales, citas, condiciones, medicamentos y alertas",
+    "screen-2-label": "Medicamentos y Recargas",
+    "screen-2-sub": "Medicamentos activos, estado de solicitudes de recarga y registro de suplementos",
     "pocket-tag": "En tu bolsillo",
-    "pocket-title": "Tu salud, siempre contigo.",
-    "pocket-sub": "Tracing Care está hecho para la vida real: en camino, entre citas, en la farmacia. Todo lo que el paciente necesita, justo cuando lo necesita.",
+    "pocket-title": "Practica donde sea.",
+    "pocket-sub": "Se puede practicar en una computadora de la biblioteca, una tableta en casa o el propio teléfono, con letra más grande cuando se necesite.",
     "phone-1-label": "Mi salud",
     "phone-1-sub": "Todo de un vistazo: signos vitales, citas y acciones pendientes",
     "phone-2-label": "Medicamentos y resurtidos",
     "phone-2-sub": "Sigue cada medicamento, pide resurtidos y ve exactamente qué está pendiente",
-    "phone-3-label": "Registro de acceso a datos",
-    "phone-3-sub": "Ve quién accedió a tus registros, qué vio y cuándo, en lenguaje sencillo",
-    "demo-tag": "Demo en vivo",
-    "demo-title": "Pruébalo tú mismo.<br/>Sin iniciar sesión.",
-    "demo-sub": "Elige un rol y entra directo. Todos los nombres y datos son ficticios, así que explora con libertad.",
+    "phone-3-label": "Práctica guiada",
+    "phone-3-sub": "Un ayudante guía cada tarea y muestra dónde hacer clic",
+    "demo-tag": "Pruébalo",
+    "demo-title": "Dos formas de practicar.<br/>Sin iniciar sesión.",
+    "demo-sub": "Empieza con la práctica guiada si eres nuevo en los portales. Explora el lado del equipo de atención para ver con qué trabaja el personal.",
+    "practice-title": "Para pacientes y familias: práctica guiada del portal",
+    "practice-p": "Un modo guiado pensado para adultos mayores y quienes los ayudan. Seis tareas cotidianas, como encontrar un resultado o pedir un resurtido, con pistas, letra más grande y un certificado de práctica para imprimir.",
+    "practice-note": "Un espacio de práctica con información ficticia, no un expediente médico. Nadie escribe sus datos reales.",
+    "practice-btn": "Empezar la práctica",
+    "demo-roles-h": "O explora libremente por rol",
+    "demo-roles-note": "Las lecciones guiadas para estudiantes en estas pantallas están en desarrollo.",
     "role-1-title": "Personal clínico",
     "role-1-p": "Centro de mando, censo de pacientes, referidos y calendario de proveedores.",
+    "role-open": "Abrir demo",
     "role-2-title": "Equipo de facturación",
     "role-2-p": "Cola de reclamos, denegaciones, autorizaciones previas y el centro de seguros y pagadores.",
     "role-3-title": "Administración",
     "role-3-p": "Todas las vistas del personal, más análisis de ingresos, flujo de pacientes y cumplimiento.",
     "role-4-title": "Paciente",
     "role-4-p": "El portal de Robin Merriweather: resultados, mensajes, resurtidos, facturas y ayudantes familiares.",
-    "role-open": "Abrir demo",
-    "practice-title": "¿Nuevo en los portales de pacientes? Practica paso a paso.",
-    "practice-p": "Un modo guiado pensado para adultos mayores y quienes los ayudan. Seis tareas cotidianas, como encontrar un resultado o pedir un resurtido, con pistas, letra más grande y un certificado de práctica para imprimir.",
-    "practice-note": "Un espacio de práctica con información ficticia, no un expediente médico. Nadie escribe sus datos reales.",
-    "practice-btn": "Empezar la práctica",
+    "comp-tag": "Por qué practicar",
+    "comp-title": "Aprender en el sistema real estresa.<br/>No tiene por qué ser así.",
+    "comp-sub": "Cómo se compara practicar en Tracing Care con aprender en un portal o EHR real.",
+    "comp-head-feature": "Lo que se necesita",
+    "comp-head-status": "Aprender en un sistema real",
+    "comp-r1-a": "Seguro para equivocarse",
+    "comp-r1-b": "✓ Todos los registros son ficticios",
+    "comp-r1-c": "✗ Cada clic es real",
+    "comp-r2-a": "Guía paso a paso",
+    "comp-r2-b": "✓ Pistas integradas",
+    "comp-r2-c": "✗ Descifrarlo solo",
+    "comp-r3-a": "Muestra dónde hacer clic",
+    "comp-r3-b": "✓ Botón \"Show me where\"",
+    "comp-r3-c": "✗ No disponible",
+    "comp-r4-a": "Letra más grande al instante",
+    "comp-r4-b": "✓ Un toque",
+    "comp-r4-c": "~ Depende del sistema",
+    "comp-r5-a": "Empezar de nuevo cuando quieras",
+    "comp-r5-b": "✓ Se reinicia para la siguiente persona",
+    "comp-r5-c": "✗ Los cambios son permanentes",
+    "comp-r6-a": "Practicar el lado del personal",
+    "comp-r6-b": "✓ Vistas clínica, de facturación y administración",
+    "comp-r6-c": "~ Por lo general solo al ser contratado",
+    "comp-r7-a": "Constancia de práctica",
+    "comp-r7-b": "✓ Certificado de práctica para imprimir",
+    "comp-r7-c": "✗ Ninguna",
+    "comp-r8-a": "Consejos de seguridad reales",
+    "comp-r8-b": "✓ Incluidos en cada tarea",
+    "comp-r8-c": "~ Rara vez se explican",
+    "manifesto-tag": "Nuestro enfoque",
+    "manifesto-h2": "La confianza viene de <em>practicar.</em><br/>No de un manual.",
+    "manifesto-p1": "La mayoría aprende la tecnología de salud por las malas: sola, con prisa y con su propio expediente en pantalla. Tracing Care ofrece un lugar tranquilo para aprender primero, para que la consulta real, la factura real o el primer día de trabajo se sientan conocidos.",
+    "manifesto-p2": "Los pacientes tienen derecho a ver su información de salud. Saber usarla es lo que hace real ese derecho.",
+    "p1-title": "Seguro para equivocarse",
+    "p1-p": "Nada en Tracing Care es real, así que se puede hacer clic, explorar y equivocarse sin consecuencias. Así empieza la confianza.",
+    "p2-title": "Primero, lenguaje sencillo",
+    "p2-p": "Las instrucciones usan palabras cotidianas. Los términos médicos se explican, no se dan por sabidos.",
+    "p3-title": "Enseñar a encontrar, no a seguir",
+    "p3-p": "Las pistas señalan primero el menú y luego el botón, para crear habilidades que sirven en cualquier portal.",
+    "p4-title": "Hecho para todas las edades",
+    "p4-p": "Letra más grande, botones amplios y pantallas para teléfono. Los adultos mayores son el primer público, no una idea de último momento.",
+    "p5-title": "Hábitos para la vida real",
+    "p5-p": "Cada tarea termina con un consejo práctico, como nunca pagar una factura desde un enlace en un mensaje de texto.",
+    "p6-title": "Honesto sobre lo que es",
+    "p6-p": "Tracing Care es un entorno de práctica. No es un expediente médico, y su certificado de práctica no es una certificación profesional.",
+    "prog-tag": "Hoja de ruta",
+    "prog-title": "Dónde estamos hoy.",
+    "prog-sub": "Tracing Care es un proyecto activo y en curso. Una mirada honesta a lo que se ha construido, lo que está en progreso y lo que viene.",
+    "prog-status-done": "✓ Completo",
     "prog1-h4": "Demo funcional",
-    "prog1-p": "Demo interactiva con cuatro roles de un clic (clínico, facturación, administración, paciente) en 12 pantallas, en vivo en tracingcare-demo.vercel.app.",
+    "prog1-p": "Plataforma de práctica interactiva con cuatro roles de un clic (clínico, facturación, administración, paciente) en 12 pantallas.",
     "prog9-h4": "Práctica del portal del paciente",
     "prog9-p": "Modo de práctica guiada para adultos mayores: seis tareas paso a paso, pistas, letra más grande y un certificado de práctica para imprimir.",
-    /* NAV */
-    'nav-problem': 'El Problema',
-    'nav-solution': 'La Solución',
-    'nav-platform': 'Plataforma',
-    'nav-philosophy': 'Filosofía',
-    'nav-progress': 'Progreso',
-    'nav-sources': 'Fuentes',
-    'nav-badge': 'En Desarrollo',
-    /* HERO */
-    'hero-tag': 'Proyecto en Curso · Tecnología de Salud Centrada en el Paciente',
-    'hero-h1': 'Tus datos de salud deben trabajar <em>para ti.</em> No en tu contra.',
-    'hero-p': 'Tracing Care es una plataforma centrada en el paciente que da a las personas control real sobre sus datos de salud, quién los ve, cuándo y por qué. Así debería ser la atención médica.',
-    'hero-btn-demo': 'Ver Demo en Vivo',
-    'hero-btn-primary': 'Ver la Plataforma',
-    'hero-btn-ghost': 'Nuestra Filosofía →',
-    /* STATS */
-    'stat-1-label': 'Registros de pacientes expuestos solo en 2024: más del doble que hace una década',
-    'stat-2-label': 'Desperdiciados anualmente en EE.UU. por fallas en la coordinación de atención',
-    'stat-3-label': 'De los pacientes dicen que la privacidad de los datos de salud es un derecho y que sus datos no deben estar disponibles para la venta',
-    'stat-4-label': 'Grandes plataformas EHR que brindan a los pacientes una vista de autoservicio en tiempo real de quién accedió a sus registros',
-    /* PROBLEM */
-    'problem-tag': 'El Problema',
-    'problem-title': 'Los datos de salud están fragmentados.<br/>Los pacientes son los últimos en saberlo.',
-    'problem-sub': 'El sistema actual trata a los pacientes como receptores pasivos de atención, no como participantes activos. Los datos circulan libremente entre proveedores, aseguradoras e investigadores sin que el paciente tenga conciencia ni control real.',
-    'problem-1-title': 'Sin visibilidad sobre el acceso',
-    'problem-1-p': 'Los pacientes no tienen forma de saber quién accedió a sus registros, cuándo ni por qué. Los datos se mueven de forma invisible en un sistema fragmentado.',
-    'problem-2-title': 'Datos compartidos sin consentimiento',
-    'problem-2-p': 'Los registros de salud se comparten rutinariamente entre proveedores, aseguradoras e investigadores, a menudo sin el conocimiento ni el acuerdo explícito del paciente.',
-    'problem-3-title': 'Cuidadores desinformados',
-    'problem-3-p': 'Las familias que gestionan el cuidado de sus seres queridos navegan por un laberinto de sistemas aislados, acceso de apoderado rígido y permisos controlados por el proveedor.',
-    /* SOLUTION / FEATURES */
-    'solution-tag': 'La Solución',
-    'solution-title': 'Transparencia, control y confianza , <br/>integrados en cada pantalla.',
-    'solution-sub': 'Tracing Care reimagina la experiencia del paciente desde cero. Cada función está diseñada en torno a un principio: los pacientes merecen ser participantes activos en su atención médica.',
-    'f1-title': 'Panel de Salud Unificado',
-    'f1-p': 'Un solo lugar para ver tus proveedores, medicamentos con detalle clínico completo, seguro y alertas, con un Índice de Confianza que muestra tu privacidad de un vistazo.',
-    'f1-l1': 'Dosis del medicamento, nivel de riesgo y efectos secundarios',
-    'f1-l2': 'Estado de acceso del proveedor de un vistazo',
-    'f1-l3': 'Alertas en tiempo real para recargas y eventos de acceso',
-    'f1-l4': 'Detalles del plan de seguro y resumen de cobertura',
-    'f2-title': 'Registro de Acceso a Datos en Tiempo Real',
-    'f2-p': 'La primera función de este tipo orientada al paciente, un registro en vivo y legible que muestra exactamente quién accedió a tus datos, qué vio y cuándo. Sin más flujos de datos invisibles.',
-    'f2-l1': 'Filtra por Proveedor, Cuidador, Investigación, Seguro',
-    'f2-l2': 'Descripciones en lenguaje claro de cada evento de acceso',
-    'f2-l3': 'Con marca de tiempo y siempre actualizado',
-    'f3-title': 'Permisos y Compartición Granular',
-    'f3-p': 'Configura exactamente qué puede ver cada proveedor, aseguradora o investigador. Revoca el acceso al instante. Elimina tus datos por completo. Siempre tienes el control.',
-    'f3-l1': 'Permisos por entidad (Registros, Laboratorios, Notas, Imágenes)',
-    'f3-l2': 'Revocar todo con un toque y confirmación',
-    'f3-l3': 'Eliminación completa de datos a petición',
-    'f3-l4': 'Efecto inmediato, sin demoras ni formularios',
-    'f4-title': 'Centro para Cuidadores',
-    'f4-p': 'Gestiona el cuidado de tus seres queridos con permisos basados en roles, pensados para relaciones reales, no solo para roles clínicos. Hecho para familias, no solo para proveedores.',
-    'f4-l1': '13 tipos de relación (Mamá, Pareja, Enfermera, Amigo…)',
-    'f4-l2': '5 roles de acceso, de Solo Lectura a Acceso Completo',
-    'f4-l3': 'Activa o desactiva el acceso del cuidador al instante',
-    'f4-l4': 'Gestiona el cuidado con el perfil propio de cada uno',
-    /* SHOWCASE */
-    'showcase-tag': 'La Plataforma',
-    'showcase-title': 'Diseñada para pacientes reales.<br/>No para flujos de trabajo clínicos.',
-    'showcase-sub': 'Cada pantalla prioriza claridad, confianza y accesibilidad, cumpliendo los estándares WCAG para que nadie quede fuera.',
-    'screen-1-label': 'Mi Salud, Inicio del Paciente',
-    'screen-1-sub': 'Todo en un solo lugar: signos vitales, citas, condiciones, medicamentos y alertas',
-    'screen-2-label': 'Medicamentos y Recargas',
-    'screen-2-sub': 'Medicamentos activos, estado de solicitudes de recarga y registro de suplementos',
-    /* COMPARISON */
-    'comp-tag': 'Por Qué Importa',
-    'comp-title': 'Esto debería ser la norma.<br/>No la excepción.',
-    'comp-sub': 'Cada función de Tracing Care existe porque los pacientes la merecen, no porque lo exija una regulación. Así nos comparamos con el statu quo.',
-    'comp-head-feature': 'Función',
-    'comp-head-status': 'Statu Quo (EHRs)',
-    /* MANIFESTO */
-    'manifesto-tag': 'Nuestra Filosofía',
-    'manifesto-h2': 'Los pacientes no son pasajeros.<br/>Son <em>pilotos.</em>',
-    'manifesto-p1': 'El sistema de salud fue construido para las instituciones, no para las personas a las que sirve. Tracing Care se basa en la convicción de que cuando los pacientes tienen visibilidad real, control real y confianza real, los resultados mejoran para todos.',
-    'manifesto-p2': 'Esto no es solo una filosofía de producto. Es una postura moral. La transparencia de los datos de salud debe ser el estándar, no una función premium, no una casilla regulatoria, no una consideración futura.',
-    'p1-title': 'Propiedad, no acceso',
-    'p1-p': 'Darle a los pacientes un portal para ver sus registros no es lo mismo que darles propiedad. La verdadera propiedad implica control, transparencia y el derecho a revocar.',
-    'p2-title': 'Transparencia por defecto',
-    'p2-p': 'Cada evento de acceso a datos debe ser visible para el paciente. No bajo petición, no con retraso, en tiempo real, en lenguaje claro, siempre.',
-    'p3-title': 'La confianza se gana, no se asume',
-    'p3-p': 'Los pacientes deben elegir compartir sus datos con investigadores, no ser incluidos por defecto. El consentimiento informado no es una formalidad legal, es un requisito de diseño.',
-    'p4-title': 'El cuidado es una relación',
-    'p4-p': 'Las personas que nos ayudan a navegar la enfermedad, parejas, padres, amigos, enfermeras, merecen herramientas pensadas para relaciones humanas, no jerarquías clínicas.',
-    'p5-title': 'La accesibilidad no es opcional',
-    'p5-p': 'Una plataforma de salud que no es accesible para personas con discapacidades, baja alfabetización o poca fluidez tecnológica ya ha fallado a sus usuarios más vulnerables.',
-    'p6-title': 'La excepción debe volverse la norma',
-    'p6-p': 'Todo en Tracing Care debe ser algo completamente normal, porque que los pacientes tengan control de sus datos de salud debería ser totalmente, absolutamente normal.',
-    /* PROGRESS */
-    'prog-tag': 'Progreso del Proyecto',
-    'prog-title': 'Dónde estamos hoy.',
-    'prog-sub': 'Tracing Care es un proyecto activo y en curso. Una mirada honesta a lo que se ha construido, lo que está en progreso y lo que viene.',
-    'prog-status-done': '✓ Completo',
-    'prog-status-active': '⬤ En Progreso',
-    'prog-status-next': '→ Próximo',
-    'prog2-h4': 'Marca y Estrategia',
-    'prog2-p': 'Identidad visual, sistema de logo, paleta de colores, estrategia de diferenciación y posicionamiento competitivo documentados.',
-    'prog3-h4': 'Pruebas Beta',
-    'prog3-p': 'Pacientes y médicos evaluando el prototipo. Recolección de feedback activa a través del sistema de retroalimentación de la marca.',
-    'prog4-h4': 'Legal y Propiedad Intelectual',
-    'prog4-p': 'Registro de marca, formación de C-Corp en Delaware y contratación de asesor legal para startups en curso.',
-    'prog5-h4': 'Cumplimiento HIPAA',
-    'prog5-p': 'Implementación de Vanta, ejecución de BAA con AWS y Google Workspace, Evaluación de Riesgos de Seguridad.',
-    'prog6-h4': 'Build de Producción',
-    'prog6-p': 'Pasando del prototipo a una app de nivel de producción con FHIR R4 API, autenticación real y hosting compatible con HIPAA.',
-    'prog7-h4': 'Epic App Orchard',
-    'prog7-p': 'Solicitud al programa de desarrolladores e integración para llegar a la red de 305M+ pacientes de Epic.',
-    'prog8-h4': 'Primeros Clientes',
-    'prog8-p': '3–5 sistemas de salud o clínicas pagantes para validar el encaje producto-mercado antes de la ronda pre-semilla.',
-    /* REFERENCES */
-    'ref-tag': 'Base de Evidencia',
-    'ref-title': 'Fuentes y Referencias',
-    'ref-sub': 'Todas las estadísticas y afirmaciones en esta página están respaldadas por investigaciones revisadas por pares, datos gubernamentales o fuentes institucionales creíbles. Se proporcionan citas para total transparencia.',
-    /* FOOTER */
-    'footer-by': 'Un proyecto en curso de Dani Neri',
-    'footer-tagline': 'Transparencia de datos de salud centrada en el paciente · Construido con cuidado · © 2026',
+    "prog2-h4": "Marca y diseño",
+    "prog2-p": "Identidad visual, logo, paleta de colores y un sistema de diseño claro y apto para teléfonos.",
+    "prog-status-active": "⬤ En Progreso",
+    "prog3-h4": "Ruta de EHR para estudiantes",
+    "prog3-p": "Lecciones guiadas en las pantallas del equipo de atención para recepción, facturación y navegación clínica.",
+    "prog4-h4": "Pruebas con aprendices",
+    "prog4-p": "Planeando las primeras sesiones con adultos mayores para ver dónde se atoran y corregirlo.",
+    "prog-status-next": "→ Próximo",
+    "prog5-h4": "Práctica en español y portugués",
+    "prog5-p": "Tareas guiadas y certificado de práctica en español y portugués.",
+    "prog6-h4": "Herramientas para instructores",
+    "prog6-p": "Herramientas sencillas para docentes y facilitadores, como códigos de clase y una forma de ver quién terminó.",
+    "prog7-h4": "Revisión de accesibilidad",
+    "prog7-p": "Una revisión formal según las pautas de accesibilidad WCAG, incluidas pruebas con lectores de pantalla.",
+    "prog8-h4": "Socios comunitarios y escolares",
+    "prog8-p": "Trabajar con bibliotecas, servicios para adultos mayores y programas de formación para llevar la práctica a más personas.",
+    "ref-tag": "Base de Evidencia",
+    "ref-title": "Fuentes y Referencias",
+    "ref-sub": "Todas las estadísticas y afirmaciones en esta página están respaldadas por investigaciones revisadas por pares, datos gubernamentales o fuentes institucionales creíbles. Se proporcionan citas para total transparencia.",
+    "footer-by": "Un proyecto en curso de Dani Neri",
+    "footer-tagline": "Práctica para portales del paciente y EHR · Hecho con cuidado · © 2026"
   },
-
   pt: {
-    /* UPDATES: live demo, portal practice, mobile */
-    "nav-demo": "Teste a demo",
-    "hero-note": "Sem login. Explore como equipe clínica, faturamento, administração ou paciente.",
+    "nav-problem": "A necessidade",
+    "nav-solution": "Como funciona",
+    "nav-platform": "Plataforma",
+    "nav-demo": "Experimente",
+    "nav-philosophy": "Nossa abordagem",
+    "nav-progress": "Roteiro",
+    "nav-sources": "Fontes",
+    "nav-badge": "Em Desenvolvimento",
+    "hero-tag": "Programa de treinamento · Prática de portal do paciente e prontuário eletrônico",
+    "hero-h1": "Pratique a tecnologia de saúde <em>sem riscos.</em> Depois use com confiança.",
+    "hero-p": "O Tracing Care é uma plataforma de prática que parece e funciona como um portal do paciente e um prontuário eletrônico reais. Pacientes e famílias aprendem a encontrar resultados, falar com a equipe de saúde e gerenciar consultas. Uma trilha para estudantes que aprendem prontuários eletrônicos para a escola ou o trabalho está em desenvolvimento.",
+    "hero-btn-demo": "Começar a prática",
+    "hero-btn-primary": "Explorar a demo",
+    "hero-btn-ghost": "Como funciona →",
+    "hero-note": "Sem login. Todos os nomes e registros são fictícios, então você não estraga nada.",
+    "stat-1-label": "Das pessoas receberam acesso online aos seus prontuários em 2024",
+    "stat-2-label": "Dos adultos de 50 a 80 anos que não usam um portal não se sentem seguros para entrar e navegar",
+    "stat-3-label": "Dos adultos com 65 anos ou mais têm letramento em saúde básico ou abaixo do básico",
+    "stat-4-label": "Da jornada de 11,4 horas de um médico de atenção primária são gastas no prontuário eletrônico",
+    "problem-tag": "A necessidade",
+    "problem-title": "A saúde foi para a internet.<br/>Nem todos aprenderam como.",
+    "problem-sub": "Resultados, renovações, contas e mensagens agora ficam em portais e prontuários eletrônicos. A maioria das pessoas precisa descobrir sozinha, e a primeira tentativa costuma acontecer com suas informações de saúde reais em jogo.",
+    "problem-1-title": "Espera-se que o paciente se vire sozinho",
+    "problem-1-p": "Os portais pedem que as pessoas encontrem resultados, peçam renovações e paguem contas por conta própria. Muitos idosos nunca aprenderam como, e alguns evitam os portais completamente.",
+    "problem-2-title": "Não há um lugar seguro para praticar",
+    "problem-2-p": "Num portal real, cada clique mexe em registros reais. O medo de apertar o botão errado impede as pessoas de tentar, e de pedir ajuda.",
+    "problem-3-title": "Estudantes aprendem prontuário eletrônico tarde",
+    "problem-3-p": "Estudantes de enfermagem e da área da saúde muitas vezes só podem visualizar os prontuários nos estágios. Muitos recém-contratados dizem se sentir despreparados para usar um prontuário eletrônico no primeiro dia.",
+    "solution-tag": "Como funciona",
+    "solution-title": "Telas reais. Registros fictícios.<br/>Orientação passo a passo.",
+    "solution-sub": "O Tracing Care recria as ferramentas que as pessoas encontram na saúde real e acrescenta o apoio que um sistema real nunca dá: dicas, linguagem simples e espaço para errar.",
+    "badge-live": "Disponível",
+    "f1-title": "Modo de prática guiada",
+    "f1-p": "Um painel de ajuda apresenta uma tarefa por vez, explica por que ela importa e mostra onde clicar se você travar. Conclua as seis tarefas para imprimir um certificado de prática.",
+    "f1-l1": "Encontrar resultados e entender valores destacados",
+    "f1-l2": "Enviar mensagem à equipe e pedir renovações",
+    "f1-l3": "Confirmar consultas e pagar uma conta",
+    "f1-l4": "Adicionar um familiar como ajudante",
+    "f2-title": "Portal do paciente realista",
+    "f2-p": "O portal de Robin Merriweather tem 15 seções que espelham o que as pessoas veem em portais reais, de sinais vitais e vacinas a um cartão de emergência.",
+    "f2-l1": "Resultados de exames, sinais vitais e histórico de consultas",
+    "f2-l2": "Medicamentos, renovações e encaminhamentos",
+    "f2-l3": "Contas, documentos e equipe de saúde",
+    "f2-l4": "Funciona em computadores, tablets e celulares",
+    "f3-title": "Visões da equipe de saúde",
+    "f3-p": "Explore o outro lado da tela: com o que as equipes clínica, de faturamento e de recepção trabalham todos os dias.",
+    "f3-l1": "Central de comando e censo de pacientes",
+    "f3-l2": "Encaminhamentos e agenda dos profissionais",
+    "f3-l3": "Cobranças, glosas e autorizações prévias",
+    "f3-l4": "Análises para administradores",
+    "badge-soon": "Em desenvolvimento",
+    "f4-title": "Trilha de prontuário eletrônico para estudantes",
+    "f4-p": "Aulas guiadas para estudantes e pessoas em transição de carreira que aprendem a navegar no prontuário eletrônico para a escola ou o trabalho, usando as mesmas telas da equipe.",
+    "f4-l1": "Recepção: check-in, agendamento e convênios",
+    "f4-l2": "Faturamento: cobranças e glosas",
+    "f4-l3": "Clínico: encontrar prontuários, resultados e encaminhamentos",
+    "f4-l4": "Para estudantes de assistente médico, gestão em saúde e enfermagem",
+    "showcase-tag": "A Plataforma",
+    "showcase-title": "Parece o de verdade.<br/>Seguro para praticar.",
+    "showcase-sub": "Layouts conhecidos, linguagem simples e rótulos claros, para que o que se aprende sirva no portal do consultório de cada pessoa.",
+    "screen-1-label": "Minha Saúde, Início do Paciente",
+    "screen-1-sub": "Tudo em um só lugar: sinais vitais, consultas, condições, medicamentos e alertas",
+    "screen-2-label": "Medicamentos e Renovações",
+    "screen-2-sub": "Medicamentos ativos, status das solicitações de renovação e registro de suplementos",
     "pocket-tag": "No seu bolso",
-    "pocket-title": "Sua saúde, sempre com você.",
-    "pocket-sub": "O Tracing Care foi feito para a vida real: em movimento, entre consultas, na farmácia. Tudo o que o paciente precisa, exatamente quando precisa.",
+    "pocket-title": "Pratique onde estiver.",
+    "pocket-sub": "Dá para praticar no computador da biblioteca, num tablet em casa ou no próprio celular, com letra maior sempre que precisar.",
     "phone-1-label": "Minha saúde",
     "phone-1-sub": "Tudo num relance: sinais vitais, consultas e ações pendentes",
     "phone-2-label": "Medicamentos e renovações",
     "phone-2-sub": "Acompanhe cada medicamento, peça renovações e veja exatamente o que está pendente",
-    "phone-3-label": "Registro de acesso aos dados",
-    "phone-3-sub": "Veja quem acessou seus registros, o que viu e quando, em linguagem simples",
-    "demo-tag": "Demo ao vivo",
-    "demo-title": "Experimente você mesmo.<br/>Sem login.",
-    "demo-sub": "Escolha um perfil e entre direto. Todos os nomes e números são fictícios, então explore à vontade.",
+    "phone-3-label": "Prática guiada",
+    "phone-3-sub": "Um ajudante conduz cada tarefa e mostra onde clicar",
+    "demo-tag": "Experimente",
+    "demo-title": "Duas formas de praticar.<br/>Sem login.",
+    "demo-sub": "Comece pela prática guiada se você é novo em portais. Explore o lado da equipe para ver com o que os profissionais trabalham.",
+    "practice-title": "Para pacientes e famílias: prática guiada do portal",
+    "practice-p": "Um modo guiado feito para idosos e para quem os ajuda. Seis tarefas do dia a dia, como encontrar um resultado de exame ou pedir uma renovação, com dicas, letra maior e um certificado de prática para imprimir.",
+    "practice-note": "Um espaço de prática com informações fictícias, não um prontuário médico. Ninguém digita seus dados reais.",
+    "practice-btn": "Começar a prática",
+    "demo-roles-h": "Ou explore livremente por perfil",
+    "demo-roles-note": "As aulas guiadas para estudantes nestas telas estão em desenvolvimento.",
     "role-1-title": "Equipe clínica",
     "role-1-p": "Central de comando, censo de pacientes, encaminhamentos e agenda dos profissionais.",
+    "role-open": "Abrir demo",
     "role-2-title": "Equipe de faturamento",
     "role-2-p": "Fila de cobranças, glosas, autorizações prévias e o hub de convênios e pagadores.",
     "role-3-title": "Administração",
     "role-3-p": "Todas as visões da equipe, mais análises de receita, fluxo de pacientes e conformidade.",
     "role-4-title": "Paciente",
     "role-4-p": "O portal de Robin Merriweather: resultados, mensagens, renovações, contas e ajudantes da família.",
-    "role-open": "Abrir demo",
-    "practice-title": "Novo em portais do paciente? Pratique passo a passo.",
-    "practice-p": "Um modo guiado feito para idosos e para quem os ajuda. Seis tarefas do dia a dia, como encontrar um resultado de exame ou pedir uma renovação, com dicas, letra maior e um certificado de prática para imprimir.",
-    "practice-note": "Um espaço de prática com informações fictícias, não um prontuário médico. Ninguém digita seus dados reais.",
-    "practice-btn": "Começar a prática",
+    "comp-tag": "Por que praticar",
+    "comp-title": "Aprender no sistema real é estressante.<br/>Não precisa ser assim.",
+    "comp-sub": "Como praticar no Tracing Care se compara a aprender num portal ou prontuário real.",
+    "comp-head-feature": "O que o aprendiz precisa",
+    "comp-head-status": "Aprender num sistema real",
+    "comp-r1-a": "Seguro para errar",
+    "comp-r1-b": "✓ Todos os registros são fictícios",
+    "comp-r1-c": "✗ Cada clique é real",
+    "comp-r2-a": "Orientação passo a passo",
+    "comp-r2-b": "✓ Dicas integradas",
+    "comp-r2-c": "✗ Descobrir sozinho",
+    "comp-r3-a": "Mostra onde clicar",
+    "comp-r3-b": "✓ Botão \"Show me where\"",
+    "comp-r3-c": "✗ Não disponível",
+    "comp-r4-a": "Letra maior na hora",
+    "comp-r4-b": "✓ Um toque",
+    "comp-r4-c": "~ Depende do sistema",
+    "comp-r5-a": "Recomeçar quando quiser",
+    "comp-r5-b": "✓ Reinicia para a próxima pessoa",
+    "comp-r5-c": "✗ As mudanças são permanentes",
+    "comp-r6-a": "Praticar o lado da equipe",
+    "comp-r6-b": "✓ Visões clínica, de faturamento e administrativa",
+    "comp-r6-c": "~ Geralmente só depois de contratado",
+    "comp-r7-a": "Comprovante de prática",
+    "comp-r7-b": "✓ Certificado de prática para imprimir",
+    "comp-r7-c": "✗ Nenhum",
+    "comp-r8-a": "Dicas de segurança reais",
+    "comp-r8-b": "✓ Incluídas em cada tarefa",
+    "comp-r8-c": "~ Raramente explicadas",
+    "manifesto-tag": "Nossa abordagem",
+    "manifesto-h2": "A confiança vem da <em>prática.</em><br/>Não de um manual.",
+    "manifesto-p1": "A maioria das pessoas aprende tecnologia de saúde do jeito difícil: sozinha, com pressa e com o próprio prontuário na tela. O Tracing Care oferece um lugar tranquilo para aprender antes, para que a consulta real, a conta real ou o primeiro dia de trabalho pareçam familiares.",
+    "manifesto-p2": "Os pacientes têm direito de ver suas informações de saúde. Saber usá-las é o que torna esse direito real.",
+    "p1-title": "Seguro para errar",
+    "p1-p": "Nada no Tracing Care é real, então dá para clicar, explorar e errar sem consequências. É assim que a confiança começa.",
+    "p2-title": "Linguagem simples em primeiro lugar",
+    "p2-p": "As instruções usam palavras do dia a dia. Termos médicos são explicados, não presumidos.",
+    "p3-title": "Ensinar a encontrar, não a seguir",
+    "p3-p": "As dicas apontam primeiro o menu e depois o botão, para criar habilidades que servem em qualquer portal.",
+    "p4-title": "Feito para todas as idades",
+    "p4-p": "Letra maior, botões grandes e telas para celular. Os idosos são o primeiro público, não um detalhe.",
+    "p5-title": "Hábitos para a vida real",
+    "p5-p": "Cada tarefa termina com uma dica prática, como nunca pagar uma conta por um link em mensagem de texto.",
+    "p6-title": "Honesto sobre o que é",
+    "p6-p": "O Tracing Care é um ambiente de prática. Não é um prontuário médico, e seu certificado de prática não é uma certificação profissional.",
+    "prog-tag": "Roteiro",
+    "prog-title": "Onde estamos hoje.",
+    "prog-sub": "O Tracing Care é um projeto ativo e em andamento. Uma visão honesta do que foi construído, o que está em progresso e o que vem a seguir.",
+    "prog-status-done": "✓ Concluído",
     "prog1-h4": "Demo funcional",
-    "prog1-p": "Demo clicável com quatro perfis de um clique (clínico, faturamento, administração, paciente) em 12 telas, no ar em tracingcare-demo.vercel.app.",
+    "prog1-p": "Plataforma de prática clicável com quatro perfis de um clique (clínico, faturamento, administração, paciente) em 12 telas.",
     "prog9-h4": "Prática do portal do paciente",
     "prog9-p": "Modo de prática guiada para idosos: seis tarefas passo a passo, dicas, letra maior e um certificado de prática para imprimir.",
-    /* NAV */
-    'nav-problem': 'O Problema',
-    'nav-solution': 'A Solução',
-    'nav-platform': 'Plataforma',
-    'nav-philosophy': 'Filosofia',
-    'nav-progress': 'Progresso',
-    'nav-sources': 'Fontes',
-    'nav-badge': 'Em Desenvolvimento',
-    /* HERO */
-    'hero-tag': 'Projeto em Andamento · Tecnologia de Saúde Centrada no Paciente',
-    'hero-h1': 'Seus dados de saúde devem trabalhar <em>para você.</em> Não contra você.',
-    'hero-p': 'O Tracing Care é uma plataforma centrada no paciente que dá às pessoas controle real sobre seus dados de saúde, quem os vê, quando e por quê. É assim que a saúde deveria funcionar.',
-    'hero-btn-demo': 'Ver Demo ao Vivo',
-    'hero-btn-primary': 'Ver a Plataforma',
-    'hero-btn-ghost': 'Nossa Filosofia →',
-    /* STATS */
-    'stat-1-label': 'Registros de pacientes expostos só em 2024: mais que o dobro de uma década atrás',
-    'stat-2-label': 'Desperdiçados anualmente nos EUA por falhas na coordenação do cuidado',
-    'stat-3-label': 'Dos pacientes dizem que a privacidade dos dados de saúde é um direito e que seus dados não devem estar disponíveis para venda',
-    'stat-4-label': 'Grandes plataformas EHR que oferecem aos pacientes uma visão self-service em tempo real de quem acessou seus registros',
-    /* PROBLEM */
-    'problem-tag': 'O Problema',
-    'problem-title': 'Os dados de saúde estão fragmentados.<br/>Os pacientes são os últimos a saber.',
-    'problem-sub': 'O sistema atual trata os pacientes como receptores passivos de cuidados, não como participantes ativos. Os dados circulam livremente entre prestadores, seguradoras e pesquisadores sem consciência ou controle real do paciente.',
-    'problem-1-title': 'Sem visibilidade sobre o acesso',
-    'problem-1-p': 'Os pacientes não têm como saber quem acessou seus registros, quando ou por quê. Os dados se movem de forma invisível em um sistema fragmentado.',
-    'problem-2-title': 'Dados compartilhados sem consentimento',
-    'problem-2-p': 'Os registros de saúde são compartilhados rotineiramente entre prestadores, seguradoras e pesquisadores, frequentemente sem o conhecimento ou a concordância explícita do paciente.',
-    'problem-3-title': 'Cuidadores deixados no escuro',
-    'problem-3-p': 'Famílias que gerenciam o cuidado de entes queridos navegam por um labirinto de sistemas isolados, acesso por procuração rígido e permissões controladas pelo prestador.',
-    /* SOLUTION / FEATURES */
-    'solution-tag': 'A Solução',
-    'solution-title': 'Transparência, controle e confiança , <br/>integrados em cada tela.',
-    'solution-sub': 'O Tracing Care reimagina a experiência do paciente do zero. Cada funcionalidade é projetada em torno de um princípio: os pacientes merecem ser participantes ativos em seus cuidados de saúde.',
-    'f1-title': 'Painel de Saúde Unificado',
-    'f1-p': 'Um único lugar para ver seus prestadores, medicamentos com detalhes clínicos completos, plano de saúde e alertas, com um Índice de Confiança que mostra sua privacidade de relance.',
-    'f1-l1': 'Dosagem do medicamento, nível de risco e efeitos colaterais',
-    'f1-l2': 'Status de acesso do prestador de relance',
-    'f1-l3': 'Alertas em tempo real para renovações e eventos de acesso',
-    'f1-l4': 'Detalhes do plano de saúde e resumo de cobertura',
-    'f2-title': 'Registro de Acesso a Dados em Tempo Real',
-    'f2-p': 'O primeiro recurso voltado ao paciente desse tipo, um feed ao vivo e legível mostrando exatamente quem acessou seus dados, o que visualizou e quando. Sem mais fluxos de dados invisíveis.',
-    'f2-l1': 'Filtre por Prestador, Cuidador, Pesquisa, Seguro',
-    'f2-l2': 'Descrições em linguagem simples de cada evento de acesso',
-    'f2-l3': 'Com registro de data/hora e sempre atualizado',
-    'f3-title': 'Compartilhamento e Permissões Granulares',
-    'f3-p': 'Configure exatamente o que cada prestador, seguradora ou pesquisador pode ver. Revogue o acesso instantaneamente. Exclua seus dados por completo. Você está sempre no controle.',
-    'f3-l1': 'Permissões por entidade (Registros, Exames, Notas, Imagens)',
-    'f3-l2': 'Revogar tudo com um toque e confirmação',
-    'f3-l3': 'Exclusão completa de dados sob demanda',
-    'f3-l4': 'Efeito imediato, sem atrasos, sem formulários',
-    'f4-title': 'Hub para Cuidadores',
-    'f4-p': 'Gerencie o cuidado de entes queridos com permissões baseadas em papéis para relacionamentos reais, não apenas funções clínicas. Feito para famílias, não apenas prestadores.',
-    'f4-l1': '13 tipos de relacionamento (Mãe, Parceiro, Enfermeiro, Amigo…)',
-    'f4-l2': '5 níveis de acesso, de Somente Leitura a Acesso Completo',
-    'f4-l3': 'Ative ou desative o acesso do cuidador instantaneamente',
-    'f4-l4': 'Gerencie o cuidado com o perfil próprio de cada um',
-    /* SHOWCASE */
-    'showcase-tag': 'A Plataforma',
-    'showcase-title': 'Projetada para pacientes reais.<br/>Não para fluxos de trabalho clínicos.',
-    'showcase-sub': 'Cada tela prioriza clareza, confiança e acessibilidade, atendendo aos padrões WCAG para que ninguém fique de fora.',
-    'screen-1-label': 'Minha Saúde, Início do Paciente',
-    'screen-1-sub': 'Tudo em um só lugar: sinais vitais, consultas, condições, medicamentos e alertas',
-    'screen-2-label': 'Medicamentos e Renovações',
-    'screen-2-sub': 'Medicamentos ativos, status das solicitações de renovação e registro de suplementos',
-    /* COMPARISON */
-    'comp-tag': 'Por Que Isso Importa',
-    'comp-title': 'Isso deveria ser o padrão.<br/>Não a exceção.',
-    'comp-sub': 'Cada funcionalidade do Tracing Care existe porque os pacientes a merecem, não porque uma regulação exige. Veja como nos comparamos ao status quo.',
-    'comp-head-feature': 'Funcionalidade',
-    'comp-head-status': 'Status Quo (EHRs)',
-    /* MANIFESTO */
-    'manifesto-tag': 'Nossa Filosofia',
-    'manifesto-h2': 'Pacientes não são passageiros.<br/>Eles são <em>pilotos.</em>',
-    'manifesto-p1': 'O sistema de saúde foi construído para instituições, não para as pessoas que atende. O Tracing Care é baseado na crença de que quando os pacientes têm visibilidade real, controle real e confiança real, os resultados melhoram para todos.',
-    'manifesto-p2': 'Isso não é apenas uma filosofia de produto. É uma posição moral. A transparência dos dados de saúde deve ser o padrão, não um recurso premium, não uma caixinha regulatória, não uma consideração futura.',
-    'p1-title': 'Propriedade, não acesso',
-    'p1-p': 'Dar aos pacientes um portal para ver seus registros não é o mesmo que dar a eles propriedade. A verdadeira propriedade significa controle, transparência e o direito de revogar.',
-    'p2-title': 'Transparência como padrão',
-    'p2-p': 'Cada evento de acesso a dados deve ser visível para o paciente. Não sob demanda, não com atraso, em tempo real, em linguagem simples, sempre.',
-    'p3-title': 'A confiança se conquista, não se pressupõe',
-    'p3-p': 'Os pacientes devem escolher compartilhar seus dados com pesquisadores, não ser incluídos por padrão. O consentimento informado não é uma formalidade legal, é um requisito de design.',
-    'p4-title': 'Cuidar é um relacionamento',
-    'p4-p': 'As pessoas que nos ajudam a navegar pela doença, parceiros, pais, amigos, enfermeiros, merecem ferramentas construídas para relacionamentos humanos, não hierarquias clínicas.',
-    'p5-title': 'Acessibilidade não é opcional',
-    'p5-p': 'Uma plataforma de saúde que não é acessível para pessoas com deficiência, baixa alfabetização ou pouca fluência tecnológica já falhou com seus usuários mais vulneráveis.',
-    'p6-title': 'A exceção deve se tornar o padrão',
-    'p6-p': 'Tudo no Tracing Care deve ser algo completamente normal, porque os pacientes terem controle sobre seus dados de saúde deve ser totalmente, absolutamente normal.',
-    /* PROGRESS */
-    'prog-tag': 'Progresso do Projeto',
-    'prog-title': 'Onde estamos hoje.',
-    'prog-sub': 'O Tracing Care é um projeto ativo e em andamento. Uma visão honesta do que foi construído, o que está em progresso e o que vem a seguir.',
-    'prog-status-done': '✓ Concluído',
-    'prog-status-active': '⬤ Em Andamento',
-    'prog-status-next': '→ Próximo',
-    'prog2-h4': 'Marca e Estratégia',
-    'prog2-p': 'Identidade visual, sistema de logotipo, paleta de cores, estratégia de diferenciação e posicionamento competitivo documentados.',
-    'prog3-h4': 'Testes Beta',
-    'prog3-p': 'Pacientes e clínicos avaliando o protótipo. Coleta de feedback ao vivo pelo sistema de feedback da marca.',
-    'prog4-h4': 'Jurídico e PI',
-    'prog4-p': 'Registro de marca, formação de C-Corp em Delaware e contratação de advogado especializado em startups em andamento.',
-    'prog5-h4': 'Conformidade HIPAA',
-    'prog5-p': 'Implementação do Vanta, execução de BAA com AWS e Google Workspace, Avaliação de Risco de Segurança.',
-    'prog6-h4': 'Build de Produção',
-    'prog6-p': 'Passando do protótipo para um app de nível de produção com FHIR R4 API, autenticação real e hospedagem compatível com HIPAA.',
-    'prog7-h4': 'Epic App Orchard',
-    'prog7-p': 'Candidatura ao programa de desenvolvedores e integração para alcançar a rede de 305M+ pacientes da Epic.',
-    'prog8-h4': 'Primeiros Clientes',
-    'prog8-p': '3–5 sistemas de saúde ou clínicas pagantes para validar o encaixe produto-mercado antes da rodada pré-semente.',
-    /* REFERENCES */
-    'ref-tag': 'Base de Evidências',
-    'ref-title': 'Fontes e Referências',
-    'ref-sub': 'Todas as estatísticas e afirmações nesta página são respaldadas por pesquisas revisadas por pares, dados governamentais ou fontes institucionais confiáveis. As citações são fornecidas para total transparência.',
-    /* FOOTER */
-    'footer-by': 'Um projeto em andamento de Dani Neri',
-    'footer-tagline': 'Transparência de dados de saúde centrada no paciente · Feito com cuidado · © 2026',
+    "prog2-h4": "Marca e design",
+    "prog2-p": "Identidade visual, logo, paleta de cores e um sistema de design claro e adaptado a celulares.",
+    "prog-status-active": "⬤ Em Andamento",
+    "prog3-h4": "Trilha de prontuário para estudantes",
+    "prog3-p": "Aulas guiadas nas telas da equipe para recepção, faturamento e navegação clínica.",
+    "prog4-h4": "Testes com aprendizes",
+    "prog4-p": "Planejando as primeiras sessões com idosos para ver onde eles travam e corrigir.",
+    "prog-status-next": "→ Próximo",
+    "prog5-h4": "Prática em espanhol e português",
+    "prog5-p": "Tarefas guiadas e certificado de prática em espanhol e português.",
+    "prog6-h4": "Ferramentas para instrutores",
+    "prog6-p": "Ferramentas simples para professores e facilitadores, como códigos de turma e um jeito de ver quem concluiu.",
+    "prog7-h4": "Revisão de acessibilidade",
+    "prog7-p": "Uma revisão formal segundo as diretrizes de acessibilidade WCAG, incluindo testes com leitores de tela.",
+    "prog8-h4": "Parceiros comunitários e escolares",
+    "prog8-p": "Trabalhar com bibliotecas, serviços para idosos e programas de formação para levar a prática a mais pessoas.",
+    "ref-tag": "Base de Evidências",
+    "ref-title": "Fontes e Referências",
+    "ref-sub": "Todas as estatísticas e afirmações nesta página são respaldadas por pesquisas revisadas por pares, dados governamentais ou fontes institucionais confiáveis. As citações são fornecidas para total transparência.",
+    "footer-by": "Um projeto em andamento de Dani Neri",
+    "footer-tagline": "Prática para portais do paciente e prontuários eletrônicos · Feito com carinho · © 2026"
   }
 };
 
