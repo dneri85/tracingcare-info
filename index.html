@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content="Tracing Care is a hands-on practice platform that looks and works like a real patient portal and EHR. Every name and record is made up."/>
+<meta name="description" content="Tracing Care is a hands-on practice platform that looks and works like a real patient portal. Built first for older adults and the people who help them. Every name and record is made up."/>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Tracing Care, Patient Portal &amp; EHR Practice</title>
+<title>Tracing Care, Patient Portal Practice</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -381,17 +381,23 @@ footer strong { color: rgba(255,255,255,0.7); }
 .practice-cta .btn-primary { flex-shrink: 0; }
 
 @media (max-width: 1000px) {
-  .role-grid { grid-template-columns: repeat(2, 1fr); }
+  .role-grid, .role-grid.three { grid-template-columns: repeat(2, 1fr); }
   .phones { grid-template-columns: 1fr; gap: 48px; }
 }
 @media (max-width: 760px) {
   .practice-cta { flex-direction: column; align-items: flex-start; padding: 26px 22px; }
 }
 @media (max-width: 600px) {
-  .role-grid { grid-template-columns: 1fr; }
+  .role-grid, .role-grid.three { grid-template-columns: 1fr; }
 }
 
 /* ── TRAINING PROGRAM ADDITIONS ── */
+.badge-later { background: #F8FAFC; color: #475569; border: 1px solid #E2E8F0; }
+.role-grid.three { grid-template-columns: repeat(3, 1fr); }
+.practice-alt { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.3); padding-bottom: 1px; }
+.practice-alt:hover { border-color: #fff; }
+@media (max-width: 1000px) { .role-grid.three { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .role-grid.three { grid-template-columns: 1fr; } }
 .feature-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: .3px; white-space: nowrap; }
 .badge-live { background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
@@ -476,9 +482,9 @@ footer strong { color: rgba(255,255,255,0.7); }
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-tag"><span></span> <span data-i18n="hero-tag">Training Program · Patient Portal &amp; EHR Practice</span></div>
+  <div class="hero-tag"><span></span> <span data-i18n="hero-tag">Training Program · Patient Portal Practice</span></div>
   <h1 data-i18n="hero-h1">Practice health tech <em>safely.</em> Then use it with confidence.</h1>
-  <p data-i18n="hero-p">Tracing Care is a hands-on practice platform that looks and works like a real patient portal and EHR. Patients and families learn to find results, message their care team, and manage appointments. A track for students learning EHRs for school or work is in progress.</p>
+  <p data-i18n="hero-p">Tracing Care is a hands-on practice platform that looks and works like a real patient portal. It is built first for older adults and the people who help them: find results, message the care team, request refills, and manage appointments, step by step.</p>
   <div class="hero-cta">
     <a href="https://tracingcare-demo.vercel.app/practice" target="_blank" rel="noopener noreferrer" class="btn-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -511,9 +517,9 @@ footer strong { color: rgba(255,255,255,0.7); }
     <div class="stat-source"><a href="https://nces.ed.gov/pubs2006/2006483.pdf" target="_blank" rel="noreferrer">NCES, National Assessment of Adult Literacy</a></div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span>5.9 hrs</span></div>
-    <div class="stat-label" data-i18n="stat-4-label">Of a primary care doctor's 11.4-hour workday are spent in the EHR</div>
-    <div class="stat-source"><a href="https://www.annfammed.org/content/15/5/419" target="_blank" rel="noreferrer">Arndt et al., Annals of Family Medicine, 2017</a></div>
+    <div class="stat-num"><span>51%</span></div>
+    <div class="stat-label" data-i18n="stat-4-label">Of people used a portal on someone else's behalf in 2024, up from 24% in 2020</div>
+    <div class="stat-source"><a href="https://www.healthit.gov/sites/default/files/2025-06/2024-HINTS-Patient-Access-DB77_508.pdf" target="_blank" rel="noreferrer">ASTP Data Brief No. 77, 2025</a></div>
   </div>
 </div>
 
@@ -535,9 +541,9 @@ footer strong { color: rgba(255,255,255,0.7); }
         <p data-i18n="problem-2-p">In a real portal, every click touches real records. Fear of pressing the wrong button keeps people from trying, and from asking for help.</p>
       </div>
       <div class="problem-card">
-        <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
-        <h3 data-i18n="problem-3-title">Students learn EHRs late</h3>
-        <p data-i18n="problem-3-p">Nursing and allied health students often get view-only access during clinicals. Many new hires say they feel unprepared to work in an EHR on day one.</p>
+        <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3 data-i18n="problem-3-title">Families help without training</h3>
+        <p data-i18n="problem-3-p">Half of portal users now help someone else, often an aging parent or spouse. They learn the system on the fly, usually in the middle of a real health problem.</p>
       </div>
     </div>
   </div>
@@ -572,9 +578,9 @@ footer strong { color: rgba(255,255,255,0.7); }
       </ul>
     </div>
     <div class="feature-card">
-      <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><span class="badge badge-live" data-i18n="badge-live">Live</span></div>
+      <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><span class="badge badge-soon" data-i18n="badge-preview">Preview</span></div>
       <h3 data-i18n="f3-title">Care-Team Views</h3>
-      <p data-i18n="f3-p">Explore the other side of the screen: what clinical, billing, and front-office staff work with every day.</p>
+      <p data-i18n="f3-p">A look at the other side of the screen: what clinical, billing, and front-office staff work with. Open to explore now, and the base for the career track.</p>
       <ul class="feature-list">
         <li data-i18n="f3-l1">Command Center and patient census</li>
         <li data-i18n="f3-l2">Referrals and provider calendar</li>
@@ -583,14 +589,14 @@ footer strong { color: rgba(255,255,255,0.7); }
       </ul>
     </div>
     <div class="feature-card">
-      <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><span class="badge badge-soon" data-i18n="badge-soon">In progress</span></div>
-      <h3 data-i18n="f4-title">Student EHR Track</h3>
-      <p data-i18n="f4-p">Guided lessons for students and career changers learning EHR navigation for school or work, built on the same care-team screens.</p>
+      <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><span class="badge badge-later" data-i18n="badge-later">Coming later</span></div>
+      <h3 data-i18n="f4-title">Career Track</h3>
+      <p data-i18n="f4-p">After the patient track, guided training for people building careers in health care, using the same staff screens.</p>
       <ul class="feature-list">
         <li data-i18n="f4-l1">Front desk: check-in, scheduling, insurance</li>
         <li data-i18n="f4-l2">Billing: claims and denials</li>
         <li data-i18n="f4-l3">Clinical: finding charts, results, and referrals</li>
-        <li data-i18n="f4-l4">For medical assistant, health admin, and nursing students</li>
+        <li data-i18n="f4-l4">For future clinical, billing, and admin professionals</li>
       </ul>
     </div>
   </div>
@@ -869,43 +875,38 @@ footer strong { color: rgba(255,255,255,0.7); }
 <!-- LIVE DEMO -->
 <section id="demo">
   <div class="section-tag" data-i18n="demo-tag">Try It</div>
-  <h2 class="section-title" data-i18n="demo-title">Two ways to practice.<br/>No login needed.</h2>
-  <p class="section-sub" data-i18n="demo-sub">Start with guided practice if you're new to portals. Explore the care-team side to see what staff work with.</p>
+  <h2 class="section-title" data-i18n="demo-title">Start practicing today.<br/>No login needed.</h2>
+  <p class="section-sub" data-i18n="demo-sub">Guided practice walks you through six everyday portal tasks. Prefer to look around on your own? Open the portal without the helper.</p>
   <div class="practice-cta">
     <div class="practice-ico">🎓</div>
     <div class="practice-txt">
       <h3 data-i18n="practice-title">For patients and families: guided portal practice</h3>
       <p data-i18n="practice-p">A guided mode built for older adults and the people who help them. Six everyday tasks, like finding a test result or requesting a refill, with hints, bigger text, and a printable certificate of practice.</p>
+      <a class="practice-alt" href="https://tracingcare-demo.vercel.app/my-health?as=patient&amp;practice=0" target="_blank" rel="noopener noreferrer"><span data-i18n="practice-alt">Or explore Robin's portal on your own</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       <p class="practice-note" data-i18n="practice-note">A practice space with made-up information, not a medical record. Learners never enter their own details.</p>
     </div>
     <a class="btn-primary" href="https://tracingcare-demo.vercel.app/practice" target="_blank" rel="noopener noreferrer"><span data-i18n="practice-btn">Start Portal Practice</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
-  <h3 class="roles-h" data-i18n="demo-roles-h">Or explore freely by role</h3>
-  <p class="roles-note" data-i18n="demo-roles-note">Guided lessons for students on these screens are in progress.</p>
-  <div class="role-grid">
+  <h3 class="roles-h" data-i18n="demo-roles-h">Coming later: career training preview</h3>
+  <p class="roles-note" data-i18n="demo-roles-note">These staff screens will become a guided career track for clinical, billing, and admin learners. You can look around now.</p>
+  <div class="role-grid three">
     <a class="role" href="https://tracingcare-demo.vercel.app/overview?as=clinical" target="_blank" rel="noopener noreferrer">
       <div class="role-ico">🩺</div>
       <h3 data-i18n="role-1-title">Clinical Staff</h3>
       <p data-i18n="role-1-p">Command Center, patient census, referrals, and the provider calendar.</p>
-      <span class="role-go"><span data-i18n="role-open">Open demo</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      <span class="role-go"><span data-i18n="role-open">Look around</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
     </a>
     <a class="role" href="https://tracingcare-demo.vercel.app/overview?as=billing" target="_blank" rel="noopener noreferrer">
       <div class="role-ico">💳</div>
       <h3 data-i18n="role-2-title">Billing Team</h3>
       <p data-i18n="role-2-p">Claims queue, denials, prior authorizations, and the insurance and payer hub.</p>
-      <span class="role-go"><span data-i18n="role-open">Open demo</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      <span class="role-go"><span data-i18n="role-open">Look around</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
     </a>
     <a class="role" href="https://tracingcare-demo.vercel.app/overview?as=admin" target="_blank" rel="noopener noreferrer">
       <div class="role-ico">📊</div>
       <h3 data-i18n="role-3-title">Administrator</h3>
       <p data-i18n="role-3-p">Every staff view, plus analytics on revenue, patient flow, and compliance.</p>
-      <span class="role-go"><span data-i18n="role-open">Open demo</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-    </a>
-    <a class="role" href="https://tracingcare-demo.vercel.app/my-health?as=patient&amp;practice=0" target="_blank" rel="noopener noreferrer">
-      <div class="role-ico">🙂</div>
-      <h3 data-i18n="role-4-title">Patient</h3>
-      <p data-i18n="role-4-p">Robin Merriweather's portal: results, messages, refills, bills, and family helpers.</p>
-      <span class="role-go"><span data-i18n="role-open">Open demo</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      <span class="role-go"><span data-i18n="role-open">Look around</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
     </a>
   </div>
 </section>
@@ -914,7 +915,7 @@ footer strong { color: rgba(255,255,255,0.7); }
 <section>
   <div class="section-tag" data-i18n="comp-tag">Why Practice</div>
   <h2 class="section-title" data-i18n="comp-title">Learning on the real thing is stressful.<br/>It doesn't have to be.</h2>
-  <p class="section-sub" data-i18n="comp-sub">How practicing in Tracing Care compares with learning on a live portal or EHR.</p>
+  <p class="section-sub" data-i18n="comp-sub">How practicing in Tracing Care compares with learning on a live patient portal.</p>
   <div class="comparison-wrap">
     <div class="comparison-header">
       <div class="comp-col-head feature" data-i18n="comp-head-feature">What learners need</div>
@@ -929,7 +930,7 @@ footer strong { color: rgba(255,255,255,0.7); }
     <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r3-a">Shows where to click</div><div class="comp-cell yes" data-i18n="comp-r3-b">✓ "Show me where" button</div><div class="comp-cell no" data-i18n="comp-r3-c">✗ Not available</div></div>
     <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r4-a">Bigger text on demand</div><div class="comp-cell yes" data-i18n="comp-r4-b">✓ One tap</div><div class="comp-cell partial" data-i18n="comp-r4-c">~ Depends on the system</div></div>
     <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r5-a">Start over anytime</div><div class="comp-cell yes" data-i18n="comp-r5-b">✓ Reset for the next learner</div><div class="comp-cell no" data-i18n="comp-r5-c">✗ Changes are permanent</div></div>
-    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r6-a">Practice the staff side</div><div class="comp-cell yes" data-i18n="comp-r6-b">✓ Clinical, billing, admin views</div><div class="comp-cell partial" data-i18n="comp-r6-c">~ Usually only after hiring</div></div>
+    <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r6-a">Practice helping a loved one</div><div class="comp-cell yes" data-i18n="comp-r6-b">✓ Add a family helper, safely</div><div class="comp-cell partial" data-i18n="comp-r6-c">~ Set up for real the first time</div></div>
     <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r7-a">Proof of practice</div><div class="comp-cell yes" data-i18n="comp-r7-b">✓ Printable certificate of practice</div><div class="comp-cell no" data-i18n="comp-r7-c">✗ None</div></div>
     <div class="comp-row"><div class="comp-cell feature-name" data-i18n="comp-r8-a">Real-world safety tips</div><div class="comp-cell yes" data-i18n="comp-r8-b">✓ Built into each task</div><div class="comp-cell partial" data-i18n="comp-r8-c">~ Rarely explained</div></div>
   </div>
@@ -940,7 +941,7 @@ footer strong { color: rgba(255,255,255,0.7); }
   <div class="manifesto-inner">
     <div class="section-tag" style="color:var(--teal-400)" data-i18n="manifesto-tag">Our Approach</div>
     <h2 data-i18n="manifesto-h2">Confidence comes from <em>practice.</em><br/>Not from a manual.</h2>
-    <p data-i18n="manifesto-p1">Most people learn health technology the hard way: alone, in a hurry, with their own records on the screen. Tracing Care gives them a calm place to learn first, so the real visit, the real bill, or the first day on the job feels familiar.</p>
+    <p data-i18n="manifesto-p1">Most people learn health technology the hard way: alone, in a hurry, with their own records on the screen. Tracing Care gives them a calm place to learn first, so the real portal, the real results, and the real bill feel familiar.</p>
     <p data-i18n="manifesto-p2">Patients have a right to see their health information. Knowing how to use it is what makes that right real.</p>
     <div class="manifesto-divider"></div>
     <div class="principle-grid">
@@ -1006,14 +1007,14 @@ footer strong { color: rgba(255,255,255,0.7); }
       <div class="progress-card active">
         <div class="progress-dot dot-active"></div>
         <div class="progress-status status-active" data-i18n="prog-status-active">⬤ In Progress</div>
-        <h4 data-i18n="prog3-h4">Student EHR Track</h4>
-        <p data-i18n="prog3-p">Guided lessons on the care-team screens for front desk, billing, and clinical navigation.</p>
-      </div>
-      <div class="progress-card active">
-        <div class="progress-dot dot-active"></div>
-        <div class="progress-status status-active" data-i18n="prog-status-active">⬤ In Progress</div>
         <h4 data-i18n="prog4-h4">Learner Testing</h4>
         <p data-i18n="prog4-p">Planning first sessions with older adult learners to see where they get stuck and fix it.</p>
+      </div>
+      <div class="progress-card next">
+        <div class="progress-dot dot-next"></div>
+        <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
+        <h4 data-i18n="prog3-h4">More Patient Lessons</h4>
+        <p data-i18n="prog3-p">New practice tasks, like reading a bill line by line, checking in for a video visit, and updating a pharmacy.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
@@ -1024,8 +1025,8 @@ footer strong { color: rgba(255,255,255,0.7); }
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
-        <h4 data-i18n="prog6-h4">Instructor Tools</h4>
-        <p data-i18n="prog6-p">Simple tools for teachers and workshop leaders, like class codes and a way to see who finished.</p>
+        <h4 data-i18n="prog6-h4">Workshop Tools</h4>
+        <p data-i18n="prog6-p">Simple tools for library and community workshop leaders, like a printable handout and a quick reset between learners.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
@@ -1035,9 +1036,9 @@ footer strong { color: rgba(255,255,255,0.7); }
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
-        <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
-        <h4 data-i18n="prog8-h4">Community &amp; School Partners</h4>
-        <p data-i18n="prog8-p">Working with libraries, aging services, and training programs to bring practice to more learners.</p>
+        <div class="progress-status status-next" data-i18n="prog-status-later">◷ Later</div>
+        <h4 data-i18n="prog8-h4">Career Track</h4>
+        <p data-i18n="prog8-p">Guided training on the staff screens for future clinical, billing, and admin professionals.</p>
       </div>
     </div>
   </div>
@@ -1078,35 +1079,8 @@ footer strong { color: rgba(255,255,255,0.7); }
         <div class="ref-link"><a href="https://nces.ed.gov/pubs2006/2006483.pdf" target="_blank" rel="noreferrer">nces.ed.gov/pubs2006/2006483.pdf</a></div>
       </div>
       <div class="ref-card">
-        <div class="ref-badge">Peer-Reviewed · Annals of Family Medicine 2017</div>
-        <div class="ref-num">04: EHR Skills Shape the Workday</div>
-        <div class="ref-title">Tethered to the EHR: Primary Care Physician Workload Assessment Using EHR Event Log Data and Time-Motion Observations</div>
-        <div class="ref-authors">Arndt BG, Beasley JW, Watkinson MD, Temte JL, Tuan WJ, Sinsky CA, Gilchrist VJ.</div>
-        <div class="ref-journal">Ann Fam Med. 2017;15(5):419-426. doi:10.1370/afm.2121</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Primary care physicians spent <strong>5.9 hours of an 11.4-hour workday in the EHR</strong>, with about two-thirds of that time on clerical work and inbox management.</p>
-        <div class="ref-link"><a href="https://www.annfammed.org/content/15/5/419" target="_blank" rel="noreferrer">annfammed.org/content/15/5/419</a></div>
-      </div>
-      <div class="ref-card">
-        <div class="ref-badge">Professional Journal · American Journal of Nursing 2023</div>
-        <div class="ref-num">05: Students Get Little EHR Practice</div>
-        <div class="ref-title">Preparing Nurses to Use Electronic Health Records</div>
-        <div class="ref-authors">Velez K, John J.</div>
-        <div class="ref-journal">American Journal of Nursing. April 2023.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Nurse informaticists who onboard 200+ new hires a month report that students often get <strong>view-only EHR access during clinical rotations</strong>, and many new graduates feel unprepared to document. The authors recommend academic EHR practice tools.</p>
-        <div class="ref-link"><a href="https://www.qgdigitalpublishing.com/article/Preparing+Nurses+to+Use+Electronic+Health+Records/4536959/786229/article.html" target="_blank" rel="noreferrer">American Journal of Nursing, April 2023</a></div>
-      </div>
-      <div class="ref-card">
-        <div class="ref-badge">Government · Bureau of Labor Statistics</div>
-        <div class="ref-num">06: Growing Demand for EHR Users</div>
-        <div class="ref-title">Occupational Outlook Handbook: Medical Assistants</div>
-        <div class="ref-authors">U.S. Bureau of Labor Statistics.</div>
-        <div class="ref-journal">Employment projections 2025 to 2035.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Medical assistant jobs are projected to grow <strong>13% from 2025 to 2035</strong>, much faster than average, with about 109,700 openings a year. Duties include entering patient information into medical records and helping with billing.</p>
-        <div class="ref-link"><a href="https://www.bls.gov/OOH/healthcare/medical-assistants.htm" target="_blank" rel="noreferrer">bls.gov, Medical Assistants</a></div>
-      </div>
-      <div class="ref-card">
         <div class="ref-badge">Government · HHS / ONC</div>
-        <div class="ref-num">07: Patients' Right to Their Data</div>
+        <div class="ref-num">04: Patients' Right to Their Data</div>
         <div class="ref-title">Information Blocking Rule, 21st Century Cures Act (45 CFR Part 171)</div>
         <div class="ref-authors">U.S. Department of Health &amp; Human Services, Office of the National Coordinator for Health IT.</div>
         <div class="ref-journal">Enforced April 5, 2021. Updated 2024.</div>
@@ -1128,13 +1102,17 @@ footer strong { color: rgba(255,255,255,0.7); }
     <span class="nav-wordmark">Tracing Care</span>
   </div>
   <p><strong data-i18n="footer-by">An ongoing project by Dani Neri</strong></p>
-  <p style="margin-top:8px" data-i18n="footer-tagline">Hands-on practice for patient portals and EHRs · Built with care · © 2026</p>
+  <p style="margin-top:8px" data-i18n="footer-tagline">Hands-on patient portal practice · Built with care · © 2026</p>
   <p style="margin-top:8px"><a href="mailto:daniza.neri@gmail.com" style="color:rgba(255,255,255,0.4);text-decoration:none;">daniza.neri@gmail.com</a></p>
 </footer>
 
 <script>
 const translations = {
   en: {
+    "prog-status-later": "◷ Later",
+    "practice-alt": "Or explore Robin's portal on your own",
+    "badge-later": "Coming later",
+    "badge-preview": "Preview",
     "nav-problem": "The Need",
     "nav-solution": "How It Works",
     "nav-platform": "Platform",
@@ -1143,9 +1121,9 @@ const translations = {
     "nav-progress": "Roadmap",
     "nav-sources": "Sources",
     "nav-badge": "In Development",
-    "hero-tag": "Training Program · Patient Portal &amp; EHR Practice",
+    "hero-tag": "Training Program · Patient Portal Practice",
     "hero-h1": "Practice health tech <em>safely.</em> Then use it with confidence.",
-    "hero-p": "Tracing Care is a hands-on practice platform that looks and works like a real patient portal and EHR. Patients and families learn to find results, message their care team, and manage appointments. A track for students learning EHRs for school or work is in progress.",
+    "hero-p": "Tracing Care is a hands-on practice platform that looks and works like a real patient portal. It is built first for older adults and the people who help them: find results, message the care team, request refills, and manage appointments, step by step.",
     "hero-btn-demo": "Start Portal Practice",
     "hero-btn-primary": "Explore the Demo",
     "hero-btn-ghost": "How It Works →",
@@ -1153,7 +1131,7 @@ const translations = {
     "stat-1-label": "Of people were offered online access to their medical records in 2024",
     "stat-2-label": "Of adults 50 to 80 who don't use a portal aren't confident they could log in and get around",
     "stat-3-label": "Of adults 65 and older have basic or below-basic health literacy",
-    "stat-4-label": "Of a primary care doctor's 11.4-hour workday are spent in the EHR",
+    "stat-4-label": "Of people used a portal on someone else's behalf in 2024, up from 24% in 2020",
     "problem-tag": "The Need",
     "problem-title": "Health care moved online.<br/>Not everyone was shown how.",
     "problem-sub": "Results, refills, bills, and messages now live in portals and electronic records. Most people are expected to figure them out alone, and the first try usually happens with their real health information on the line.",
@@ -1161,8 +1139,8 @@ const translations = {
     "problem-1-p": "Portals ask people to find results, request refills, and pay bills on their own. Many older adults were never shown how, and some avoid portals altogether.",
     "problem-2-title": "No safe place to practice",
     "problem-2-p": "In a real portal, every click touches real records. Fear of pressing the wrong button keeps people from trying, and from asking for help.",
-    "problem-3-title": "Students learn EHRs late",
-    "problem-3-p": "Nursing and allied health students often get view-only access during clinicals. Many new hires say they feel unprepared to work in an EHR on day one.",
+    "problem-3-title": "Families help without training",
+    "problem-3-p": "Half of portal users now help someone else, often an aging parent or spouse. They learn the system on the fly, usually in the middle of a real health problem.",
     "solution-tag": "How It Works",
     "solution-title": "Real screens. Made-up records.<br/>Step-by-step guidance.",
     "solution-sub": "Tracing Care recreates the tools people meet in real health care, then adds the support a real system never gives you: hints, plain language, and room to make mistakes.",
@@ -1180,18 +1158,18 @@ const translations = {
     "f2-l3": "Billing, documents, and care team",
     "f2-l4": "Works on computers, tablets, and phones",
     "f3-title": "Care-Team Views",
-    "f3-p": "Explore the other side of the screen: what clinical, billing, and front-office staff work with every day.",
+    "f3-p": "A look at the other side of the screen: what clinical, billing, and front-office staff work with. Open to explore now, and the base for the career track.",
     "f3-l1": "Command Center and patient census",
     "f3-l2": "Referrals and provider calendar",
     "f3-l3": "Claims, denials, and prior authorizations",
     "f3-l4": "Analytics for administrators",
     "badge-soon": "In progress",
-    "f4-title": "Student EHR Track",
-    "f4-p": "Guided lessons for students and career changers learning EHR navigation for school or work, built on the same care-team screens.",
+    "f4-title": "Career Track",
+    "f4-p": "After the patient track, guided training for people building careers in health care, using the same staff screens.",
     "f4-l1": "Front desk: check-in, scheduling, insurance",
     "f4-l2": "Billing: claims and denials",
     "f4-l3": "Clinical: finding charts, results, and referrals",
-    "f4-l4": "For medical assistant, health admin, and nursing students",
+    "f4-l4": "For future clinical, billing, and admin professionals",
     "showcase-tag": "The Platform",
     "showcase-title": "Looks like the real thing.<br/>Safe to practice on.",
     "showcase-sub": "Familiar layouts, plain language, and clear labels, so the skills carry over to the portal at a learner's own doctor's office.",
@@ -1209,17 +1187,17 @@ const translations = {
     "phone-3-label": "Guided Practice",
     "phone-3-sub": "A helper walks learners through each task and shows where to click",
     "demo-tag": "Try It",
-    "demo-title": "Two ways to practice.<br/>No login needed.",
-    "demo-sub": "Start with guided practice if you're new to portals. Explore the care-team side to see what staff work with.",
+    "demo-title": "Start practicing today.<br/>No login needed.",
+    "demo-sub": "Guided practice walks you through six everyday portal tasks. Prefer to look around on your own? Open the portal without the helper.",
     "practice-title": "For patients and families: guided portal practice",
     "practice-p": "A guided mode built for older adults and the people who help them. Six everyday tasks, like finding a test result or requesting a refill, with hints, bigger text, and a printable certificate of practice.",
     "practice-note": "A practice space with made-up information, not a medical record. Learners never enter their own details.",
     "practice-btn": "Start Portal Practice",
-    "demo-roles-h": "Or explore freely by role",
-    "demo-roles-note": "Guided lessons for students on these screens are in progress.",
+    "demo-roles-h": "Coming later: career training preview",
+    "demo-roles-note": "These staff screens will become a guided career track for clinical, billing, and admin learners. You can look around now.",
     "role-1-title": "Clinical Staff",
     "role-1-p": "Command Center, patient census, referrals, and the provider calendar.",
-    "role-open": "Open demo",
+    "role-open": "Look around",
     "role-2-title": "Billing Team",
     "role-2-p": "Claims queue, denials, prior authorizations, and the insurance and payer hub.",
     "role-3-title": "Administrator",
@@ -1228,7 +1206,7 @@ const translations = {
     "role-4-p": "Robin Merriweather's portal: results, messages, refills, bills, and family helpers.",
     "comp-tag": "Why Practice",
     "comp-title": "Learning on the real thing is stressful.<br/>It doesn't have to be.",
-    "comp-sub": "How practicing in Tracing Care compares with learning on a live portal or EHR.",
+    "comp-sub": "How practicing in Tracing Care compares with learning on a live patient portal.",
     "comp-head-feature": "What learners need",
     "comp-head-status": "Learning on a live system",
     "comp-r1-a": "Safe to make mistakes",
@@ -1246,9 +1224,9 @@ const translations = {
     "comp-r5-a": "Start over anytime",
     "comp-r5-b": "✓ Reset for the next learner",
     "comp-r5-c": "✗ Changes are permanent",
-    "comp-r6-a": "Practice the staff side",
-    "comp-r6-b": "✓ Clinical, billing, admin views",
-    "comp-r6-c": "~ Usually only after hiring",
+    "comp-r6-a": "Practice helping a loved one",
+    "comp-r6-b": "✓ Add a family helper, safely",
+    "comp-r6-c": "~ Set up for real the first time",
     "comp-r7-a": "Proof of practice",
     "comp-r7-b": "✓ Printable certificate of practice",
     "comp-r7-c": "✗ None",
@@ -1257,7 +1235,7 @@ const translations = {
     "comp-r8-c": "~ Rarely explained",
     "manifesto-tag": "Our Approach",
     "manifesto-h2": "Confidence comes from <em>practice.</em><br/>Not from a manual.",
-    "manifesto-p1": "Most people learn health technology the hard way: alone, in a hurry, with their own records on the screen. Tracing Care gives them a calm place to learn first, so the real visit, the real bill, or the first day on the job feels familiar.",
+    "manifesto-p1": "Most people learn health technology the hard way: alone, in a hurry, with their own records on the screen. Tracing Care gives them a calm place to learn first, so the real portal, the real results, and the real bill feel familiar.",
     "manifesto-p2": "Patients have a right to see their health information. Knowing how to use it is what makes that right real.",
     "p1-title": "Safe to make mistakes",
     "p1-p": "Nothing in Tracing Care is real, so learners can click, explore, and get it wrong without consequences. That's how confidence starts.",
@@ -1282,26 +1260,30 @@ const translations = {
     "prog2-h4": "Brand &amp; Design",
     "prog2-p": "Visual identity, logo, color palette, and a clear, phone-friendly design system.",
     "prog-status-active": "⬤ In Progress",
-    "prog3-h4": "Student EHR Track",
-    "prog3-p": "Guided lessons on the care-team screens for front desk, billing, and clinical navigation.",
+    "prog3-h4": "More Patient Lessons",
+    "prog3-p": "New practice tasks, like reading a bill line by line, checking in for a video visit, and updating a pharmacy.",
     "prog4-h4": "Learner Testing",
     "prog4-p": "Planning first sessions with older adult learners to see where they get stuck and fix it.",
     "prog-status-next": "→ Up Next",
     "prog5-h4": "Spanish &amp; Portuguese Practice",
     "prog5-p": "Guided tasks and the certificate of practice in Spanish and Portuguese.",
-    "prog6-h4": "Instructor Tools",
-    "prog6-p": "Simple tools for teachers and workshop leaders, like class codes and a way to see who finished.",
+    "prog6-h4": "Workshop Tools",
+    "prog6-p": "Simple tools for library and community workshop leaders, like a printable handout and a quick reset between learners.",
     "prog7-h4": "Accessibility Review",
     "prog7-p": "A formal check against WCAG accessibility guidelines, including screen reader testing.",
-    "prog8-h4": "Community &amp; School Partners",
-    "prog8-p": "Working with libraries, aging services, and training programs to bring practice to more learners.",
+    "prog8-h4": "Career Track",
+    "prog8-p": "Guided training on the staff screens for future clinical, billing, and admin professionals.",
     "ref-tag": "Evidence Base",
     "ref-title": "Sources &amp; References",
     "ref-sub": "All statistics and claims on this page are supported by peer-reviewed research, government data, or credible institutional sources. Citations are provided for full transparency.",
     "footer-by": "An ongoing project by Dani Neri",
-    "footer-tagline": "Hands-on practice for patient portals and EHRs · Built with care · © 2026"
+    "footer-tagline": "Hands-on patient portal practice · Built with care · © 2026"
   },
   es: {
+    "prog-status-later": "◷ Más adelante",
+    "practice-alt": "O explora el portal de Robin por tu cuenta",
+    "badge-later": "Más adelante",
+    "badge-preview": "Vista previa",
     "nav-problem": "La necesidad",
     "nav-solution": "Cómo funciona",
     "nav-platform": "Plataforma",
@@ -1310,9 +1292,9 @@ const translations = {
     "nav-progress": "Hoja de ruta",
     "nav-sources": "Fuentes",
     "nav-badge": "En Desarrollo",
-    "hero-tag": "Programa de capacitación · Práctica de portal del paciente y EHR",
+    "hero-tag": "Programa de capacitación · Práctica del portal del paciente",
     "hero-h1": "Practica la tecnología de salud <em>sin riesgos.</em> Luego úsala con confianza.",
-    "hero-p": "Tracing Care es una plataforma de práctica que se ve y funciona como un portal del paciente y un EHR reales. Pacientes y familias aprenden a encontrar resultados, escribir a su equipo de atención y manejar citas. Una ruta para estudiantes que aprenden EHR para la escuela o el trabajo está en desarrollo.",
+    "hero-p": "Tracing Care es una plataforma de práctica que se ve y funciona como un portal del paciente real. Está hecha primero para adultos mayores y quienes los ayudan: encontrar resultados, escribir al equipo de atención, pedir resurtidos y manejar citas, paso a paso.",
     "hero-btn-demo": "Empezar la práctica",
     "hero-btn-primary": "Explorar la demo",
     "hero-btn-ghost": "Cómo funciona →",
@@ -1320,7 +1302,7 @@ const translations = {
     "stat-1-label": "De las personas recibieron acceso en línea a sus expedientes médicos en 2024",
     "stat-2-label": "De los adultos de 50 a 80 años que no usan un portal no se sienten seguros de poder entrar y navegarlo",
     "stat-3-label": "De los adultos de 65 años o más tienen una alfabetización en salud básica o inferior",
-    "stat-4-label": "De la jornada de 11.4 horas de un médico de atención primaria se pasan en el EHR",
+    "stat-4-label": "De las personas usaron un portal en nombre de otra en 2024, frente al 24% en 2020",
     "problem-tag": "La necesidad",
     "problem-title": "La atención médica se mudó a internet.<br/>No a todos les enseñaron cómo.",
     "problem-sub": "Resultados, resurtidos, facturas y mensajes ahora viven en portales y expedientes electrónicos. A la mayoría se le pide que los descifre sola, y el primer intento suele ser con su información de salud real en juego.",
@@ -1328,8 +1310,8 @@ const translations = {
     "problem-1-p": "Los portales piden encontrar resultados, pedir resurtidos y pagar facturas por cuenta propia. A muchos adultos mayores nunca les enseñaron cómo, y algunos evitan los portales por completo.",
     "problem-2-title": "No hay un lugar seguro para practicar",
     "problem-2-p": "En un portal real, cada clic toca registros reales. El miedo a presionar el botón equivocado impide intentarlo, y también pedir ayuda.",
-    "problem-3-title": "Los estudiantes aprenden EHR tarde",
-    "problem-3-p": "Los estudiantes de enfermería y ciencias de la salud a menudo solo pueden ver los expedientes durante sus prácticas. Muchos recién contratados dicen sentirse poco preparados para usar un EHR desde el primer día.",
+    "problem-3-title": "Las familias ayudan sin capacitación",
+    "problem-3-p": "La mitad de quienes usan portales ahora ayudan a otra persona, a menudo a un padre mayor o a su pareja. Aprenden el sistema sobre la marcha, casi siempre en medio de un problema de salud real.",
     "solution-tag": "Cómo funciona",
     "solution-title": "Pantallas reales. Registros ficticios.<br/>Guía paso a paso.",
     "solution-sub": "Tracing Care recrea las herramientas que la gente encuentra en la atención médica real y añade el apoyo que un sistema real nunca da: pistas, lenguaje sencillo y espacio para equivocarse.",
@@ -1347,18 +1329,18 @@ const translations = {
     "f2-l3": "Facturación, documentos y equipo de atención",
     "f2-l4": "Funciona en computadoras, tabletas y teléfonos",
     "f3-title": "Vistas del equipo de atención",
-    "f3-p": "Explora el otro lado de la pantalla: con qué trabaja a diario el personal clínico, de facturación y de recepción.",
+    "f3-p": "Un vistazo al otro lado de la pantalla: con qué trabaja el personal clínico, de facturación y de recepción. Ya se puede explorar y será la base de la ruta profesional.",
     "f3-l1": "Centro de mando y censo de pacientes",
     "f3-l2": "Referidos y calendario de proveedores",
     "f3-l3": "Reclamos, denegaciones y autorizaciones previas",
     "f3-l4": "Análisis para administradores",
     "badge-soon": "En desarrollo",
-    "f4-title": "Ruta de EHR para estudiantes",
-    "f4-p": "Lecciones guiadas para estudiantes y personas que cambian de carrera y aprenden a navegar un EHR para la escuela o el trabajo, sobre las mismas pantallas del equipo de atención.",
+    "f4-title": "Ruta profesional",
+    "f4-p": "Después de la ruta para pacientes, capacitación guiada para quienes construyen una carrera en salud, con las mismas pantallas del personal.",
     "f4-l1": "Recepción: registro, citas y seguros",
     "f4-l2": "Facturación: reclamos y denegaciones",
     "f4-l3": "Clínica: encontrar expedientes, resultados y referidos",
-    "f4-l4": "Para estudiantes de asistente médico, administración de salud y enfermería",
+    "f4-l4": "Para futuros profesionales clínicos, de facturación y administración",
     "showcase-tag": "La Plataforma",
     "showcase-title": "Se ve como el real.<br/>Seguro para practicar.",
     "showcase-sub": "Diseños conocidos, lenguaje sencillo y etiquetas claras, para que lo aprendido sirva en el portal del consultorio de cada persona.",
@@ -1376,17 +1358,17 @@ const translations = {
     "phone-3-label": "Práctica guiada",
     "phone-3-sub": "Un ayudante guía cada tarea y muestra dónde hacer clic",
     "demo-tag": "Pruébalo",
-    "demo-title": "Dos formas de practicar.<br/>Sin iniciar sesión.",
-    "demo-sub": "Empieza con la práctica guiada si eres nuevo en los portales. Explora el lado del equipo de atención para ver con qué trabaja el personal.",
+    "demo-title": "Empieza a practicar hoy.<br/>Sin iniciar sesión.",
+    "demo-sub": "La práctica guiada te lleva por seis tareas cotidianas del portal. ¿Prefieres mirar por tu cuenta? Abre el portal sin el ayudante.",
     "practice-title": "Para pacientes y familias: práctica guiada del portal",
     "practice-p": "Un modo guiado pensado para adultos mayores y quienes los ayudan. Seis tareas cotidianas, como encontrar un resultado o pedir un resurtido, con pistas, letra más grande y un certificado de práctica para imprimir.",
     "practice-note": "Un espacio de práctica con información ficticia, no un expediente médico. Nadie escribe sus datos reales.",
     "practice-btn": "Empezar la práctica",
-    "demo-roles-h": "O explora libremente por rol",
-    "demo-roles-note": "Las lecciones guiadas para estudiantes en estas pantallas están en desarrollo.",
+    "demo-roles-h": "Más adelante: vista previa de la capacitación profesional",
+    "demo-roles-note": "Estas pantallas del personal serán una ruta profesional guiada para estudiantes clínicos, de facturación y administración. Ya puedes explorarlas.",
     "role-1-title": "Personal clínico",
     "role-1-p": "Centro de mando, censo de pacientes, referidos y calendario de proveedores.",
-    "role-open": "Abrir demo",
+    "role-open": "Echar un vistazo",
     "role-2-title": "Equipo de facturación",
     "role-2-p": "Cola de reclamos, denegaciones, autorizaciones previas y el centro de seguros y pagadores.",
     "role-3-title": "Administración",
@@ -1395,7 +1377,7 @@ const translations = {
     "role-4-p": "El portal de Robin Merriweather: resultados, mensajes, resurtidos, facturas y ayudantes familiares.",
     "comp-tag": "Por qué practicar",
     "comp-title": "Aprender en el sistema real estresa.<br/>No tiene por qué ser así.",
-    "comp-sub": "Cómo se compara practicar en Tracing Care con aprender en un portal o EHR real.",
+    "comp-sub": "Cómo se compara practicar en Tracing Care con aprender en un portal del paciente real.",
     "comp-head-feature": "Lo que se necesita",
     "comp-head-status": "Aprender en un sistema real",
     "comp-r1-a": "Seguro para equivocarse",
@@ -1413,9 +1395,9 @@ const translations = {
     "comp-r5-a": "Empezar de nuevo cuando quieras",
     "comp-r5-b": "✓ Se reinicia para la siguiente persona",
     "comp-r5-c": "✗ Los cambios son permanentes",
-    "comp-r6-a": "Practicar el lado del personal",
-    "comp-r6-b": "✓ Vistas clínica, de facturación y administración",
-    "comp-r6-c": "~ Por lo general solo al ser contratado",
+    "comp-r6-a": "Practicar cómo ayudar a un ser querido",
+    "comp-r6-b": "✓ Agregar a un familiar como ayudante, sin riesgo",
+    "comp-r6-c": "~ Se configura de verdad la primera vez",
     "comp-r7-a": "Constancia de práctica",
     "comp-r7-b": "✓ Certificado de práctica para imprimir",
     "comp-r7-c": "✗ Ninguna",
@@ -1424,7 +1406,7 @@ const translations = {
     "comp-r8-c": "~ Rara vez se explican",
     "manifesto-tag": "Nuestro enfoque",
     "manifesto-h2": "La confianza viene de <em>practicar.</em><br/>No de un manual.",
-    "manifesto-p1": "La mayoría aprende la tecnología de salud por las malas: sola, con prisa y con su propio expediente en pantalla. Tracing Care ofrece un lugar tranquilo para aprender primero, para que la consulta real, la factura real o el primer día de trabajo se sientan conocidos.",
+    "manifesto-p1": "La mayoría aprende la tecnología de salud por las malas: sola, con prisa y con su propio expediente en pantalla. Tracing Care ofrece un lugar tranquilo para aprender primero, para que el portal real, los resultados reales y la factura real se sientan conocidos.",
     "manifesto-p2": "Los pacientes tienen derecho a ver su información de salud. Saber usarla es lo que hace real ese derecho.",
     "p1-title": "Seguro para equivocarse",
     "p1-p": "Nada en Tracing Care es real, así que se puede hacer clic, explorar y equivocarse sin consecuencias. Así empieza la confianza.",
@@ -1449,26 +1431,30 @@ const translations = {
     "prog2-h4": "Marca y diseño",
     "prog2-p": "Identidad visual, logo, paleta de colores y un sistema de diseño claro y apto para teléfonos.",
     "prog-status-active": "⬤ En Progreso",
-    "prog3-h4": "Ruta de EHR para estudiantes",
-    "prog3-p": "Lecciones guiadas en las pantallas del equipo de atención para recepción, facturación y navegación clínica.",
+    "prog3-h4": "Más lecciones para pacientes",
+    "prog3-p": "Nuevas tareas de práctica, como leer una factura línea por línea, registrarse para una videoconsulta y cambiar de farmacia.",
     "prog4-h4": "Pruebas con aprendices",
     "prog4-p": "Planeando las primeras sesiones con adultos mayores para ver dónde se atoran y corregirlo.",
     "prog-status-next": "→ Próximo",
     "prog5-h4": "Práctica en español y portugués",
     "prog5-p": "Tareas guiadas y certificado de práctica en español y portugués.",
-    "prog6-h4": "Herramientas para instructores",
-    "prog6-p": "Herramientas sencillas para docentes y facilitadores, como códigos de clase y una forma de ver quién terminó.",
+    "prog6-h4": "Herramientas para talleres",
+    "prog6-p": "Herramientas sencillas para quienes dan talleres en bibliotecas y comunidades, como una guía para imprimir y un reinicio rápido entre personas.",
     "prog7-h4": "Revisión de accesibilidad",
     "prog7-p": "Una revisión formal según las pautas de accesibilidad WCAG, incluidas pruebas con lectores de pantalla.",
-    "prog8-h4": "Socios comunitarios y escolares",
-    "prog8-p": "Trabajar con bibliotecas, servicios para adultos mayores y programas de formación para llevar la práctica a más personas.",
+    "prog8-h4": "Ruta profesional",
+    "prog8-p": "Capacitación guiada en las pantallas del personal para futuros profesionales clínicos, de facturación y administración.",
     "ref-tag": "Base de Evidencia",
     "ref-title": "Fuentes y Referencias",
     "ref-sub": "Todas las estadísticas y afirmaciones en esta página están respaldadas por investigaciones revisadas por pares, datos gubernamentales o fuentes institucionales creíbles. Se proporcionan citas para total transparencia.",
     "footer-by": "Un proyecto en curso de Dani Neri",
-    "footer-tagline": "Práctica para portales del paciente y EHR · Hecho con cuidado · © 2026"
+    "footer-tagline": "Práctica del portal del paciente · Hecho con cuidado · © 2026"
   },
   pt: {
+    "prog-status-later": "◷ Depois",
+    "practice-alt": "Ou explore o portal de Robin por conta própria",
+    "badge-later": "Em breve",
+    "badge-preview": "Prévia",
     "nav-problem": "A necessidade",
     "nav-solution": "Como funciona",
     "nav-platform": "Plataforma",
@@ -1477,9 +1463,9 @@ const translations = {
     "nav-progress": "Roteiro",
     "nav-sources": "Fontes",
     "nav-badge": "Em Desenvolvimento",
-    "hero-tag": "Programa de treinamento · Prática de portal do paciente e prontuário eletrônico",
+    "hero-tag": "Programa de treinamento · Prática do portal do paciente",
     "hero-h1": "Pratique a tecnologia de saúde <em>sem riscos.</em> Depois use com confiança.",
-    "hero-p": "O Tracing Care é uma plataforma de prática que parece e funciona como um portal do paciente e um prontuário eletrônico reais. Pacientes e famílias aprendem a encontrar resultados, falar com a equipe de saúde e gerenciar consultas. Uma trilha para estudantes que aprendem prontuários eletrônicos para a escola ou o trabalho está em desenvolvimento.",
+    "hero-p": "O Tracing Care é uma plataforma de prática que parece e funciona como um portal do paciente real. Foi feita primeiro para idosos e para quem os ajuda: encontrar resultados, falar com a equipe de saúde, pedir renovações e gerenciar consultas, passo a passo.",
     "hero-btn-demo": "Começar a prática",
     "hero-btn-primary": "Explorar a demo",
     "hero-btn-ghost": "Como funciona →",
@@ -1487,7 +1473,7 @@ const translations = {
     "stat-1-label": "Das pessoas receberam acesso online aos seus prontuários em 2024",
     "stat-2-label": "Dos adultos de 50 a 80 anos que não usam um portal não se sentem seguros para entrar e navegar",
     "stat-3-label": "Dos adultos com 65 anos ou mais têm letramento em saúde básico ou abaixo do básico",
-    "stat-4-label": "Da jornada de 11,4 horas de um médico de atenção primária são gastas no prontuário eletrônico",
+    "stat-4-label": "Das pessoas usaram um portal em nome de outra em 2024, contra 24% em 2020",
     "problem-tag": "A necessidade",
     "problem-title": "A saúde foi para a internet.<br/>Nem todos aprenderam como.",
     "problem-sub": "Resultados, renovações, contas e mensagens agora ficam em portais e prontuários eletrônicos. A maioria das pessoas precisa descobrir sozinha, e a primeira tentativa costuma acontecer com suas informações de saúde reais em jogo.",
@@ -1495,8 +1481,8 @@ const translations = {
     "problem-1-p": "Os portais pedem que as pessoas encontrem resultados, peçam renovações e paguem contas por conta própria. Muitos idosos nunca aprenderam como, e alguns evitam os portais completamente.",
     "problem-2-title": "Não há um lugar seguro para praticar",
     "problem-2-p": "Num portal real, cada clique mexe em registros reais. O medo de apertar o botão errado impede as pessoas de tentar, e de pedir ajuda.",
-    "problem-3-title": "Estudantes aprendem prontuário eletrônico tarde",
-    "problem-3-p": "Estudantes de enfermagem e da área da saúde muitas vezes só podem visualizar os prontuários nos estágios. Muitos recém-contratados dizem se sentir despreparados para usar um prontuário eletrônico no primeiro dia.",
+    "problem-3-title": "As famílias ajudam sem treinamento",
+    "problem-3-p": "Metade de quem usa portais agora ajuda outra pessoa, muitas vezes um pai idoso ou o cônjuge. Aprendem o sistema na correria, geralmente no meio de um problema de saúde real.",
     "solution-tag": "Como funciona",
     "solution-title": "Telas reais. Registros fictícios.<br/>Orientação passo a passo.",
     "solution-sub": "O Tracing Care recria as ferramentas que as pessoas encontram na saúde real e acrescenta o apoio que um sistema real nunca dá: dicas, linguagem simples e espaço para errar.",
@@ -1514,18 +1500,18 @@ const translations = {
     "f2-l3": "Contas, documentos e equipe de saúde",
     "f2-l4": "Funciona em computadores, tablets e celulares",
     "f3-title": "Visões da equipe de saúde",
-    "f3-p": "Explore o outro lado da tela: com o que as equipes clínica, de faturamento e de recepção trabalham todos os dias.",
+    "f3-p": "Uma olhada no outro lado da tela: com o que as equipes clínica, de faturamento e de recepção trabalham. Já dá para explorar, e será a base da trilha profissional.",
     "f3-l1": "Central de comando e censo de pacientes",
     "f3-l2": "Encaminhamentos e agenda dos profissionais",
     "f3-l3": "Cobranças, glosas e autorizações prévias",
     "f3-l4": "Análises para administradores",
     "badge-soon": "Em desenvolvimento",
-    "f4-title": "Trilha de prontuário eletrônico para estudantes",
-    "f4-p": "Aulas guiadas para estudantes e pessoas em transição de carreira que aprendem a navegar no prontuário eletrônico para a escola ou o trabalho, usando as mesmas telas da equipe.",
+    "f4-title": "Trilha profissional",
+    "f4-p": "Depois da trilha para pacientes, treinamento guiado para quem está construindo uma carreira na saúde, usando as mesmas telas da equipe.",
     "f4-l1": "Recepção: check-in, agendamento e convênios",
     "f4-l2": "Faturamento: cobranças e glosas",
     "f4-l3": "Clínico: encontrar prontuários, resultados e encaminhamentos",
-    "f4-l4": "Para estudantes de assistente médico, gestão em saúde e enfermagem",
+    "f4-l4": "Para futuros profissionais clínicos, de faturamento e administração",
     "showcase-tag": "A Plataforma",
     "showcase-title": "Parece o de verdade.<br/>Seguro para praticar.",
     "showcase-sub": "Layouts conhecidos, linguagem simples e rótulos claros, para que o que se aprende sirva no portal do consultório de cada pessoa.",
@@ -1543,17 +1529,17 @@ const translations = {
     "phone-3-label": "Prática guiada",
     "phone-3-sub": "Um ajudante conduz cada tarefa e mostra onde clicar",
     "demo-tag": "Experimente",
-    "demo-title": "Duas formas de praticar.<br/>Sem login.",
-    "demo-sub": "Comece pela prática guiada se você é novo em portais. Explore o lado da equipe para ver com o que os profissionais trabalham.",
+    "demo-title": "Comece a praticar hoje.<br/>Sem login.",
+    "demo-sub": "A prática guiada conduz você por seis tarefas do dia a dia no portal. Prefere explorar sozinho? Abra o portal sem o ajudante.",
     "practice-title": "Para pacientes e famílias: prática guiada do portal",
     "practice-p": "Um modo guiado feito para idosos e para quem os ajuda. Seis tarefas do dia a dia, como encontrar um resultado de exame ou pedir uma renovação, com dicas, letra maior e um certificado de prática para imprimir.",
     "practice-note": "Um espaço de prática com informações fictícias, não um prontuário médico. Ninguém digita seus dados reais.",
     "practice-btn": "Começar a prática",
-    "demo-roles-h": "Ou explore livremente por perfil",
-    "demo-roles-note": "As aulas guiadas para estudantes nestas telas estão em desenvolvimento.",
+    "demo-roles-h": "Em breve: prévia do treinamento profissional",
+    "demo-roles-note": "Estas telas da equipe vão virar uma trilha profissional guiada para estudantes das áreas clínica, de faturamento e administrativa. Você já pode explorá-las.",
     "role-1-title": "Equipe clínica",
     "role-1-p": "Central de comando, censo de pacientes, encaminhamentos e agenda dos profissionais.",
-    "role-open": "Abrir demo",
+    "role-open": "Dar uma olhada",
     "role-2-title": "Equipe de faturamento",
     "role-2-p": "Fila de cobranças, glosas, autorizações prévias e o hub de convênios e pagadores.",
     "role-3-title": "Administração",
@@ -1562,7 +1548,7 @@ const translations = {
     "role-4-p": "O portal de Robin Merriweather: resultados, mensagens, renovações, contas e ajudantes da família.",
     "comp-tag": "Por que praticar",
     "comp-title": "Aprender no sistema real é estressante.<br/>Não precisa ser assim.",
-    "comp-sub": "Como praticar no Tracing Care se compara a aprender num portal ou prontuário real.",
+    "comp-sub": "Como praticar no Tracing Care se compara a aprender num portal do paciente real.",
     "comp-head-feature": "O que o aprendiz precisa",
     "comp-head-status": "Aprender num sistema real",
     "comp-r1-a": "Seguro para errar",
@@ -1580,9 +1566,9 @@ const translations = {
     "comp-r5-a": "Recomeçar quando quiser",
     "comp-r5-b": "✓ Reinicia para a próxima pessoa",
     "comp-r5-c": "✗ As mudanças são permanentes",
-    "comp-r6-a": "Praticar o lado da equipe",
-    "comp-r6-b": "✓ Visões clínica, de faturamento e administrativa",
-    "comp-r6-c": "~ Geralmente só depois de contratado",
+    "comp-r6-a": "Praticar como ajudar alguém querido",
+    "comp-r6-b": "✓ Adicionar um familiar como ajudante, sem risco",
+    "comp-r6-c": "~ Configurado de verdade logo na primeira vez",
     "comp-r7-a": "Comprovante de prática",
     "comp-r7-b": "✓ Certificado de prática para imprimir",
     "comp-r7-c": "✗ Nenhum",
@@ -1591,7 +1577,7 @@ const translations = {
     "comp-r8-c": "~ Raramente explicadas",
     "manifesto-tag": "Nossa abordagem",
     "manifesto-h2": "A confiança vem da <em>prática.</em><br/>Não de um manual.",
-    "manifesto-p1": "A maioria das pessoas aprende tecnologia de saúde do jeito difícil: sozinha, com pressa e com o próprio prontuário na tela. O Tracing Care oferece um lugar tranquilo para aprender antes, para que a consulta real, a conta real ou o primeiro dia de trabalho pareçam familiares.",
+    "manifesto-p1": "A maioria das pessoas aprende tecnologia de saúde do jeito difícil: sozinha, com pressa e com o próprio prontuário na tela. O Tracing Care oferece um lugar tranquilo para aprender antes, para que o portal real, os resultados reais e a conta real pareçam familiares.",
     "manifesto-p2": "Os pacientes têm direito de ver suas informações de saúde. Saber usá-las é o que torna esse direito real.",
     "p1-title": "Seguro para errar",
     "p1-p": "Nada no Tracing Care é real, então dá para clicar, explorar e errar sem consequências. É assim que a confiança começa.",
@@ -1616,24 +1602,24 @@ const translations = {
     "prog2-h4": "Marca e design",
     "prog2-p": "Identidade visual, logo, paleta de cores e um sistema de design claro e adaptado a celulares.",
     "prog-status-active": "⬤ Em Andamento",
-    "prog3-h4": "Trilha de prontuário para estudantes",
-    "prog3-p": "Aulas guiadas nas telas da equipe para recepção, faturamento e navegação clínica.",
+    "prog3-h4": "Mais aulas para pacientes",
+    "prog3-p": "Novas tarefas de prática, como ler uma conta linha por linha, fazer check-in para uma teleconsulta e atualizar a farmácia.",
     "prog4-h4": "Testes com aprendizes",
     "prog4-p": "Planejando as primeiras sessões com idosos para ver onde eles travam e corrigir.",
     "prog-status-next": "→ Próximo",
     "prog5-h4": "Prática em espanhol e português",
     "prog5-p": "Tarefas guiadas e certificado de prática em espanhol e português.",
-    "prog6-h4": "Ferramentas para instrutores",
-    "prog6-p": "Ferramentas simples para professores e facilitadores, como códigos de turma e um jeito de ver quem concluiu.",
+    "prog6-h4": "Ferramentas para oficinas",
+    "prog6-p": "Ferramentas simples para quem conduz oficinas em bibliotecas e comunidades, como um material para imprimir e um reinício rápido entre pessoas.",
     "prog7-h4": "Revisão de acessibilidade",
     "prog7-p": "Uma revisão formal segundo as diretrizes de acessibilidade WCAG, incluindo testes com leitores de tela.",
-    "prog8-h4": "Parceiros comunitários e escolares",
-    "prog8-p": "Trabalhar com bibliotecas, serviços para idosos e programas de formação para levar a prática a mais pessoas.",
+    "prog8-h4": "Trilha profissional",
+    "prog8-p": "Treinamento guiado nas telas da equipe para futuros profissionais clínicos, de faturamento e administração.",
     "ref-tag": "Base de Evidências",
     "ref-title": "Fontes e Referências",
     "ref-sub": "Todas as estatísticas e afirmações nesta página são respaldadas por pesquisas revisadas por pares, dados governamentais ou fontes institucionais confiáveis. As citações são fornecidas para total transparência.",
     "footer-by": "Um projeto em andamento de Dani Neri",
-    "footer-tagline": "Prática para portais do paciente e prontuários eletrônicos · Feito com carinho · © 2026"
+    "footer-tagline": "Prática do portal do paciente · Feito com carinho · © 2026"
   }
 };
 
