@@ -121,7 +121,7 @@ section { padding: 96px 48px; max-width: 1200px; margin: 0 auto; }
 .problem-strip .section-tag { color: var(--teal-400); }
 .problem-strip .section-title { color: var(--white); }
 .problem-strip .section-sub { color: rgba(255,255,255,0.6); }
-.problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.problem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
 .problem-card {
 background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
 border-radius: 16px; padding: 28px;
@@ -515,14 +515,14 @@ footer strong { color: rgba(255,255,255,0.7); }
     <div class="stat-source"><a href="https://ihpi.umich.edu/national-poll-healthy-aging/national-findings/use-and-experiences-patient-portals-among-older" target="_blank" rel="noreferrer">U-M National Poll on Healthy Aging, 2023</a></div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span>59%</span></div>
-    <div class="stat-label" data-i18n="stat-3-label">Of adults 65 and older have basic or below-basic health literacy</div>
-    <div class="stat-source"><a href="https://nces.ed.gov/pubs2006/2006483.pdf" target="_blank" rel="noreferrer">NCES, National Assessment of Adult Literacy</a></div>
+    <div class="stat-num"><span>$7.7B</span></div>
+    <div class="stat-label" data-i18n="stat-3-label">Lost to online fraud by adults 60 and older in 2025, up about 60% from 2024</div>
+    <div class="stat-source"><a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noreferrer">FBI IC3 Annual Report, 2025</a></div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span>51%</span></div>
-    <div class="stat-label" data-i18n="stat-4-label">Of people used a portal on someone else's behalf in 2024, up from 24% in 2020</div>
-    <div class="stat-source"><a href="https://www.healthit.gov/sites/default/files/2025-06/2024-HINTS-Patient-Access-DB77_508.pdf" target="_blank" rel="noreferrer">ASTP Data Brief No. 77, 2025</a></div>
+    <div class="stat-num"><span>90%+</span></div>
+    <div class="stat-label" data-i18n="stat-4-label">Of medical students and residents train on Epic, which offers no student practice version</div>
+    <div class="stat-source"><a href="https://www.beckershospitalreview.com/ehrs/orlando-health-it-partnership-trains-students-on-epic.html" target="_blank" rel="noreferrer">Becker's Hospital Review, 2024</a></div>
   </div>
 </div>
 
@@ -531,7 +531,7 @@ footer strong { color: rgba(255,255,255,0.7); }
   <div class="problem-inner">
     <div class="section-tag" data-i18n="problem-tag">The Need</div>
     <h2 class="section-title" style="color:#fff" data-i18n="problem-title">Health care moved online. Not everyone was shown how.</h2>
-    <p class="section-sub" data-i18n="problem-sub">Results, refills, bills, and messages now live in portals and electronic records. Most people are expected to figure them out alone, and the first try usually happens with their real health information on the line.</p>
+    <p class="section-sub" data-i18n="problem-sub">Results, refills, bills, and messages now live in portals and electronic health records. Yet patients, families, and future health workers rarely get a safe place to learn them, and real records are too sensitive to practice on.</p>
     <div class="problem-grid">
       <div class="problem-card">
         <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
@@ -539,9 +539,14 @@ footer strong { color: rgba(255,255,255,0.7); }
         <p data-i18n="problem-1-p">Portals ask people to find results, request refills, and pay bills on their own. Many older adults were never shown how, and some avoid portals altogether.</p>
       </div>
       <div class="problem-card">
-        <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-        <h3 data-i18n="problem-2-title">No safe place to practice</h3>
-        <p data-i18n="problem-2-p">In a real portal, every click touches real records. Fear of pressing the wrong button keeps people from trying, and from asking for help.</p>
+        <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <h3 data-i18n="problem-2-title">Real records, real risk</h3>
+        <p data-i18n="problem-2-p">Scams aimed at older adults keep rising. Families and community groups are right to keep outsiders away from real health records, but that makes hands-on help hard to give.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+        <h3 data-i18n="problem-4-title">Students can't practice on real systems</h3>
+        <p data-i18n="problem-4-p">Health jobs ask for EHR experience, but training on major systems like Epic usually requires a hospital sponsor. Students have nowhere to build that skill before they're hired.</p>
       </div>
       <div class="problem-card">
         <div class="problem-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
@@ -1052,7 +1057,7 @@ footer strong { color: rgba(255,255,255,0.7); }
   <div class="references-inner">
     <div class="section-tag" data-i18n="ref-tag">Evidence Base</div>
     <h2 data-i18n="ref-title">Sources &amp; References</h2>
-    <p class="references-sub" data-i18n="ref-sub">All statistics and claims on this page are supported by peer-reviewed research, government data, or credible institutional sources. Citations are provided for full transparency.</p>
+    <p class="references-sub" data-i18n="ref-sub">Every statistic on this page links to its source: government data, published research, and credible industry reporting. Citations are listed here for full transparency.</p>
     <div class="ref-grid">
       <div class="ref-card">
         <div class="ref-badge">Government · ASTP / HHS 2025</div>
@@ -1060,35 +1065,71 @@ footer strong { color: rgba(255,255,255,0.7); }
         <div class="ref-title">Individuals' Access and Use of Patient Portals and Smartphone Health Apps, 2024</div>
         <div class="ref-authors">Richwine C. Office of the Assistant Secretary for Technology Policy (ASTP).</div>
         <div class="ref-journal">ASTP Data Brief No. 77. July 2025.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">National survey data showing <strong>77% of individuals were offered online access</strong> to their medical records in 2024 and 65% accessed a portal at least once. 59% had more than one portal, and 51% used proxy access to help someone else.</p>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">In 2024, <strong>77% of individuals were offered online access</strong> to their medical records and 65% used it. <strong>51% used a portal on someone else's behalf</strong>, up from 24% in 2020.</p>
         <div class="ref-link"><a href="https://www.healthit.gov/sites/default/files/2025-06/2024-HINTS-Patient-Access-DB77_508.pdf" target="_blank" rel="noreferrer">healthit.gov, ASTP Data Brief No. 77</a></div>
       </div>
       <div class="ref-card">
         <div class="ref-badge">Institutional Survey · University of Michigan 2023</div>
-        <div class="ref-num">02: Older Adults and Patient Portals</div>
+        <div class="ref-num">02: Older Adults and Confidence</div>
         <div class="ref-title">Use and Experiences with Patient Portals Among Older Adults</div>
         <div class="ref-authors">Anthony D, Singer D, Kirch M, Solway E, Roberts S, Smith E, Hutchens L, Malani P, Kullgren J.</div>
         <div class="ref-journal">National Poll on Healthy Aging. May 2023. 2,563 adults aged 50 to 80.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Found 78% of adults 50 to 80 have a patient portal, but <strong>35% of non-users were not confident they could log in and navigate one</strong>. About half of portal users had given someone else access to help them.</p>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Among adults 50 to 80 who don't use a portal, <strong>35% are not confident</strong> they could log in and get around one.</p>
         <div class="ref-link"><a href="https://ihpi.umich.edu/national-poll-healthy-aging/national-findings/use-and-experiences-patient-portals-among-older" target="_blank" rel="noreferrer">ihpi.umich.edu, National Poll on Healthy Aging</a></div>
       </div>
       <div class="ref-card">
-        <div class="ref-badge">Government · NCES 2006</div>
-        <div class="ref-num">03: Health Literacy by Age</div>
-        <div class="ref-title">The Health Literacy of America's Adults: Results From the 2003 National Assessment of Adult Literacy</div>
-        <div class="ref-authors">Kutner M, Greenberg E, Jin Y, Paulsen C.</div>
-        <div class="ref-journal">U.S. Department of Education, NCES 2006-483.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">The most recent national measure of health literacy. Only 12% of adults scored proficient. Among adults 65 and older, <strong>59% scored basic or below basic</strong> and only 3% were proficient.</p>
-        <div class="ref-link"><a href="https://nces.ed.gov/pubs2006/2006483.pdf" target="_blank" rel="noreferrer">nces.ed.gov/pubs2006/2006483.pdf</a></div>
+        <div class="ref-badge">Government · FBI 2026</div>
+        <div class="ref-num">03: Scams Targeting Older Adults</div>
+        <div class="ref-title">2025 Internet Crime Report</div>
+        <div class="ref-authors">Federal Bureau of Investigation, Internet Crime Complaint Center (IC3).</div>
+        <div class="ref-journal">IC3 Annual Report. April 2026.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Adults 60 and older reported <strong>more than $7.7 billion in losses</strong> in 2025, about 60% more than in 2024. Phishing and spoofing were the most reported scams against older victims.</p>
+        <div class="ref-link"><a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noreferrer">ic3.gov, 2025 IC3 Annual Report</a></div>
       </div>
       <div class="ref-card">
-        <div class="ref-badge">Government · HHS / ONC</div>
-        <div class="ref-num">04: Patients' Right to Their Data</div>
-        <div class="ref-title">Information Blocking Rule, 21st Century Cures Act (45 CFR Part 171)</div>
-        <div class="ref-authors">U.S. Department of Health &amp; Human Services, Office of the National Coordinator for Health IT.</div>
-        <div class="ref-journal">Enforced April 5, 2021. Updated 2024.</div>
-        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Federal law requiring that patients can access their electronic health information without blocking. <strong>The right exists, but people still need the skills to use it</strong>, which is the gap Tracing Care helps close.</p>
-        <div class="ref-link"><a href="https://www.healthit.gov/topic/information-blocking" target="_blank" rel="noreferrer">healthit.gov/topic/information-blocking</a></div>
+        <div class="ref-badge">Industry Research · LexisNexis 2025</div>
+        <div class="ref-num">04: Security Worries Keep People Offline</div>
+        <div class="ref-title">Healthcare Portal Use</div>
+        <div class="ref-authors">LexisNexis Risk Solutions.</div>
+        <div class="ref-journal">Consumer research report. May 2025.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px"><strong>49% of people who don't use a portal doubt the security</strong> of their data in it, compared with 11% of active users.</p>
+        <div class="ref-link"><a href="https://risk.lexisnexis.com/insights-resources/research/healthcare-portal-use" target="_blank" rel="noreferrer">risk.lexisnexis.com, Healthcare Portal Use</a></div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-badge">Government Data · HHS OCR 2025</div>
+        <div class="ref-num">05: Why Organizations Guard Health Data</div>
+        <div class="ref-title">December 2025 Healthcare Data Breach Report</div>
+        <div class="ref-authors">HIPAA Journal, analysis of the HHS Office for Civil Rights breach portal.</div>
+        <div class="ref-journal">Full-year 2025 data.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px"><strong>697 large health data breaches</strong> affecting about 61 million people were reported in 2025. In 2024, one breach alone, at Change Healthcare, affected 192.7 million people.</p>
+        <div class="ref-link"><a href="https://www.hipaajournal.com/december-2025-healthcare-data-breach-report/" target="_blank" rel="noreferrer">hipaajournal.com, December 2025 Breach Report</a></div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-badge">Industry News · Becker's 2024</div>
+        <div class="ref-num">06: Students Can't Get Into Epic</div>
+        <div class="ref-title">Orlando Health IT Partnership Trains Students on Epic</div>
+        <div class="ref-authors">Becker's Hospital Review.</div>
+        <div class="ref-journal">December 12, 2024.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Training on Epic generally requires <strong>sponsorship by a health care facility</strong>, and Epic offers no educational version for students to practice on. More than 90% of medical students and residents train on it.</p>
+        <div class="ref-link"><a href="https://www.beckershospitalreview.com/ehrs/orlando-health-it-partnership-trains-students-on-epic.html" target="_blank" rel="noreferrer">beckershospitalreview.com, Epic student training</a></div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-badge">Research · Sigma Theta Tau International 2020</div>
+        <div class="ref-num">07: Limited EHR Access in Clinical Training</div>
+        <div class="ref-title">Restricted Electronic Health Record Access in Clinical Leads to Gaps in Student Learning</div>
+        <div class="ref-authors">Survey of 208 clinical nursing faculty in 25 states.</div>
+        <div class="ref-journal">Nursing Education Research Conference. March 2020.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Most nursing students could <strong>view the EHR but were limited in documenting</strong> in it, which the authors found leaves gaps in student learning.</p>
+        <div class="ref-link"><a href="https://stti.confex.com/stti/nerc20/webprogram/Paper101863.html" target="_blank" rel="noreferrer">stti.confex.com, NERC 2020 abstract</a></div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-badge">Government · BLS 2025</div>
+        <div class="ref-num">08: EHR Skills Lead to Jobs</div>
+        <div class="ref-title">Occupational Outlook Handbook: Medical Records Specialists</div>
+        <div class="ref-authors">U.S. Bureau of Labor Statistics.</div>
+        <div class="ref-journal">Projections for 2025 to 2035.</div>
+        <p style="font-size:12px;color:var(--gray);line-height:1.5;margin-bottom:8px">Medical records specialists enter patient information into EHR systems. The field is projected to <strong>grow 8%</strong>, with about 14,000 openings each year.</p>
+        <div class="ref-link"><a href="https://www.bls.gov/ooh/healthcare/medical-records-and-health-information-technicians.htm" target="_blank" rel="noreferrer">bls.gov, Medical Records Specialists</a></div>
       </div>
     </div>
   </div>
@@ -1129,17 +1170,19 @@ const translations = {
     "hero-note": "No login needed. Every name and record is made up, so you can't break anything.",
     "stat-1-label": "Of people were offered online access to their medical records in 2024",
     "stat-2-label": "Of adults 50 to 80 who don't use a portal aren't confident they could log in and get around",
-    "stat-3-label": "Of adults 65 and older have basic or below-basic health literacy",
-    "stat-4-label": "Of people used a portal on someone else's behalf in 2024, up from 24% in 2020",
+    "stat-3-label": "Lost to online fraud by adults 60 and older in 2025, up about 60% from 2024",
+    "stat-4-label": "Of medical students and residents train on Epic, which offers no student practice version",
     "problem-tag": "The Need",
     "problem-title": "Health care moved online. Not everyone was shown how.",
-    "problem-sub": "Results, refills, bills, and messages now live in portals and electronic records. Most people are expected to figure them out alone, and the first try usually happens with their real health information on the line.",
+    "problem-sub": "Results, refills, bills, and messages now live in portals and electronic health records. Yet patients, families, and future health workers rarely get a safe place to learn them, and real records are too sensitive to practice on.",
     "problem-1-title": "Patients are expected to self-serve",
     "problem-1-p": "Portals ask people to find results, request refills, and pay bills on their own. Many older adults were never shown how, and some avoid portals altogether.",
-    "problem-2-title": "No safe place to practice",
-    "problem-2-p": "In a real portal, every click touches real records. Fear of pressing the wrong button keeps people from trying, and from asking for help.",
+    "problem-2-title": "Real records, real risk",
+    "problem-2-p": "Scams aimed at older adults keep rising. Families and community groups are right to keep outsiders away from real health records, but that makes hands-on help hard to give.",
     "problem-3-title": "Families help without training",
     "problem-3-p": "Half of portal users now help someone else, often an aging parent or spouse. They learn the system on the fly, usually in the middle of a real health problem.",
+    "problem-4-p": "Health jobs ask for EHR experience, but training on major systems like Epic usually requires a hospital sponsor. Students have nowhere to build that skill before they're hired.",
+    "problem-4-title": "Students can't practice on real systems",
     "solution-tag": "How It Works",
     "solution-title": "Real screens. Made-up records. Step-by-step guidance.",
     "solution-sub": "Tracing Care recreates the tools people meet in real health care, then adds the support a real system never gives you: hints, plain language, and room to make mistakes.",
@@ -1274,7 +1317,7 @@ const translations = {
     "prog8-p": "Guided training on the staff screens for future clinical, billing, and admin professionals.",
     "ref-tag": "Evidence Base",
     "ref-title": "Sources &amp; References",
-    "ref-sub": "All statistics and claims on this page are supported by peer-reviewed research, government data, or credible institutional sources. Citations are provided for full transparency.",
+    "ref-sub": "Every statistic on this page links to its source: government data, published research, and credible industry reporting. Citations are listed here for full transparency.",
     "footer-by": "An ongoing project by Daniza Neri",
     "footer-tagline": "Hands-on patient portal practice · Built with care · © 2026"
   },
@@ -1300,17 +1343,19 @@ const translations = {
     "hero-note": "Sin iniciar sesión. Todos los nombres y registros son ficticios, así que no puedes romper nada.",
     "stat-1-label": "De las personas recibieron acceso en línea a sus expedientes médicos en 2024",
     "stat-2-label": "De los adultos de 50 a 80 años que no usan un portal no se sienten seguros de poder entrar y navegarlo",
-    "stat-3-label": "De los adultos de 65 años o más tienen una alfabetización en salud básica o inferior",
-    "stat-4-label": "De las personas usaron un portal en nombre de otra en 2024, frente al 24% en 2020",
+    "stat-3-label": "Perdieron por fraude en línea los adultos de 60 años o más en 2025, cerca de 60% más que en 2024",
+    "stat-4-label": "De los estudiantes de medicina y residentes se capacitan en Epic, que no ofrece una versión de práctica para estudiantes",
     "problem-tag": "La necesidad",
     "problem-title": "La atención médica se mudó a internet. No a todos les enseñaron cómo.",
-    "problem-sub": "Resultados, resurtidos, facturas y mensajes ahora viven en portales y expedientes electrónicos. A la mayoría se le pide que los descifre sola, y el primer intento suele ser con su información de salud real en juego.",
+    "problem-sub": "Resultados, resurtidos, facturas y mensajes ahora viven en portales y expedientes electrónicos de salud. Aun así, pacientes, familias y futuros trabajadores de la salud casi nunca tienen un lugar seguro para aprender, y los expedientes reales son demasiado delicados para practicar.",
     "problem-1-title": "Se espera que el paciente se atienda solo",
     "problem-1-p": "Los portales piden encontrar resultados, pedir resurtidos y pagar facturas por cuenta propia. A muchos adultos mayores nunca les enseñaron cómo, y algunos evitan los portales por completo.",
-    "problem-2-title": "No hay un lugar seguro para practicar",
-    "problem-2-p": "En un portal real, cada clic toca registros reales. El miedo a presionar el botón equivocado impide intentarlo, y también pedir ayuda.",
+    "problem-2-title": "Expedientes reales, riesgo real",
+    "problem-2-p": "Las estafas contra adultos mayores siguen aumentando. Las familias y los grupos comunitarios hacen bien en no dejar que extraños vean expedientes de salud reales, pero eso dificulta dar ayuda práctica.",
     "problem-3-title": "Las familias ayudan sin capacitación",
     "problem-3-p": "La mitad de quienes usan portales ahora ayudan a otra persona, a menudo a un padre mayor o a su pareja. Aprenden el sistema sobre la marcha, casi siempre en medio de un problema de salud real.",
+    "problem-4-p": "Los empleos de salud piden experiencia con expedientes electrónicos, pero capacitarse en sistemas como Epic suele requerir el patrocinio de un hospital. Los estudiantes no tienen dónde desarrollar esa habilidad antes de ser contratados.",
+    "problem-4-title": "Los estudiantes no pueden practicar en sistemas reales",
     "solution-tag": "Cómo funciona",
     "solution-title": "Pantallas reales. Registros ficticios. Guía paso a paso.",
     "solution-sub": "Tracing Care recrea las herramientas que la gente encuentra en la atención médica real y añade el apoyo que un sistema real nunca da: pistas, lenguaje sencillo y espacio para equivocarse.",
@@ -1445,7 +1490,7 @@ const translations = {
     "prog8-p": "Capacitación guiada en las pantallas del personal para futuros profesionales clínicos, de facturación y administración.",
     "ref-tag": "Base de Evidencia",
     "ref-title": "Fuentes y Referencias",
-    "ref-sub": "Todas las estadísticas y afirmaciones en esta página están respaldadas por investigaciones revisadas por pares, datos gubernamentales o fuentes institucionales creíbles. Se proporcionan citas para total transparencia.",
+    "ref-sub": "Cada estadística de esta página enlaza a su fuente: datos gubernamentales, investigaciones publicadas e informes confiables de la industria. Las citas se incluyen aquí para total transparencia.",
     "footer-by": "Un proyecto en curso de Daniza Neri",
     "footer-tagline": "Práctica del portal del paciente · Hecho con cuidado · © 2026"
   },
@@ -1471,17 +1516,19 @@ const translations = {
     "hero-note": "Sem login. Todos os nomes e registros são fictícios, então você não estraga nada.",
     "stat-1-label": "Das pessoas receberam acesso online aos seus prontuários em 2024",
     "stat-2-label": "Dos adultos de 50 a 80 anos que não usam um portal não se sentem seguros para entrar e navegar",
-    "stat-3-label": "Dos adultos com 65 anos ou mais têm letramento em saúde básico ou abaixo do básico",
-    "stat-4-label": "Das pessoas usaram um portal em nome de outra em 2024, contra 24% em 2020",
+    "stat-3-label": "Foram perdidos em fraudes online por adultos de 60 anos ou mais em 2025, cerca de 60% a mais que em 2024",
+    "stat-4-label": "Dos estudantes de medicina e residentes treinam no Epic, que não oferece uma versão de prática para estudantes",
     "problem-tag": "A necessidade",
     "problem-title": "A saúde foi para a internet. Nem todos aprenderam como.",
-    "problem-sub": "Resultados, renovações, contas e mensagens agora ficam em portais e prontuários eletrônicos. A maioria das pessoas precisa descobrir sozinha, e a primeira tentativa costuma acontecer com suas informações de saúde reais em jogo.",
+    "problem-sub": "Resultados, renovações, contas e mensagens agora ficam em portais e prontuários eletrônicos. Mesmo assim, pacientes, famílias e futuros profissionais de saúde raramente têm um lugar seguro para aprender, e prontuários reais são sensíveis demais para praticar.",
     "problem-1-title": "Espera-se que o paciente se vire sozinho",
     "problem-1-p": "Os portais pedem que as pessoas encontrem resultados, peçam renovações e paguem contas por conta própria. Muitos idosos nunca aprenderam como, e alguns evitam os portais completamente.",
-    "problem-2-title": "Não há um lugar seguro para praticar",
-    "problem-2-p": "Num portal real, cada clique mexe em registros reais. O medo de apertar o botão errado impede as pessoas de tentar, e de pedir ajuda.",
+    "problem-2-title": "Prontuários reais, risco real",
+    "problem-2-p": "Os golpes contra idosos continuam crescendo. Famílias e grupos comunitários estão certos em manter pessoas de fora longe de prontuários reais, mas isso dificulta oferecer ajuda prática.",
     "problem-3-title": "As famílias ajudam sem treinamento",
     "problem-3-p": "Metade de quem usa portais agora ajuda outra pessoa, muitas vezes um pai idoso ou o cônjuge. Aprendem o sistema na correria, geralmente no meio de um problema de saúde real.",
+    "problem-4-p": "Vagas na saúde pedem experiência com prontuário eletrônico, mas treinar em sistemas como o Epic geralmente exige o patrocínio de um hospital. Os estudantes não têm onde desenvolver essa habilidade antes de serem contratados.",
+    "problem-4-title": "Estudantes não podem praticar em sistemas reais",
     "solution-tag": "Como funciona",
     "solution-title": "Telas reais. Registros fictícios. Orientação passo a passo.",
     "solution-sub": "O Tracing Care recria as ferramentas que as pessoas encontram na saúde real e acrescenta o apoio que um sistema real nunca dá: dicas, linguagem simples e espaço para errar.",
@@ -1616,7 +1663,7 @@ const translations = {
     "prog8-p": "Treinamento guiado nas telas da equipe para futuros profissionais clínicos, de faturamento e administração.",
     "ref-tag": "Base de Evidências",
     "ref-title": "Fontes e Referências",
-    "ref-sub": "Todas as estatísticas e afirmações nesta página são respaldadas por pesquisas revisadas por pares, dados governamentais ou fontes institucionais confiáveis. As citações são fornecidas para total transparência.",
+    "ref-sub": "Cada estatística desta página leva à sua fonte: dados do governo, pesquisas publicadas e relatórios confiáveis do setor. As citações estão listadas aqui para total transparência.",
     "footer-by": "Um projeto em andamento de Daniza Neri",
     "footer-tagline": "Prática do portal do paciente · Feito com carinho · © 2026"
   }
