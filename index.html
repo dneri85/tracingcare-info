@@ -418,6 +418,9 @@ footer strong { color: rgba(255,255,255,0.7); }
 .ph-task { font-size: 13px; font-weight: 800; line-height: 1.25; margin-bottom: 4px; }
 .ph-why { font-size: 9px; color: #64748b; margin-bottom: 6px; line-height: 1.4; }
 .ph-helper ol { padding-left: 14px; font-size: 9.5px; line-height: 1.45; display: grid; gap: 3px; margin-bottom: 8px; }
+.ph-choices { display: grid; gap: 4px; margin-bottom: 8px; }
+.ph-choices span { border: 1px solid #cbd5e1; border-radius: 7px; padding: 5px 7px; font-size: 9px; }
+.ph-choices span.pick { border-color: #3b6cf6; background: #eef3ff; font-weight: 700; }
 .ph-show { background: #2f5fe0; color: #fff; text-align: center; border-radius: 8px; padding: 7px; font-size: 10px; font-weight: 700; }
 .ph-safe { font-size: 8px; color: #64748b; margin-top: 8px; padding-top: 6px; border-top: 1px solid #eef0f4; }
 
@@ -488,7 +491,7 @@ footer strong { color: rgba(255,255,255,0.7); }
   <div class="hero-cta">
     <a href="https://tracingcare-demo.vercel.app/practice" target="_blank" rel="noopener noreferrer" class="btn-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-      <span data-i18n="hero-btn-demo">Start Portal Practice</span>
+      <span data-i18n="hero-btn-demo">Start Guided Practice</span>
     </a>
     <a href="#demo" class="btn-ghost">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
@@ -557,19 +560,19 @@ footer strong { color: rgba(255,255,255,0.7); }
   <div class="features-grid">
     <div class="feature-card">
       <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 .5c0 1.5-2.5 2-2.5 3.5"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><span class="badge badge-live" data-i18n="badge-live">Live</span></div>
-      <h3 data-i18n="f1-title">Guided Practice Mode</h3>
-      <p data-i18n="f1-p">A helper panel gives one task at a time, explains why it matters, and shows where to click if you get stuck. Finish all six to see a simple summary of what you did.</p>
+      <h3 data-i18n="f1-title">Guided Practice</h3>
+      <p data-i18n="f1-p">One instruction at a time, told as a short story about Robin: "Robin has a visit coming up. Can you find the date and time?" Learners find answers and do real portal tasks, with supportive feedback and hints when they need them.</p>
       <ul class="feature-list">
-        <li data-i18n="f1-l1">Find test results and read flagged values</li>
-        <li data-i18n="f1-l2">Message the care team and request refills</li>
-        <li data-i18n="f1-l3">Confirm appointments and pay a bill</li>
-        <li data-i18n="f1-l4">Add a family member as a helper</li>
+        <li data-i18n="f1-l1">Seven everyday tasks, from visits to bills</li>
+        <li data-i18n="f1-l2">"Show me where" hints and gentle feedback</li>
+        <li data-i18n="f1-l3">Comfort check-in at the start and the end</li>
+        <li data-i18n="f1-l4">Simple "You did it!" summary, no names needed</li>
       </ul>
     </div>
     <div class="feature-card">
       <div class="feature-top"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div><span class="badge badge-live" data-i18n="badge-live">Live</span></div>
-      <h3 data-i18n="f2-title">Realistic Patient Portal</h3>
-      <p data-i18n="f2-p">Robin Merriweather's portal is organized the way many clinic portals are, with familiar names like Visits, Test Results, Messages, and Billing Summary, so skills carry over.</p>
+      <h3 data-i18n="f2-title">Explore Mode</h3>
+      <p data-i18n="f2-p">Robin Merriweather's full practice portal with no instructions, organized the way many clinic portals are, with familiar names like Visits, Test Results, Messages, and Billing Summary. Learners click around freely, just like in a real portal.</p>
       <ul class="feature-list">
         <li data-i18n="f2-l1">Home feed with shortcuts and reminders</li>
         <li data-i18n="f2-l2">My Record: test results, medications, health summary</li>
@@ -853,19 +856,19 @@ footer strong { color: rgba(255,255,255,0.7); }
             <div class="ph-top"><div class="ph-brand">Tracing Care</div><div class="ph-av">RM</div></div>
             <div class="ph-faded"><div class="ph-h">Hello, Robin 👋</div><div class="ph-stats"><div><b>4</b>Conditions</div><div><b>6</b>Meds</div><div><b>2</b>Appts</div><div><b>3</b>Actions</div></div></div>
             <div class="ph-helper">
-              <div class="ph-helper-top"><b>✦ Practice mode</b><span>A<big>A</big></span></div>
-              <div class="ph-dots"><i class="ok"></i><i class="now"></i><i></i><i></i><i></i><i></i></div>
-              <div class="ph-k">Task 2 of 6</div>
-              <div class="ph-task">Send a message to your care team</div>
-              <p class="ph-why">Messages are a good way to ask non-urgent questions without waiting on the phone.</p>
-              <ol><li>Click <b>Secure Messages</b> in the menu.</li><li>Type a short question in the big box.</li><li>Click the blue <b>Send message</b> button.</li></ol>
+              <div class="ph-helper-top"><b>✦ Guided Practice</b><span>A<big>A</big></span></div>
+              <div class="ph-dots"><i class="now"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="ph-k">Task 1 of 7</div>
+              <div class="ph-task">Find your next visit</div>
+              <p class="ph-why">Robin has a visit coming up. Can you find the date and time?</p>
+              <div class="ph-choices"><span>Tue, Nov 10 at 1:15 PM</span><span class="pick">Tue, Oct 27 at 10:30 AM</span><span>Tue, Nov 3 at 9:00 AM</span></div>
               <div class="ph-show">👁 Show me where</div>
               <div class="ph-safe">🛡 Nothing here is real, so you can't break anything.</div>
             </div>
           </div>
         </div>
         <div class="screen-label" data-i18n="phone-3-label">Guided Practice</div>
-        <div class="screen-label-sub" data-i18n="phone-3-sub">A helper walks learners through each task and shows where to click</div>
+        <div class="screen-label-sub" data-i18n="phone-3-sub">One story-based task at a time, with hints and gentle feedback</div>
       </div>
       </div>
     </div>
@@ -875,17 +878,17 @@ footer strong { color: rgba(255,255,255,0.7); }
 <!-- LIVE DEMO -->
 <section id="demo">
   <div class="section-tag" data-i18n="demo-tag">Try It</div>
-  <h2 class="section-title" data-i18n="demo-title">Start practicing today. No login needed.</h2>
-  <p class="section-sub" data-i18n="demo-sub">Guided practice walks you through six everyday portal tasks. Prefer to look around on your own? Open the portal without the helper.</p>
+  <h2 class="section-title" data-i18n="demo-title">Two ways to practice. No login needed.</h2>
+  <p class="section-sub" data-i18n="demo-sub">Start with Guided Practice for step-by-step help. Ready to try on your own? Use Explore Mode.</p>
   <div class="practice-cta">
     <div class="practice-ico">🎓</div>
     <div class="practice-txt">
-      <h3 data-i18n="practice-title">For patients and families: guided portal practice</h3>
-      <p data-i18n="practice-p">A guided mode built for older adults and the people who help them. Six everyday tasks, like finding a test result or requesting a refill, with hints, bigger text, and a simple summary at the end. No name or sign-up needed.</p>
-      <a class="practice-alt" href="https://tracingcare-demo.vercel.app/my-health?as=patient&amp;practice=0" target="_blank" rel="noopener noreferrer"><span data-i18n="practice-alt">Or explore Robin's portal on your own</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <h3 data-i18n="practice-title">Guided Practice: one step at a time</h3>
+      <p data-i18n="practice-p">Built for older adults and the people who help them. Seven short tasks about Robin, like finding a visit, reading a test result, or asking for a refill, with hints, bigger text, and a simple summary at the end. No name or sign-up needed.</p>
+      <a class="practice-alt" href="https://tracingcare-demo.vercel.app/my-health?as=patient&amp;practice=0" target="_blank" rel="noopener noreferrer"><span data-i18n="practice-alt">Or try Explore Mode on your own</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       <p class="practice-note" data-i18n="practice-note">A practice space with made-up information, not a medical record. Learners never enter their own details.</p>
     </div>
-    <a class="btn-primary" href="https://tracingcare-demo.vercel.app/practice" target="_blank" rel="noopener noreferrer"><span data-i18n="practice-btn">Start Portal Practice</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a class="btn-primary" href="https://tracingcare-demo.vercel.app/practice" target="_blank" rel="noopener noreferrer"><span data-i18n="practice-btn">Start Guided Practice</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
   <h3 class="roles-h" data-i18n="demo-roles-h">Coming later: career training preview</h3>
   <p class="roles-note" data-i18n="demo-roles-note">These staff screens will become a guided career track for clinical, billing, and admin learners. You can look around now.</p>
@@ -995,8 +998,8 @@ footer strong { color: rgba(255,255,255,0.7); }
       <div class="progress-card done">
         <div class="progress-dot dot-done"></div>
         <div class="progress-status status-done" data-i18n="prog-status-done">✓ Complete</div>
-        <h4 data-i18n="prog9-h4">Patient Portal Practice</h4>
-        <p data-i18n="prog9-p">Guided practice mode for older adults: six step-by-step tasks, hints, bigger text, and a simple summary when you finish.</p>
+        <h4 data-i18n="prog9-h4">Guided Practice &amp; Explore Mode</h4>
+        <p data-i18n="prog9-p">Two ways to learn: seven story-based guided tasks with hints and gentle feedback, or free exploring in a realistic portal.</p>
       </div>
       <div class="progress-card done">
         <div class="progress-dot dot-done"></div>
@@ -1008,7 +1011,7 @@ footer strong { color: rgba(255,255,255,0.7); }
         <div class="progress-dot dot-active"></div>
         <div class="progress-status status-active" data-i18n="prog-status-active">⬤ In Progress</div>
         <h4 data-i18n="prog4-h4">Learner Testing</h4>
-        <p data-i18n="prog4-p">Planning first sessions with older adult learners to see where they get stuck and fix it.</p>
+        <p data-i18n="prog4-p">Anonymous progress tracking is built in: tasks finished, help needed, and comfort before and after. Next: first sessions with older adult learners.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
@@ -1110,7 +1113,7 @@ footer strong { color: rgba(255,255,255,0.7); }
 const translations = {
   en: {
     "prog-status-later": "◷ Later",
-    "practice-alt": "Or explore Robin's portal on your own",
+    "practice-alt": "Or try Explore Mode on your own",
     "badge-later": "Coming later",
     "badge-preview": "Preview",
     "nav-problem": "The Need",
@@ -1124,7 +1127,7 @@ const translations = {
     "hero-tag": "Training Program · Patient Portal Practice",
     "hero-h1": "Practice health tech <em>safely.</em> Then use it with confidence.",
     "hero-p": "Tracing Care is a hands-on practice platform that looks and works like a real patient portal. It is built first for older adults and the people who help them: find results, message the care team, request refills, and manage appointments, step by step.",
-    "hero-btn-demo": "Start Portal Practice",
+    "hero-btn-demo": "Start Guided Practice",
     "hero-btn-primary": "Explore the Demo",
     "hero-btn-ghost": "How It Works →",
     "hero-note": "No login needed. Every name and record is made up, so you can't break anything.",
@@ -1145,14 +1148,14 @@ const translations = {
     "solution-title": "Real screens. Made-up records. Step-by-step guidance.",
     "solution-sub": "Tracing Care recreates the tools people meet in real health care, then adds the support a real system never gives you: hints, plain language, and room to make mistakes.",
     "badge-live": "Live",
-    "f1-title": "Guided Practice Mode",
-    "f1-p": "A helper panel gives one task at a time, explains why it matters, and shows where to click if you get stuck. Finish all six to see a simple summary of what you did.",
-    "f1-l1": "Find test results and read flagged values",
-    "f1-l2": "Message the care team and request refills",
-    "f1-l3": "Confirm appointments and pay a bill",
-    "f1-l4": "Add a family member as a helper",
-    "f2-title": "Realistic Patient Portal",
-    "f2-p": "Robin Merriweather's portal is organized the way many clinic portals are, with familiar names like Visits, Test Results, Messages, and Billing Summary, so skills carry over.",
+    "f1-title": "Guided Practice",
+    "f1-p": "One instruction at a time, told as a short story about Robin: \"Robin has a visit coming up. Can you find the date and time?\" Learners find answers and do real portal tasks, with supportive feedback and hints when they need them.",
+    "f1-l1": "Seven everyday tasks, from visits to bills",
+    "f1-l2": "\"Show me where\" hints and gentle feedback",
+    "f1-l3": "Comfort check-in at the start and the end",
+    "f1-l4": "Simple \"You did it!\" summary, no names needed",
+    "f2-title": "Explore Mode",
+    "f2-p": "Robin Merriweather's full practice portal with no instructions, organized the way many clinic portals are, with familiar names like Visits, Test Results, Messages, and Billing Summary. Learners click around freely, just like in a real portal.",
     "f2-l1": "Home feed with shortcuts and reminders",
     "f2-l2": "My Record: test results, medications, health summary",
     "f2-l3": "Visits, messages, sharing, and billing summary",
@@ -1185,14 +1188,14 @@ const translations = {
     "phone-2-label": "Medications &amp; Refills",
     "phone-2-sub": "Track every medication, request refills, and see exactly what's pending",
     "phone-3-label": "Guided Practice",
-    "phone-3-sub": "A helper walks learners through each task and shows where to click",
+    "phone-3-sub": "One story-based task at a time, with hints and gentle feedback",
     "demo-tag": "Try It",
-    "demo-title": "Start practicing today. No login needed.",
-    "demo-sub": "Guided practice walks you through six everyday portal tasks. Prefer to look around on your own? Open the portal without the helper.",
-    "practice-title": "For patients and families: guided portal practice",
-    "practice-p": "A guided mode built for older adults and the people who help them. Six everyday tasks, like finding a test result or requesting a refill, with hints, bigger text, and a simple summary at the end. No name or sign-up needed.",
+    "demo-title": "Two ways to practice. No login needed.",
+    "demo-sub": "Start with Guided Practice for step-by-step help. Ready to try on your own? Use Explore Mode.",
+    "practice-title": "Guided Practice: one step at a time",
+    "practice-p": "Built for older adults and the people who help them. Seven short tasks about Robin, like finding a visit, reading a test result, or asking for a refill, with hints, bigger text, and a simple summary at the end. No name or sign-up needed.",
     "practice-note": "A practice space with made-up information, not a medical record. Learners never enter their own details.",
-    "practice-btn": "Start Portal Practice",
+    "practice-btn": "Start Guided Practice",
     "demo-roles-h": "Coming later: career training preview",
     "demo-roles-note": "These staff screens will become a guided career track for clinical, billing, and admin learners. You can look around now.",
     "role-1-title": "Clinical Staff",
@@ -1255,15 +1258,15 @@ const translations = {
     "prog-status-done": "✓ Complete",
     "prog1-h4": "Working Demo",
     "prog1-p": "Clickable practice platform with four one-click roles (clinical, billing, administrator, patient) across 12 screens.",
-    "prog9-h4": "Patient Portal Practice",
-    "prog9-p": "Guided practice mode for older adults: six step-by-step tasks, hints, bigger text, and a simple summary when you finish.",
+    "prog9-h4": "Guided Practice &amp; Explore Mode",
+    "prog9-p": "Two ways to learn: seven story-based guided tasks with hints and gentle feedback, or free exploring in a realistic portal.",
     "prog2-h4": "Brand &amp; Design",
     "prog2-p": "Visual identity, logo, color palette, and a clear, phone-friendly design system.",
     "prog-status-active": "⬤ In Progress",
     "prog3-h4": "More Patient Lessons",
     "prog3-p": "New practice tasks, like reading a bill line by line, checking in for a video visit, and updating a pharmacy.",
     "prog4-h4": "Learner Testing",
-    "prog4-p": "Planning first sessions with older adult learners to see where they get stuck and fix it.",
+    "prog4-p": "Anonymous progress tracking is built in: tasks finished, help needed, and comfort before and after. Next: first sessions with older adult learners.",
     "prog-status-next": "→ Up Next",
     "prog5-h4": "Spanish &amp; Portuguese Practice",
     "prog5-p": "Guided tasks and the finish screen in Spanish and Portuguese.",
@@ -1281,7 +1284,7 @@ const translations = {
   },
   es: {
     "prog-status-later": "◷ Más adelante",
-    "practice-alt": "O explora el portal de Robin por tu cuenta",
+    "practice-alt": "O prueba el modo explorar por tu cuenta",
     "badge-later": "Más adelante",
     "badge-preview": "Vista previa",
     "nav-problem": "La necesidad",
@@ -1295,7 +1298,7 @@ const translations = {
     "hero-tag": "Programa de capacitación · Práctica del portal del paciente",
     "hero-h1": "Practica la tecnología de salud <em>sin riesgos.</em> Luego úsala con confianza.",
     "hero-p": "Tracing Care es una plataforma de práctica que se ve y funciona como un portal del paciente real. Está hecha primero para adultos mayores y quienes los ayudan: encontrar resultados, escribir al equipo de atención, pedir resurtidos y manejar citas, paso a paso.",
-    "hero-btn-demo": "Empezar la práctica",
+    "hero-btn-demo": "Empezar práctica guiada",
     "hero-btn-primary": "Explorar la demo",
     "hero-btn-ghost": "Cómo funciona →",
     "hero-note": "Sin iniciar sesión. Todos los nombres y registros son ficticios, así que no puedes romper nada.",
@@ -1316,14 +1319,14 @@ const translations = {
     "solution-title": "Pantallas reales. Registros ficticios. Guía paso a paso.",
     "solution-sub": "Tracing Care recrea las herramientas que la gente encuentra en la atención médica real y añade el apoyo que un sistema real nunca da: pistas, lenguaje sencillo y espacio para equivocarse.",
     "badge-live": "Disponible",
-    "f1-title": "Modo de práctica guiada",
-    "f1-p": "Un panel de ayuda da una tarea a la vez, explica por qué importa y muestra dónde hacer clic si te atoras. Completa las seis para ver un resumen sencillo de lo que hiciste.",
-    "f1-l1": "Encontrar resultados y leer valores marcados",
-    "f1-l2": "Escribir al equipo de atención y pedir resurtidos",
-    "f1-l3": "Confirmar citas y pagar una factura",
-    "f1-l4": "Agregar a un familiar como ayudante",
-    "f2-title": "Portal del paciente realista",
-    "f2-p": "El portal de Robin Merriweather está organizado como muchos portales de clínicas, con nombres conocidos como Visitas, Resultados, Mensajes y Resumen de facturación, para que lo aprendido sirva después.",
+    "f1-title": "Práctica guiada",
+    "f1-p": "Una instrucción a la vez, contada como una historia breve sobre Robin: \"Robin tiene una cita pronto. ¿Puedes encontrar la fecha y la hora?\" Se buscan respuestas y se hacen tareas reales del portal, con comentarios de apoyo y pistas cuando hacen falta.",
+    "f1-l1": "Siete tareas cotidianas, de citas a facturas",
+    "f1-l2": "Pistas \"Show me where\" y comentarios amables",
+    "f1-l3": "Pregunta de comodidad al inicio y al final",
+    "f1-l4": "Resumen sencillo al final, sin nombres",
+    "f2-title": "Modo explorar",
+    "f2-p": "El portal de práctica completo de Robin Merriweather, sin instrucciones, organizado como muchos portales de clínicas, con nombres conocidos como Visitas, Resultados, Mensajes y Resumen de facturación. Se puede explorar libremente, como en un portal real.",
     "f2-l1": "Inicio con accesos directos y recordatorios",
     "f2-l2": "Mi expediente: resultados, medicamentos, resumen de salud",
     "f2-l3": "Visitas, mensajes, acceso compartido y resumen de facturación",
@@ -1356,14 +1359,14 @@ const translations = {
     "phone-2-label": "Medicamentos y resurtidos",
     "phone-2-sub": "Sigue cada medicamento, pide resurtidos y ve exactamente qué está pendiente",
     "phone-3-label": "Práctica guiada",
-    "phone-3-sub": "Un ayudante guía cada tarea y muestra dónde hacer clic",
+    "phone-3-sub": "Una tarea a la vez, en forma de historia, con pistas y comentarios amables",
     "demo-tag": "Pruébalo",
-    "demo-title": "Empieza a practicar hoy. Sin iniciar sesión.",
-    "demo-sub": "La práctica guiada te lleva por seis tareas cotidianas del portal. ¿Prefieres mirar por tu cuenta? Abre el portal sin el ayudante.",
-    "practice-title": "Para pacientes y familias: práctica guiada del portal",
-    "practice-p": "Un modo guiado pensado para adultos mayores y quienes los ayudan. Seis tareas cotidianas, como encontrar un resultado o pedir un resurtido, con pistas, letra más grande y un resumen sencillo al final. Sin nombre ni registro.",
+    "demo-title": "Dos formas de practicar. Sin iniciar sesión.",
+    "demo-sub": "Empieza con la práctica guiada para recibir ayuda paso a paso. ¿Listo para probar por tu cuenta? Usa el modo explorar.",
+    "practice-title": "Práctica guiada: un paso a la vez",
+    "practice-p": "Hecha para adultos mayores y quienes los ayudan. Siete tareas cortas sobre Robin, como encontrar una cita, leer un resultado o pedir un resurtido, con pistas, letra más grande y un resumen sencillo al final. Sin nombre ni registro.",
     "practice-note": "Un espacio de práctica con información ficticia, no un expediente médico. Nadie escribe sus datos reales.",
-    "practice-btn": "Empezar la práctica",
+    "practice-btn": "Empezar práctica guiada",
     "demo-roles-h": "Más adelante: vista previa de la capacitación profesional",
     "demo-roles-note": "Estas pantallas del personal serán una ruta profesional guiada para estudiantes clínicos, de facturación y administración. Ya puedes explorarlas.",
     "role-1-title": "Personal clínico",
@@ -1426,15 +1429,15 @@ const translations = {
     "prog-status-done": "✓ Completo",
     "prog1-h4": "Demo funcional",
     "prog1-p": "Plataforma de práctica interactiva con cuatro roles de un clic (clínico, facturación, administración, paciente) en 12 pantallas.",
-    "prog9-h4": "Práctica del portal del paciente",
-    "prog9-p": "Modo de práctica guiada para adultos mayores: seis tareas paso a paso, pistas, letra más grande y un resumen sencillo al terminar.",
+    "prog9-h4": "Práctica guiada y modo explorar",
+    "prog9-p": "Dos formas de aprender: siete tareas guiadas en forma de historia, con pistas y comentarios amables, o explorar libremente un portal realista.",
     "prog2-h4": "Marca y diseño",
     "prog2-p": "Identidad visual, logo, paleta de colores y un sistema de diseño claro y apto para teléfonos.",
     "prog-status-active": "⬤ En Progreso",
     "prog3-h4": "Más lecciones para pacientes",
     "prog3-p": "Nuevas tareas de práctica, como leer una factura línea por línea, registrarse para una videoconsulta y cambiar de farmacia.",
     "prog4-h4": "Pruebas con aprendices",
-    "prog4-p": "Planeando las primeras sesiones con adultos mayores para ver dónde se atoran y corregirlo.",
+    "prog4-p": "El seguimiento anónimo del progreso ya está integrado: tareas completadas, ayuda necesaria y comodidad antes y después. Siguiente paso: primeras sesiones con adultos mayores.",
     "prog-status-next": "→ Próximo",
     "prog5-h4": "Práctica en español y portugués",
     "prog5-p": "Tareas guiadas y pantalla final en español y portugués.",
@@ -1452,7 +1455,7 @@ const translations = {
   },
   pt: {
     "prog-status-later": "◷ Depois",
-    "practice-alt": "Ou explore o portal de Robin por conta própria",
+    "practice-alt": "Ou experimente o modo explorar sozinho",
     "badge-later": "Em breve",
     "badge-preview": "Prévia",
     "nav-problem": "A necessidade",
@@ -1466,7 +1469,7 @@ const translations = {
     "hero-tag": "Programa de treinamento · Prática do portal do paciente",
     "hero-h1": "Pratique a tecnologia de saúde <em>sem riscos.</em> Depois use com confiança.",
     "hero-p": "O Tracing Care é uma plataforma de prática que parece e funciona como um portal do paciente real. Foi feita primeiro para idosos e para quem os ajuda: encontrar resultados, falar com a equipe de saúde, pedir renovações e gerenciar consultas, passo a passo.",
-    "hero-btn-demo": "Começar a prática",
+    "hero-btn-demo": "Começar prática guiada",
     "hero-btn-primary": "Explorar a demo",
     "hero-btn-ghost": "Como funciona →",
     "hero-note": "Sem login. Todos os nomes e registros são fictícios, então você não estraga nada.",
@@ -1487,14 +1490,14 @@ const translations = {
     "solution-title": "Telas reais. Registros fictícios. Orientação passo a passo.",
     "solution-sub": "O Tracing Care recria as ferramentas que as pessoas encontram na saúde real e acrescenta o apoio que um sistema real nunca dá: dicas, linguagem simples e espaço para errar.",
     "badge-live": "Disponível",
-    "f1-title": "Modo de prática guiada",
-    "f1-p": "Um painel de ajuda apresenta uma tarefa por vez, explica por que ela importa e mostra onde clicar se você travar. Conclua as seis para ver um resumo simples do que você fez.",
-    "f1-l1": "Encontrar resultados e entender valores destacados",
-    "f1-l2": "Enviar mensagem à equipe e pedir renovações",
-    "f1-l3": "Confirmar consultas e pagar uma conta",
-    "f1-l4": "Adicionar um familiar como ajudante",
-    "f2-title": "Portal do paciente realista",
-    "f2-p": "O portal de Robin Merriweather é organizado como muitos portais de clínicas, com nomes conhecidos como Consultas, Resultados, Mensagens e Resumo de cobrança, para que o aprendizado sirva depois.",
+    "f1-title": "Prática guiada",
+    "f1-p": "Uma instrução por vez, contada como uma pequena história sobre Robin: \"Robin tem uma consulta em breve. Você consegue encontrar a data e a hora?\" Os aprendizes encontram respostas e fazem tarefas reais do portal, com retorno encorajador e dicas quando precisam.",
+    "f1-l1": "Sete tarefas do dia a dia, de consultas a contas",
+    "f1-l2": "Dicas \"Show me where\" e retorno gentil",
+    "f1-l3": "Pergunta de conforto no início e no fim",
+    "f1-l4": "Resumo simples no final, sem nomes",
+    "f2-title": "Modo explorar",
+    "f2-p": "O portal de prática completo de Robin Merriweather, sem instruções, organizado como muitos portais de clínicas, com nomes conhecidos como Consultas, Resultados, Mensagens e Resumo de cobrança. Dá para explorar livremente, como num portal real.",
     "f2-l1": "Início com atalhos e lembretes",
     "f2-l2": "Meu prontuário: resultados, medicamentos, resumo de saúde",
     "f2-l3": "Consultas, mensagens, compartilhamento e resumo de cobrança",
@@ -1527,14 +1530,14 @@ const translations = {
     "phone-2-label": "Medicamentos e renovações",
     "phone-2-sub": "Acompanhe cada medicamento, peça renovações e veja exatamente o que está pendente",
     "phone-3-label": "Prática guiada",
-    "phone-3-sub": "Um ajudante conduz cada tarefa e mostra onde clicar",
+    "phone-3-sub": "Uma tarefa por vez, em forma de história, com dicas e retorno gentil",
     "demo-tag": "Experimente",
-    "demo-title": "Comece a praticar hoje. Sem login.",
-    "demo-sub": "A prática guiada conduz você por seis tarefas do dia a dia no portal. Prefere explorar sozinho? Abra o portal sem o ajudante.",
-    "practice-title": "Para pacientes e famílias: prática guiada do portal",
-    "practice-p": "Um modo guiado feito para idosos e para quem os ajuda. Seis tarefas do dia a dia, como encontrar um resultado de exame ou pedir uma renovação, com dicas, letra maior e um resumo simples no final. Sem nome nem cadastro.",
+    "demo-title": "Duas formas de praticar. Sem login.",
+    "demo-sub": "Comece pela prática guiada para ter ajuda passo a passo. Pronto para tentar sozinho? Use o modo explorar.",
+    "practice-title": "Prática guiada: um passo de cada vez",
+    "practice-p": "Feita para idosos e para quem os ajuda. Sete tarefas curtas sobre Robin, como encontrar uma consulta, ler um resultado ou pedir uma renovação, com dicas, letra maior e um resumo simples no final. Sem nome nem cadastro.",
     "practice-note": "Um espaço de prática com informações fictícias, não um prontuário médico. Ninguém digita seus dados reais.",
-    "practice-btn": "Começar a prática",
+    "practice-btn": "Começar prática guiada",
     "demo-roles-h": "Em breve: prévia do treinamento profissional",
     "demo-roles-note": "Estas telas da equipe vão virar uma trilha profissional guiada para estudantes das áreas clínica, de faturamento e administrativa. Você já pode explorá-las.",
     "role-1-title": "Equipe clínica",
@@ -1597,15 +1600,15 @@ const translations = {
     "prog-status-done": "✓ Concluído",
     "prog1-h4": "Demo funcional",
     "prog1-p": "Plataforma de prática clicável com quatro perfis de um clique (clínico, faturamento, administração, paciente) em 12 telas.",
-    "prog9-h4": "Prática do portal do paciente",
-    "prog9-p": "Modo de prática guiada para idosos: seis tarefas passo a passo, dicas, letra maior e um resumo simples ao terminar.",
+    "prog9-h4": "Prática guiada e modo explorar",
+    "prog9-p": "Duas formas de aprender: sete tarefas guiadas em forma de história, com dicas e retorno gentil, ou explorar livremente um portal realista.",
     "prog2-h4": "Marca e design",
     "prog2-p": "Identidade visual, logo, paleta de cores e um sistema de design claro e adaptado a celulares.",
     "prog-status-active": "⬤ Em Andamento",
     "prog3-h4": "Mais aulas para pacientes",
     "prog3-p": "Novas tarefas de prática, como ler uma conta linha por linha, fazer check-in para uma teleconsulta e atualizar a farmácia.",
     "prog4-h4": "Testes com aprendizes",
-    "prog4-p": "Planejando as primeiras sessões com idosos para ver onde eles travam e corrigir.",
+    "prog4-p": "O acompanhamento anônimo do progresso já está integrado: tarefas concluídas, ajuda necessária e conforto antes e depois. Próximo passo: primeiras sessões com idosos.",
     "prog-status-next": "→ Próximo",
     "prog5-h4": "Prática em espanhol e português",
     "prog5-p": "Tarefas guiadas e tela final em espanhol e português.",
