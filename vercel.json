@@ -1,34 +1,26 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/practice",
+      "destination": "/healthportal",
+      "permanent": false
+    },
+    {
+      "source": "/learn.html",
+      "destination": "/learn",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/healthportal",
       "destination": "https://tracingcare-demo.vercel.app/practice"
     },
     {
-      "source": "/my-health",
-      "destination": "https://tracingcare-demo.vercel.app/my-health"
-    },
-    {
-      "source": "/styles.css",
-      "destination": "https://tracingcare-demo.vercel.app/styles.css"
-    },
-    {
-      "source": "/app.js",
-      "destination": "https://tracingcare-demo.vercel.app/app.js"
-    },
-    {
-      "source": "/practice.js",
-      "destination": "https://tracingcare-demo.vercel.app/practice.js"
-    },
-    {
-      "source": "/api/results",
-      "destination": "https://tracingcare-demo.vercel.app/api/results"
-    },
-    {
-      "source": "/login",
-      "destination": "https://tracingcare-demo.vercel.app/login"
+      "source": "/:path*",
+      "destination": "https://tracingcare-demo.vercel.app/:path*"
     }
   ]
 }
