@@ -1,4 +1,7 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/healthportal", "destination": "https://tracingcare-demo.vercel.app/practice", "permanent": false }
+  ]
 }
