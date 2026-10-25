@@ -1702,7 +1702,10 @@ function setLang(lang) {
   var activeBtn = document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]');
   if (activeBtn) activeBtn.classList.add('active');
   document.documentElement.lang = lang;
+  try { localStorage.setItem('tc-lang', lang); } catch (e) {}
 }
+// Use the language chosen on any Tracing Care page (safe if storage is blocked)
+(function () { var l = null; try { l = localStorage.getItem('tc-lang'); } catch (e) {} if (l && l !== 'en' && translations[l]) setLang(l); })();
 </script>
 
 </body>

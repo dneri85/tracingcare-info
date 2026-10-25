@@ -170,26 +170,39 @@ footer a{color:var(--white)}
 .tc-back a:hover{color:var(--teal-400)}
 .tc-back a:hover,.tc-back a:focus-visible{text-decoration:underline;text-underline-offset:4px}
 section[id]{scroll-margin-top:132px}
+
+/* language switch, same look as the main page, sized for easy tapping */
+.lang-toggle{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:3px;margin-left:8px}
+.lang-btn{font:inherit;font-size:15px;font-weight:700;letter-spacing:.3px;color:rgba(255,255,255,.75);background:none;border:0;cursor:pointer;min-width:48px;min-height:40px;padding:0 12px;border-radius:999px;transition:background .2s,color .2s}
+.lang-btn:hover{color:var(--white)}
+.lang-btn.active{background:linear-gradient(135deg,var(--btn-a),var(--btn-b));color:var(--white);box-shadow:0 2px 8px rgba(37,99,235,.35)}
+.lang-note{margin-top:16px;color:rgba(255,255,255,.8);font-size:17px}
+@media (max-width:640px){.lang-toggle{margin-left:0}header{position:static}section[id]{scroll-margin-top:0}}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to main content</a>
+<a class="skip" href="#main"><span data-i18n="skip">Skip to main content</span></a>
 
 <header>
-  <div class="tc-back"><div class="wrap"><a href="/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back to Tracing Care home</a></div></div>
+  <div class="tc-back"><div class="wrap"><a href="/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-i18n="back">Back to Tracing Care home</span></a></div></div>
   <div class="wrap bar">
-    <a class="brand" href="/learn" aria-label="Tracing Care, learner home">
+    <a class="brand" href="/learn" data-i18n-aria="brand-aria" aria-label="Tracing Care, learner home">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 100 100" width="38" height="38"><defs><linearGradient id="hg" gradientUnits="userSpaceOnUse" x1="14" y1="50" x2="86" y2="50"><stop offset="0" stop-color="#4F8BEA"/><stop offset="1" stop-color="#5CC9B5"/></linearGradient></defs><path d="M84.24 38.88 A36 36 0 1 0 84.24 61.12" fill="none" stroke="url(#hg)" stroke-width="7" stroke-linecap="round"/><path d="M14 50 H33 L40 30 L47 68 L53 50 H75" fill="none" stroke="url(#hg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="8" fill="#7EE8C4"/></svg></span>
       <span>Tracing <span class="care">Care</span></span>
     </a>
-    <nav aria-label="Main">
+    <nav data-i18n-aria="nav-aria" aria-label="Main">
       <ul>
-        <li><a href="#learn">What you'll learn</a></li>
-        <li><a href="#preview">See the portal</a></li>
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#learn"><span data-i18n="nav-learn">What you'll learn</span></a></li>
+        <li><a href="#preview"><span data-i18n="nav-preview">See the portal</span></a></li>
+        <li><a href="#how"><span data-i18n="nav-how">How it works</span></a></li>
+        <li><a href="#contact"><span data-i18n="nav-contact">Contact</span></a></li>
       </ul>
     </nav>
+    <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+      <button type="button" class="lang-btn" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+      <button type="button" class="lang-btn" data-lang="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+      <button type="button" class="lang-btn" data-lang="pt" lang="pt" aria-label="Português" aria-pressed="false">PT</button>
+    </div>
   </div>
 </header>
 
@@ -199,18 +212,19 @@ section[id]{scroll-margin-top:132px}
 <section class="hero">
   <div class="wrap">
     <div style="display:flex;flex-direction:column;align-items:center">
-      <span class="eyebrow">Practice project · In development</span>
-      <h1>A place to practice. <em>Confidence for your own health portal.</em></h1>
-      <p class="lead">Tracing Care is a practice health portal filled with made-up information. You can click around, make mistakes, and learn at your own pace before you use the portal at your own doctor's office.</p>
+      <span class="eyebrow"><span data-i18n="hero-eyebrow">Practice project · In development</span></span>
+      <h1><span data-i18n="hero-h1">A place to practice. <em>Confidence for your own health portal.</em></span></h1>
+      <p class="lead"><span data-i18n="hero-lead">Tracing Care is a practice health portal filled with made-up information. You can click around, make mistakes, and learn at your own pace before you use the portal at your own doctor's office.</span></p>
       <div class="safe" role="note">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6B4A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <span><strong>Everything here is pretend.</strong> Never type your real health details or your portal password into Tracing Care.</span>
+        <span><span data-i18n="hero-safe"><strong>Everything here is pretend.</strong> Never type your real health details or your portal password into Tracing Care.</span></span>
       </div>
       <div class="btns">
-        <a class="btn btn-primary" href="/healthportal">Start practicing
+        <a class="btn btn-primary" href="/healthportal"><span data-i18n="hero-start">Start practicing</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        <a class="btn btn-outline" href="#learn">What can I learn?</a>
+        <a class="btn btn-outline" href="#learn"><span data-i18n="hero-what">What can I learn?</span></a>
       </div>
+      <p class="lang-note" data-i18n="hero-langnote" hidden></p>
     </div>
   </div>
 </section>
@@ -219,20 +233,20 @@ section[id]{scroll-margin-top:132px}
 <section id="why">
   <div class="wrap">
     <div class="narrow">
-      <span class="eyebrow">Why I'm building it</span>
-      <h2>Learning the portal should feel manageable.</h2>
-      <p class="lead">Health portals now hold your visits, messages, medicines, and test results. Many people are expected to learn them alone, with their real information on the screen. Tracing Care gives you a calm place to learn first.</p>
+      <span class="eyebrow"><span data-i18n="why-eyebrow">Why I'm building it</span></span>
+      <h2><span data-i18n="why-h2">Learning the portal should feel manageable.</span></h2>
+      <p class="lead"><span data-i18n="why-lead">Health portals now hold your visits, messages, medicines, and test results. Many people are expected to learn them alone, with their real information on the screen. Tracing Care gives you a calm place to learn first.</span></p>
     </div>
     <div class="grid2">
       <div class="card">
         <div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14s1.3 2 3.5 2 3.5-2 3.5-2"/><line x1="9" y1="9.5" x2="9.01" y2="9.5"/><line x1="15" y1="9.5" x2="15.01" y2="9.5"/></svg></div>
-        <h3>Explore without pressure</h3>
-        <p>Nothing you do here changes a real record or reaches a real doctor. Click anything, get it wrong, and try again.</p>
+        <h3><span data-i18n="why1-h">Explore without pressure</span></h3>
+        <p><span data-i18n="why1-p">Nothing you do here changes a real record or reaches a real doctor. Click anything, get it wrong, and try again.</span></p>
       </div>
       <div class="card">
         <div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <h3>Build skills that carry over</h3>
-        <p>The practice portal is laid out like the ones many clinics use, so what you learn here helps you find your way in your own portal.</p>
+        <h3><span data-i18n="why2-h">Build skills that carry over</span></h3>
+        <p><span data-i18n="why2-p">The practice portal is laid out like the ones many clinics use, so what you learn here helps you find your way in your own portal.</span></p>
       </div>
     </div>
   </div>
@@ -242,16 +256,16 @@ section[id]{scroll-margin-top:132px}
 <section id="learn" class="alt">
   <div class="wrap">
     <div class="narrow">
-      <span class="eyebrow">Everyday health portal skills</span>
-      <h2>Small steps toward greater confidence.</h2>
+      <span class="eyebrow"><span data-i18n="skills-eyebrow">Everyday health portal skills</span></span>
+      <h2><span data-i18n="skills-h2">Small steps toward greater confidence.</span></h2>
     </div>
     <div class="grid3">
-      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div><h3>Find your way around</h3><p>Learn where things live: home, messages, test results, visits, and bills.</p></div>
-      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3>Prepare for an appointment</h3><p>Find the date, time, and doctor, and read any notes about getting ready.</p></div>
-      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><h3>Understand messages and results</h3><p>Read a message from the care team and find a test result, with plain-language help.</p></div>
-      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="5"/><line x1="7" y1="12" x2="17" y2="12"/></svg></div><h3>Find medicines and refills</h3><p>See your list of medicines and practice asking for a refill.</p></div>
-      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h3>Recognize privacy and sharing settings</h3><p>Learn how family helpers can be given access, and how to spot a scam message.</p></div>
-      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 .5c0 1.5-2.5 2-2.5 3.5"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>Know when to ask for help</h3><p>Know when a portal message is fine, and when to call the clinic instead.</p></div>
+      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div><h3><span data-i18n="s1-h">Find your way around</span></h3><p><span data-i18n="s1-p">Learn where things live: home, messages, test results, visits, and bills.</span></p></div>
+      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3><span data-i18n="s2-h">Prepare for an appointment</span></h3><p><span data-i18n="s2-p">Find the date, time, and doctor, and read any notes about getting ready.</span></p></div>
+      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><h3><span data-i18n="s3-h">Understand messages and results</span></h3><p><span data-i18n="s3-p">Read a message from the care team and find a test result, with plain-language help.</span></p></div>
+      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="5"/><line x1="7" y1="12" x2="17" y2="12"/></svg></div><h3><span data-i18n="s4-h">Find medicines and refills</span></h3><p><span data-i18n="s4-p">See your list of medicines and practice asking for a refill.</span></p></div>
+      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h3><span data-i18n="s5-h">Recognize privacy and sharing settings</span></h3><p><span data-i18n="s5-p">Learn how family helpers can be given access, and how to spot a scam message.</span></p></div>
+      <div class="card"><div class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 .5c0 1.5-2.5 2-2.5 3.5"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3><span data-i18n="s6-h">Know when to ask for help</span></h3><p><span data-i18n="s6-p">Know when a portal message is fine, and when to call the clinic instead.</span></p></div>
     </div>
   </div>
 </section>
@@ -260,35 +274,35 @@ section[id]{scroll-margin-top:132px}
 <section id="preview">
   <div class="wrap">
     <div class="narrow">
-      <span class="eyebrow">A look inside the practice portal</span>
-      <h2>Familiar screens. A place to learn.</h2>
-      <p class="lead">Meet Robin Merriweather, our made-up patient. You'll help Robin with everyday tasks, like finding a visit or asking for a refill.</p>
+      <span class="eyebrow"><span data-i18n="prev-eyebrow">A look inside the practice portal</span></span>
+      <h2><span data-i18n="prev-h2">Familiar screens. A place to learn.</span></h2>
+      <p class="lead"><span data-i18n="prev-lead">Meet Robin Merriweather, our made-up patient. You'll help Robin with everyday tasks, like finding a visit or asking for a refill.</span></p>
     </div>
     <div class="previews">
-      <figure class="screen" aria-label="Sample practice screen: Robin's home page">
-        <div class="practice-flag"><span class="dot" aria-hidden="true"></span>Practice portal · Made-up information</div>
+      <figure class="screen" data-i18n-aria="fig1-aria" aria-label="Sample practice screen: Robin's home page">
+        <div class="practice-flag"><span class="dot" aria-hidden="true"></span><span data-i18n="flag">Practice portal · Made-up information</span></div>
         <div class="screen-body">
-          <div class="screen-title">Welcome, Robin</div>
-          <div class="screen-sub">Robin's practice home page</div>
-          <div class="mini"><div class="k">Next appointment</div><b>Next Wednesday, 10:30 AM</b>Dr. Sarah Chen · Bayview Community Clinic</div>
-          <div class="row"><b>Care actions</b><span>3 need attention</span></div>
-          <div class="row"><b>Medicines</b><span>6 active</span></div>
-          <div class="row"><b>Newest test result</b><span>Ready to view</span></div>
-          <div class="row"><b>Messages</b><span>1 new from the care team</span></div>
+          <div class="screen-title"><span data-i18n="scr1-title">Welcome, Robin</span></div>
+          <div class="screen-sub"><span data-i18n="scr1-sub">Robin's practice home page</span></div>
+          <div class="mini"><div class="k"><span data-i18n="scr1-k">Next appointment</span></div><span data-i18n="scr1-appt"><b>Next Wednesday, 10:30 AM</b>Dr. Sarah Chen · Bayview Community Clinic</span></div>
+          <div class="row"><b><span data-i18n="r-care">Care actions</span></b><span><span data-i18n="r-care-v">3 need attention</span></span></div>
+          <div class="row"><b><span data-i18n="r-meds">Medicines</span></b><span><span data-i18n="r-meds-v">6 active</span></span></div>
+          <div class="row"><b><span data-i18n="r-test">Newest test result</span></b><span><span data-i18n="r-test-v">Ready to view</span></span></div>
+          <div class="row"><b><span data-i18n="r-msg">Messages</span></b><span><span data-i18n="r-msg-v">1 new from the care team</span></span></div>
         </div>
-        <figcaption>Practice task: "Robin has a visit coming up. Can you find the date and time?"</figcaption>
+        <figcaption><span data-i18n="cap1">Practice task: "Robin has a visit coming up. Can you find the date and time?"</span></figcaption>
       </figure>
-      <figure class="screen" aria-label="Sample practice screen: Robin's medicines and refills">
-        <div class="practice-flag"><span class="dot" aria-hidden="true"></span>Practice portal · Made-up information</div>
+      <figure class="screen" data-i18n-aria="fig2-aria" aria-label="Sample practice screen: Robin's medicines and refills">
+        <div class="practice-flag"><span class="dot" aria-hidden="true"></span><span data-i18n="flag">Practice portal · Made-up information</span></div>
         <div class="screen-body">
-          <div class="screen-title">Medicines &amp; Refills</div>
-          <div class="screen-sub">Robin's medicine list and refill requests</div>
-          <div class="row"><b>Metformin 500 mg</b><span><span class="pill pill-amber">Waiting for review</span></span></div>
-          <div class="row"><b>Lisinopril 10 mg</b><span><span class="pill pill-green">Ready for pickup</span></span></div>
-          <div class="row"><b>Atorvastatin 20 mg</b><span>Refill next month</span></div>
-          <div class="row"><b>Pharmacy</b><span>Corner Street Pharmacy</span></div>
+          <div class="screen-title"><span data-i18n="scr2-title">Medicines &amp; Refills</span></div>
+          <div class="screen-sub"><span data-i18n="scr2-sub">Robin's medicine list and refill requests</span></div>
+          <div class="row"><b>Metformin 500 mg</b><span><span class="pill pill-amber"><span data-i18n="pill-review">Waiting for review</span></span></span></div>
+          <div class="row"><b>Lisinopril 10 mg</b><span><span class="pill pill-green"><span data-i18n="pill-ready">Ready for pickup</span></span></span></div>
+          <div class="row"><b>Atorvastatin 20 mg</b><span><span data-i18n="r-refill">Refill next month</span></span></div>
+          <div class="row"><b><span data-i18n="r-pharm">Pharmacy</span></b><span>Corner Street Pharmacy</span></div>
         </div>
-        <figcaption>Practice task: "Robin is almost out of Metformin. Can you ask for a refill?"</figcaption>
+        <figcaption><span data-i18n="cap2">Practice task: "Robin is almost out of Metformin. Can you ask for a refill?"</span></figcaption>
       </figure>
     </div>
   </div>
@@ -298,14 +312,14 @@ section[id]{scroll-margin-top:132px}
 <section id="how" class="cream">
   <div class="wrap">
     <div class="narrow">
-      <span class="eyebrow">The learning approach</span>
-      <h2>See it. Try it. Make it familiar.</h2>
+      <span class="eyebrow"><span data-i18n="how-eyebrow">The learning approach</span></span>
+      <h2><span data-i18n="how-h2">See it. Try it. Make it familiar.</span></h2>
     </div>
     <ol class="steps">
-      <li><div class="num" aria-hidden="true">01</div><h3>Start with what matters to you</h3><p>Pick a task you'll actually use, like checking a visit or asking for a refill.</p></li>
-      <li><div class="num" aria-hidden="true">02</div><h3>Walk through it together</h3><p>Guided Practice gives one step at a time, with a "Show me where" button if you get stuck.</p></li>
-      <li><div class="num" aria-hidden="true">03</div><h3>Practice again at your own pace</h3><p>Start over anytime. Repeat a task until it feels easy.</p></li>
-      <li><div class="num" aria-hidden="true">04</div><h3>Connect it to your own portal</h3><p>Use the same steps in your own doctor's portal, knowing what to look for.</p></li>
+      <li><div class="num" aria-hidden="true">01</div><h3><span data-i18n="st1-h">Start with what matters to you</span></h3><p><span data-i18n="st1-p">Pick a task you'll actually use, like checking a visit or asking for a refill.</span></p></li>
+      <li><div class="num" aria-hidden="true">02</div><h3><span data-i18n="st2-h">Walk through it together</span></h3><p><span data-i18n="st2-p">Guided Practice gives one step at a time, with a "Show me where" button if you get stuck.</span></p></li>
+      <li><div class="num" aria-hidden="true">03</div><h3><span data-i18n="st3-h">Practice again at your own pace</span></h3><p><span data-i18n="st3-p">Start over anytime. Repeat a task until it feels easy.</span></p></li>
+      <li><div class="num" aria-hidden="true">04</div><h3><span data-i18n="st4-h">Connect it to your own portal</span></h3><p><span data-i18n="st4-p">Use the same steps in your own doctor's portal, knowing what to look for.</span></p></li>
     </ol>
   </div>
 </section>
@@ -314,39 +328,39 @@ section[id]{scroll-margin-top:132px}
 <section id="project">
   <div class="wrap">
     <div class="narrow">
-      <span class="eyebrow">A project in development</span>
-      <h2>Built around learning, shaped by people.</h2>
-      <p class="lead">Tracing Care is a working project. Here's what you can use today and what's coming next.</p>
+      <span class="eyebrow"><span data-i18n="proj-eyebrow">A project in development</span></span>
+      <h2><span data-i18n="proj-h2">Built around learning, shaped by people.</span></h2>
+      <p class="lead"><span data-i18n="proj-lead">Tracing Care is a working project. Here's what you can use today and what's coming next.</span></p>
     </div>
     <div class="status">
       <div class="card">
-        <h3>Ready to try now</h3>
+        <h3><span data-i18n="now-h">Ready to try now</span></h3>
         <ul>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Guided Practice: seven short tasks, one step at a time</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Explore Mode: look around Robin's full practice portal</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Bigger text with one tap, on a computer, tablet, or phone</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Accessibility built into every screen from the start</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="now-1">Guided Practice: seven short tasks, one step at a time</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="now-2">Explore Mode: look around Robin's full practice portal</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="now-3">Bigger text with one tap, on a computer, tablet, or phone</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="now-4">Accessibility built into every screen from the start</span></li>
         </ul>
       </div>
       <div class="card">
-        <h3>Coming next</h3>
+        <h3><span data-i18n="next-h">Coming next</span></h3>
         <ul>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245FC4" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>Practice sessions with older adult learners, and changes based on what they tell us</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245FC4" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>More lessons, like reading a bill and joining a video visit</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245FC4" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>Practice in Spanish and Portuguese</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245FC4" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>Simple tools for library and community workshops</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245FC4" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg><span data-i18n="next-1">Practice sessions with older adult learners, and changes based on what they tell us</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245FC4" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg><span data-i18n="next-2">More lessons, like reading a bill and joining a video visit</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245FC4" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg><span data-i18n="next-3">Practice in Spanish and Portuguese</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#245FC4" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg><span data-i18n="next-4">Simple tools for library and community workshops</span></li>
         </ul>
       </div>
     </div>
 
     <div class="note" role="note" aria-labelledby="purpose-h">
-      <h3 id="purpose-h">A learning space with a clear purpose</h3>
-      <p>Tracing Care is for practice only.</p>
+      <h3 id="purpose-h"><span data-i18n="note-h">A learning space with a clear purpose</span></h3>
+      <p><span data-i18n="note-p">Tracing Care is for practice only.</span></p>
       <ul>
-        <li>It is not connected to any doctor, clinic, hospital, or health plan.</li>
-        <li>It does not give medical advice or care.</li>
-        <li>Nothing you do here sends a real message, request, or payment.</li>
-        <li>Every name, record, clinic, and pharmacy is made up.</li>
+        <li><span data-i18n="note-1">It is not connected to any doctor, clinic, hospital, or health plan.</span></li>
+        <li><span data-i18n="note-2">It does not give medical advice or care.</span></li>
+        <li><span data-i18n="note-3">Nothing you do here sends a real message, request, or payment.</span></li>
+        <li><span data-i18n="note-4">Every name, record, clinic, and pharmacy is made up.</span></li>
       </ul>
     </div>
   </div>
@@ -355,11 +369,11 @@ section[id]{scroll-margin-top:132px}
 <!-- PARTNERS -->
 <section class="partner-band" aria-labelledby="partners-h">
   <div class="wrap">
-    <h2 id="partners-h">Are you an educator, partner, or researcher?</h2>
-    <p>See the full project: the research behind it, the student EHR track, and the roadmap.</p>
+    <h2 id="partners-h"><span data-i18n="partners-h">Are you an educator, partner, or researcher?</span></h2>
+    <p><span data-i18n="partners-p">See the full project: the research behind it, the student EHR track, and the roadmap.</span></p>
     <div class="btns">
-      <a class="btn btn-light" href="/">See the full project</a>
-      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      <a class="btn btn-light" href="/"><span data-i18n="partners-btn">See the full project</span></a>
+      <a class="btn btn-ghost" href="#contact"><span data-i18n="partners-btn2">Get in touch</span></a>
     </div>
   </div>
 </section>
@@ -367,11 +381,11 @@ section[id]{scroll-margin-top:132px}
 <!-- CONTACT -->
 <section id="contact" class="alt">
   <div class="wrap narrow">
-    <span class="eyebrow">Let's connect</span>
-    <h2>Interested in the training project?</h2>
-    <p class="lead">I'd love to hear from libraries, senior centers, and community groups that help older adults with health technology, and from anyone who wants to try it and share feedback.</p>
+    <span class="eyebrow"><span data-i18n="contact-eyebrow">Let's connect</span></span>
+    <h2><span data-i18n="contact-h2">Interested in the training project?</span></h2>
+    <p class="lead"><span data-i18n="contact-lead">I'd love to hear from libraries, senior centers, and community groups that help older adults with health technology, and from anyone who wants to try it and share feedback.</span></p>
     <div class="btns">
-      <a class="btn btn-primary" href="mailto:daniza.neri@gmail.com?subject=Tracing%20Care">Contact Daniza</a>
+      <a class="btn btn-primary" href="mailto:daniza.neri@gmail.com?subject=Tracing%20Care"><span data-i18n="contact-btn">Contact Daniza</span></a>
     </div>
   </div>
 </section>
@@ -380,9 +394,346 @@ section[id]{scroll-margin-top:132px}
 
 <footer>
   <div class="wrap foot">
-    <p><strong style="color:#fff">Tracing Care</strong> · A health portal practice project by Daniza Neri · Practice at your own pace.</p>
-    <p>Made-up information only · © 2026 · <a href="/">Full project</a></p>
+    <p><span data-i18n="foot-1"><strong style="color:#fff">Tracing Care</strong> · A health portal practice project by Daniza Neri · Practice at your own pace.</span></p>
+    <p><span data-i18n="foot-2">Made-up information only · © 2026 · <a href="/">Full project</a></span></p>
   </div>
 </footer>
+<script>
+var TC_I18N = {
+"en": {
+"skip": "Skip to main content",
+"back": "Back to Tracing Care home",
+"nav-learn": "What you'll learn",
+"nav-preview": "See the portal",
+"nav-how": "How it works",
+"nav-contact": "Contact",
+"hero-eyebrow": "Practice project · In development",
+"hero-h1": "A place to practice. <em>Confidence for your own health portal.</em>",
+"hero-lead": "Tracing Care is a practice health portal filled with made-up information. You can click around, make mistakes, and learn at your own pace before you use the portal at your own doctor's office.",
+"hero-safe": "<strong>Everything here is pretend.</strong> Never type your real health details or your portal password into Tracing Care.",
+"hero-start": "Start practicing",
+"hero-what": "What can I learn?",
+"why-eyebrow": "Why I'm building it",
+"why-h2": "Learning the portal should feel manageable.",
+"why-lead": "Health portals now hold your visits, messages, medicines, and test results. Many people are expected to learn them alone, with their real information on the screen. Tracing Care gives you a calm place to learn first.",
+"why1-h": "Explore without pressure",
+"why1-p": "Nothing you do here changes a real record or reaches a real doctor. Click anything, get it wrong, and try again.",
+"why2-h": "Build skills that carry over",
+"why2-p": "The practice portal is laid out like the ones many clinics use, so what you learn here helps you find your way in your own portal.",
+"skills-eyebrow": "Everyday health portal skills",
+"skills-h2": "Small steps toward greater confidence.",
+"s1-h": "Find your way around",
+"s1-p": "Learn where things live: home, messages, test results, visits, and bills.",
+"s2-h": "Prepare for an appointment",
+"s2-p": "Find the date, time, and doctor, and read any notes about getting ready.",
+"s3-h": "Understand messages and results",
+"s3-p": "Read a message from the care team and find a test result, with plain-language help.",
+"s4-h": "Find medicines and refills",
+"s4-p": "See your list of medicines and practice asking for a refill.",
+"s5-h": "Recognize privacy and sharing settings",
+"s5-p": "Learn how family helpers can be given access, and how to spot a scam message.",
+"s6-h": "Know when to ask for help",
+"s6-p": "Know when a portal message is fine, and when to call the clinic instead.",
+"prev-eyebrow": "A look inside the practice portal",
+"prev-h2": "Familiar screens. A place to learn.",
+"prev-lead": "Meet Robin Merriweather, our made-up patient. You'll help Robin with everyday tasks, like finding a visit or asking for a refill.",
+"flag": "Practice portal · Made-up information",
+"scr1-title": "Welcome, Robin",
+"scr1-sub": "Robin's practice home page",
+"scr1-k": "Next appointment",
+"scr1-appt": "<b>Next Wednesday, 10:30 AM</b>Dr. Sarah Chen · Bayview Community Clinic",
+"r-care": "Care actions",
+"r-care-v": "3 need attention",
+"r-meds": "Medicines",
+"r-meds-v": "6 active",
+"r-test": "Newest test result",
+"r-test-v": "Ready to view",
+"r-msg": "Messages",
+"r-msg-v": "1 new from the care team",
+"cap1": "Practice task: \"Robin has a visit coming up. Can you find the date and time?\"",
+"scr2-title": "Medicines &amp; Refills",
+"scr2-sub": "Robin's medicine list and refill requests",
+"pill-review": "Waiting for review",
+"pill-ready": "Ready for pickup",
+"r-refill": "Refill next month",
+"r-pharm": "Pharmacy",
+"cap2": "Practice task: \"Robin is almost out of Metformin. Can you ask for a refill?\"",
+"how-eyebrow": "The learning approach",
+"how-h2": "See it. Try it. Make it familiar.",
+"st1-h": "Start with what matters to you",
+"st1-p": "Pick a task you'll actually use, like checking a visit or asking for a refill.",
+"st2-h": "Walk through it together",
+"st2-p": "Guided Practice gives one step at a time, with a \"Show me where\" button if you get stuck.",
+"st3-h": "Practice again at your own pace",
+"st3-p": "Start over anytime. Repeat a task until it feels easy.",
+"st4-h": "Connect it to your own portal",
+"st4-p": "Use the same steps in your own doctor's portal, knowing what to look for.",
+"proj-eyebrow": "A project in development",
+"proj-h2": "Built around learning, shaped by people.",
+"proj-lead": "Tracing Care is a working project. Here's what you can use today and what's coming next.",
+"now-h": "Ready to try now",
+"now-1": "Guided Practice: seven short tasks, one step at a time",
+"now-2": "Explore Mode: look around Robin's full practice portal",
+"now-3": "Bigger text with one tap, on a computer, tablet, or phone",
+"now-4": "Accessibility built into every screen from the start",
+"next-h": "Coming next",
+"next-1": "Practice sessions with older adult learners, and changes based on what they tell us",
+"next-2": "More lessons, like reading a bill and joining a video visit",
+"next-3": "Practice in Spanish and Portuguese",
+"next-4": "Simple tools for library and community workshops",
+"note-h": "A learning space with a clear purpose",
+"note-p": "Tracing Care is for practice only.",
+"note-1": "It is not connected to any doctor, clinic, hospital, or health plan.",
+"note-2": "It does not give medical advice or care.",
+"note-3": "Nothing you do here sends a real message, request, or payment.",
+"note-4": "Every name, record, clinic, and pharmacy is made up.",
+"partners-h": "Are you an educator, partner, or researcher?",
+"partners-p": "See the full project: the research behind it, the student EHR track, and the roadmap.",
+"partners-btn": "See the full project",
+"partners-btn2": "Get in touch",
+"contact-eyebrow": "Let's connect",
+"contact-h2": "Interested in the training project?",
+"contact-lead": "I'd love to hear from libraries, senior centers, and community groups that help older adults with health technology, and from anyone who wants to try it and share feedback.",
+"contact-btn": "Contact Daniza",
+"foot-1": "<strong style=\"color:#fff\">Tracing Care</strong> · A health portal practice project by Daniza Neri · Practice at your own pace.",
+"foot-2": "Made-up information only · © 2026 · <a href=\"/\">Full project</a>",
+"hero-langnote": "",
+"brand-aria": "Tracing Care, learner home",
+"fig1-aria": "Sample practice screen: Robin's home page",
+"fig2-aria": "Sample practice screen: Robin's medicines and refills",
+"nav-aria": "Main",
+"title": "Tracing Care, Practice Your Health Portal"
+},
+"es": {
+"skip": "Ir al contenido principal",
+"back": "Volver al inicio de Tracing Care",
+"nav-learn": "Qué aprenderá",
+"nav-preview": "Vea el portal",
+"nav-how": "Cómo funciona",
+"nav-contact": "Contacto",
+"hero-eyebrow": "Proyecto de práctica · En desarrollo",
+"hero-h1": "Un lugar para practicar. <em>Confianza para usar su propio portal de salud.</em>",
+"hero-lead": "Tracing Care es un portal de salud de práctica con información inventada. Puede explorar, equivocarse y aprender a su propio ritmo antes de usar el portal de su propio consultorio médico.",
+"hero-safe": "<strong>Todo aquí es de mentira.</strong> Nunca escriba sus datos de salud reales ni la contraseña de su portal en Tracing Care.",
+"hero-start": "Empezar a practicar",
+"hero-what": "¿Qué puedo aprender?",
+"why-eyebrow": "Por qué lo estoy creando",
+"why-h2": "Aprender a usar el portal debería sentirse sencillo.",
+"why-lead": "Los portales de salud ahora guardan sus citas, mensajes, medicinas y resultados. A muchas personas se les pide aprender a usarlos solas, con su información real en la pantalla. Tracing Care le da un lugar tranquilo para aprender primero.",
+"why1-h": "Explore sin presión",
+"why1-p": "Nada de lo que haga aquí cambia un expediente real ni llega a un médico real. Haga clic en lo que quiera, equivóquese y vuelva a intentarlo.",
+"why2-h": "Aprenda habilidades que le servirán",
+"why2-p": "El portal de práctica está organizado como los que usan muchas clínicas, así que lo que aprenda aquí le ayudará a orientarse en su propio portal.",
+"skills-eyebrow": "Habilidades diarias para el portal de salud",
+"skills-h2": "Pequeños pasos hacia más confianza.",
+"s1-h": "Oriéntese en el portal",
+"s1-p": "Aprenda dónde está cada cosa: inicio, mensajes, resultados, citas y facturas.",
+"s2-h": "Prepárese para una cita",
+"s2-p": "Encuentre la fecha, la hora y el médico, y lea las indicaciones para prepararse.",
+"s3-h": "Entienda mensajes y resultados",
+"s3-p": "Lea un mensaje del equipo de salud y encuentre un resultado, con ayuda en palabras sencillas.",
+"s4-h": "Encuentre medicinas y resurtidos",
+"s4-p": "Vea su lista de medicinas y practique cómo pedir un resurtido.",
+"s5-h": "Conozca la privacidad y el acceso compartido",
+"s5-p": "Aprenda cómo dar acceso a un familiar que le ayuda y cómo reconocer un mensaje de estafa.",
+"s6-h": "Sepa cuándo pedir ayuda",
+"s6-p": "Sepa cuándo basta un mensaje por el portal y cuándo es mejor llamar a la clínica.",
+"prev-eyebrow": "Un vistazo al portal de práctica",
+"prev-h2": "Pantallas conocidas. Un lugar para aprender.",
+"prev-lead": "Conozca a Robin Merriweather, el paciente inventado de la práctica. Ayudará a Robin con tareas diarias, como encontrar una cita o pedir un resurtido.",
+"flag": "Portal de práctica · Información inventada",
+"scr1-title": "Hola, Robin",
+"scr1-sub": "Página de inicio de práctica de Robin",
+"scr1-k": "Próxima cita",
+"scr1-appt": "<b>El próximo miércoles, 10:30 a. m.</b>Dra. Sarah Chen · Bayview Community Clinic",
+"r-care": "Acciones de cuidado",
+"r-care-v": "3 requieren atención",
+"r-meds": "Medicinas",
+"r-meds-v": "6 activas",
+"r-test": "Resultado más reciente",
+"r-test-v": "Listo para ver",
+"r-msg": "Mensajes",
+"r-msg-v": "1 nuevo del equipo de salud",
+"cap1": "Tarea de práctica: \"Robin tiene una cita pronto. ¿Puede encontrar la fecha y la hora?\"",
+"scr2-title": "Medicinas y resurtidos",
+"scr2-sub": "Lista de medicinas y solicitudes de resurtido de Robin",
+"pill-review": "En revisión",
+"pill-ready": "Listo para recoger",
+"r-refill": "Resurtido el próximo mes",
+"r-pharm": "Farmacia",
+"cap2": "Tarea de práctica: \"A Robin casi se le acaba la metformina. ¿Puede pedir un resurtido?\"",
+"how-eyebrow": "La forma de aprender",
+"how-h2": "Véalo. Inténtelo. Hágalo suyo.",
+"st1-h": "Empiece por lo que le importa",
+"st1-p": "Elija una tarea que de verdad usará, como revisar una cita o pedir un resurtido.",
+"st2-h": "Hágalo paso a paso con ayuda",
+"st2-p": "La práctica guiada le da un paso a la vez, con un botón \"Show me where\" (Muéstreme dónde) si se atasca.",
+"st3-h": "Practique de nuevo a su ritmo",
+"st3-p": "Empiece de nuevo cuando quiera. Repita una tarea hasta que le resulte fácil.",
+"st4-h": "Llévelo a su propio portal",
+"st4-p": "Use los mismos pasos en el portal de su médico, sabiendo qué buscar.",
+"proj-eyebrow": "Un proyecto en desarrollo",
+"proj-h2": "Creado para aprender, guiado por las personas.",
+"proj-lead": "Tracing Care es un proyecto en marcha. Esto es lo que puede usar hoy y lo que viene después.",
+"now-h": "Listo para probar ahora",
+"now-1": "Práctica guiada: siete tareas cortas, un paso a la vez",
+"now-2": "Modo explorar: recorra el portal de práctica completo de Robin",
+"now-3": "Texto más grande con un toque, en computadora, tableta o celular",
+"now-4": "Accesibilidad incluida en cada pantalla desde el inicio",
+"next-h": "Lo que viene",
+"next-1": "Sesiones de práctica con adultos mayores, y cambios según lo que nos digan",
+"next-2": "Más lecciones, como leer una factura y entrar a una videoconsulta",
+"next-3": "Práctica en español y portugués",
+"next-4": "Herramientas sencillas para talleres en bibliotecas y en la comunidad",
+"note-h": "Un espacio para aprender, con un propósito claro",
+"note-p": "Tracing Care es solo para practicar.",
+"note-1": "No está conectado a ningún médico, clínica, hospital ni plan de salud.",
+"note-2": "No da consejos ni atención médica.",
+"note-3": "Nada de lo que haga aquí envía un mensaje, una solicitud o un pago real.",
+"note-4": "Todos los nombres, expedientes, clínicas y farmacias son inventados.",
+"partners-h": "¿Es usted educador, aliado o investigador?",
+"partners-p": "Vea el proyecto completo: la investigación detrás, la sección para estudiantes de expedientes electrónicos y los próximos pasos.",
+"partners-btn": "Ver el proyecto completo",
+"partners-btn2": "Escríbame",
+"contact-eyebrow": "Conectemos",
+"contact-h2": "¿Le interesa el proyecto de capacitación?",
+"contact-lead": "Me encantaría saber de bibliotecas, centros para personas mayores y grupos comunitarios que ayudan a adultos mayores con la tecnología de salud, y de cualquier persona que quiera probarlo y darme su opinión.",
+"contact-btn": "Contactar a Daniza",
+"foot-1": "<strong style=\"color:#fff\">Tracing Care</strong> · Un proyecto de práctica de portales de salud de Daniza Neri · Practique a su ritmo.",
+"foot-2": "Solo información inventada · © 2026 · <a href=\"/\">Proyecto completo</a>",
+"hero-langnote": "Por ahora, la práctica está en inglés. Pronto estará en español.",
+"brand-aria": "Tracing Care, página para aprender",
+"fig1-aria": "Pantalla de práctica de ejemplo: página de inicio de Robin",
+"fig2-aria": "Pantalla de práctica de ejemplo: medicinas y resurtidos de Robin",
+"nav-aria": "Principal",
+"title": "Tracing Care, practique con su portal de salud"
+},
+"pt": {
+"skip": "Ir para o conteúdo principal",
+"back": "Voltar ao início do Tracing Care",
+"nav-learn": "O que você vai aprender",
+"nav-preview": "Veja o portal",
+"nav-how": "Como funciona",
+"nav-contact": "Contato",
+"hero-eyebrow": "Projeto de prática · Em desenvolvimento",
+"hero-h1": "Um lugar para praticar. <em>Confiança para usar seu próprio portal de saúde.</em>",
+"hero-lead": "Tracing Care é um portal de saúde de prática com informações inventadas. Você pode explorar, errar e aprender no seu ritmo antes de usar o portal do seu próprio consultório.",
+"hero-safe": "<strong>Tudo aqui é de faz de conta.</strong> Nunca digite seus dados de saúde reais nem a senha do seu portal no Tracing Care.",
+"hero-start": "Começar a praticar",
+"hero-what": "O que posso aprender?",
+"why-eyebrow": "Por que estou criando isso",
+"why-h2": "Aprender a usar o portal deveria ser tranquilo.",
+"why-lead": "Os portais de saúde agora guardam suas consultas, mensagens, remédios e resultados de exames. Muitas pessoas precisam aprender sozinhas, com suas informações reais na tela. Tracing Care oferece um lugar tranquilo para aprender antes.",
+"why1-h": "Explore sem pressão",
+"why1-p": "Nada do que você fizer aqui muda um prontuário real ou chega a um médico de verdade. Clique no que quiser, erre e tente de novo.",
+"why2-h": "Aprenda habilidades que você vai levar adiante",
+"why2-p": "O portal de prática é organizado como os de muitas clínicas, então o que você aprender aqui vai ajudar no seu próprio portal.",
+"skills-eyebrow": "Habilidades do dia a dia no portal de saúde",
+"skills-h2": "Pequenos passos para mais confiança.",
+"s1-h": "Encontre o caminho",
+"s1-p": "Saiba onde fica cada coisa: início, mensagens, resultados de exames, consultas e contas.",
+"s2-h": "Prepare-se para uma consulta",
+"s2-p": "Encontre a data, o horário e o médico, e leia as orientações para se preparar.",
+"s3-h": "Entenda mensagens e resultados",
+"s3-p": "Leia uma mensagem da equipe de saúde e encontre um resultado, com ajuda em linguagem simples.",
+"s4-h": "Encontre remédios e renovações de receita",
+"s4-p": "Veja sua lista de remédios e pratique como pedir uma renovação.",
+"s5-h": "Conheça a privacidade e o compartilhamento",
+"s5-p": "Aprenda como dar acesso a um familiar que ajuda você e como reconhecer uma mensagem de golpe.",
+"s6-h": "Saiba quando pedir ajuda",
+"s6-p": "Saiba quando uma mensagem pelo portal resolve e quando é melhor ligar para a clínica.",
+"prev-eyebrow": "Uma olhada no portal de prática",
+"prev-h2": "Telas familiares. Um lugar para aprender.",
+"prev-lead": "Conheça Robin Merriweather, o paciente inventado da prática. Você vai ajudar Robin com tarefas do dia a dia, como encontrar uma consulta ou pedir uma renovação.",
+"flag": "Portal de prática · Informações inventadas",
+"scr1-title": "Olá, Robin",
+"scr1-sub": "Página inicial de prática de Robin",
+"scr1-k": "Próxima consulta",
+"scr1-appt": "<b>Próxima quarta-feira, 10h30</b>Dra. Sarah Chen · Bayview Community Clinic",
+"r-care": "Ações de cuidado",
+"r-care-v": "3 precisam de atenção",
+"r-meds": "Remédios",
+"r-meds-v": "6 ativos",
+"r-test": "Resultado mais recente",
+"r-test-v": "Pronto para ver",
+"r-msg": "Mensagens",
+"r-msg-v": "1 nova da equipe de saúde",
+"cap1": "Tarefa de prática: \"Robin tem uma consulta chegando. Você consegue encontrar a data e o horário?\"",
+"scr2-title": "Remédios e renovações",
+"scr2-sub": "Lista de remédios e pedidos de renovação de Robin",
+"pill-review": "Em análise",
+"pill-ready": "Pronto para retirar",
+"r-refill": "Renovar no próximo mês",
+"r-pharm": "Farmácia",
+"cap2": "Tarefa de prática: \"A metformina de Robin está acabando. Você consegue pedir uma renovação?\"",
+"how-eyebrow": "O jeito de aprender",
+"how-h2": "Veja. Tente. Torne familiar.",
+"st1-h": "Comece pelo que importa para você",
+"st1-p": "Escolha uma tarefa que você vai usar de verdade, como ver uma consulta ou pedir uma renovação.",
+"st2-h": "Faça passo a passo com ajuda",
+"st2-p": "A prática guiada mostra um passo de cada vez, com um botão \"Show me where\" (Mostre onde) se você travar.",
+"st3-h": "Pratique de novo no seu ritmo",
+"st3-p": "Recomece quando quiser. Repita uma tarefa até ficar fácil.",
+"st4-h": "Leve para o seu próprio portal",
+"st4-p": "Use os mesmos passos no portal do seu médico, sabendo o que procurar.",
+"proj-eyebrow": "Um projeto em desenvolvimento",
+"proj-h2": "Feito para aprender, moldado pelas pessoas.",
+"proj-lead": "Tracing Care é um projeto em andamento. Veja o que você já pode usar e o que vem por aí.",
+"now-h": "Pronto para usar agora",
+"now-1": "Prática guiada: sete tarefas curtas, um passo de cada vez",
+"now-2": "Modo explorar: conheça o portal de prática completo de Robin",
+"now-3": "Texto maior com um toque, no computador, tablet ou celular",
+"now-4": "Acessibilidade em cada tela desde o início",
+"next-h": "O que vem por aí",
+"next-1": "Sessões de prática com idosos, e mudanças com base no que eles nos disserem",
+"next-2": "Mais lições, como ler uma conta e entrar em uma consulta por vídeo",
+"next-3": "Prática em espanhol e português",
+"next-4": "Ferramentas simples para oficinas em bibliotecas e na comunidade",
+"note-h": "Um espaço para aprender, com um propósito claro",
+"note-p": "Tracing Care é só para praticar.",
+"note-1": "Não está ligado a nenhum médico, clínica, hospital ou plano de saúde.",
+"note-2": "Não dá conselhos nem atendimento médico.",
+"note-3": "Nada do que você fizer aqui envia uma mensagem, um pedido ou um pagamento real.",
+"note-4": "Todos os nomes, prontuários, clínicas e farmácias são inventados.",
+"partners-h": "Você é educador, parceiro ou pesquisador?",
+"partners-p": "Veja o projeto completo: a pesquisa por trás dele, a trilha para estudantes de prontuário eletrônico e os próximos passos.",
+"partners-btn": "Ver o projeto completo",
+"partners-btn2": "Fale comigo",
+"contact-eyebrow": "Vamos conversar",
+"contact-h2": "Tem interesse no projeto de treinamento?",
+"contact-lead": "Adoraria ouvir bibliotecas, centros de convivência para idosos e grupos comunitários que ajudam idosos com a tecnologia da saúde, e qualquer pessoa que queira testar e dar sua opinião.",
+"contact-btn": "Falar com a Daniza",
+"foot-1": "<strong style=\"color:#fff\">Tracing Care</strong> · Um projeto de prática de portais de saúde por Daniza Neri · Pratique no seu ritmo.",
+"foot-2": "Somente informações inventadas · © 2026 · <a href=\"/\">Projeto completo</a>",
+"hero-langnote": "Por enquanto, a prática está em inglês. Em breve estará em português.",
+"brand-aria": "Tracing Care, página de aprendizagem",
+"fig1-aria": "Tela de prática de exemplo: página inicial de Robin",
+"fig2-aria": "Tela de prática de exemplo: remédios e renovações de Robin",
+"nav-aria": "Principal",
+"title": "Tracing Care, pratique com seu portal de saúde"
+}
+};
+function setLang(lang) {
+  var t = TC_I18N[lang]; if (!t) return;
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var v = t[el.getAttribute('data-i18n')];
+    if (v !== undefined) { el.innerHTML = v; if (el.hasAttribute('hidden') || el.classList.contains('lang-note')) el.hidden = !v; }
+  });
+  document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+    var v = t[el.getAttribute('data-i18n-aria')]; if (v) el.setAttribute('aria-label', v);
+  });
+  document.querySelectorAll('.lang-btn').forEach(function (b) {
+    var on = b.getAttribute('data-lang') === lang;
+    b.classList.toggle('active', on); b.setAttribute('aria-pressed', on);
+  });
+  document.documentElement.lang = lang;
+  document.title = t.title;
+  try { localStorage.setItem('tc-lang', lang); } catch (e) {}
+}
+document.querySelectorAll('.lang-btn').forEach(function (b) {
+  b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
+});
+(function () { var l = null; try { l = localStorage.getItem('tc-lang'); } catch (e) {} if (l && l !== 'en' && TC_I18N[l]) setLang(l); })();
+</script>
 </body>
 </html>
