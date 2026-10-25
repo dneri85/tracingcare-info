@@ -163,12 +163,20 @@ footer a{color:var(--white)}
   nav a{font-size:15px;padding:0 10px}
   .btn{width:100%}
 }
+
+/* back link strip, same as the practice and portal pages */
+.tc-back{background:#081C2E;border-bottom:1px solid rgba(255,255,255,.08)}
+.tc-back a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#fff;font-size:16px;font-weight:600;text-decoration:none;padding:0 4px;border-radius:8px}
+.tc-back a:hover{color:var(--teal-400)}
+.tc-back a:hover,.tc-back a:focus-visible{text-decoration:underline;text-underline-offset:4px}
+section[id]{scroll-margin-top:132px}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
 <header>
+  <div class="tc-back"><div class="wrap"><a href="/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back to Tracing Care home</a></div></div>
   <div class="wrap bar">
     <a class="brand" href="/learn" aria-label="Tracing Care, learner home">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 100 100" width="38" height="38"><defs><linearGradient id="hg" gradientUnits="userSpaceOnUse" x1="14" y1="50" x2="86" y2="50"><stop offset="0" stop-color="#4F8BEA"/><stop offset="1" stop-color="#5CC9B5"/></linearGradient></defs><path d="M84.24 38.88 A36 36 0 1 0 84.24 61.12" fill="none" stroke="url(#hg)" stroke-width="7" stroke-linecap="round"/><path d="M14 50 H33 L40 30 L47 68 L53 50 H75" fill="none" stroke="url(#hg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="8" fill="#7EE8C4"/></svg></span>
