@@ -249,6 +249,7 @@ header{position:sticky}
 .install-done{display:flex;align-items:center;gap:10px;margin-top:24px;padding:16px 20px;border-radius:14px;background:#E6F7F1;color:#0F5F55;font-weight:600;font-size:19px}
 .install-done[hidden],.btns[hidden],.install-grid[hidden]{display:none}
 .addr{white-space:nowrap}
+.install-card li{overflow-wrap:break-word;min-width:0}
 .install-tip{font-size:18px;color:var(--navy);font-weight:600;margin-top:14px;max-width:780px}
 .install-which{margin-top:24px;color:var(--navy);font-size:17px;max-width:780px}
 .install-note{margin-top:10px;color:var(--gray);font-size:17px;max-width:780px}
@@ -427,15 +428,15 @@ header{position:sticky}
     <div class="grid3 install-grid" id="installSteps">
       <div class="card install-card" data-device="ios">
         <div class="install-head"><h3><span data-i18n="ins-ios-h">iPhone or iPad</span></h3><span class="ins-mine" data-i18n="ins-mine">Your device</span></div>
-        <ol><li><span data-i18n="ins-ios-1">Find the <b>Safari</b> app on your iPhone or iPad. Its icon is a blue compass. Tap it to open it.</span></li><li><span data-i18n="ins-ios-2">Tap the address bar. On most iPhones it's at the bottom of the screen. On an iPad, it's at the top. Type <b class="addr">tracing-care.com/healthportal</b> and tap <b>Go</b>.</span></li><li><span data-i18n="ins-ios-3">Find the <b>Share</b> button. It's a square with an arrow pointing up, usually at the bottom of the screen. If you don't see it, tap the three dots <b>•••</b> first, then tap <b>Share</b>.</span></li><li><span data-i18n="ins-ios-4">A list slides up. Slowly scroll down with your finger until you see <b>Add to Home Screen</b>. Tap it.</span></li><li><span data-i18n="ins-ios-5">Tap <b>Add</b> in the top right corner.</span></li><li><span data-i18n="ins-ios-6">Go back to your home screen and look for the Tracing Care icon. Tap it anytime you want to practice.</span></li></ol>
+        <ol><li><span data-i18n="ins-ios-1">Find the <b>Safari</b> app on your iPhone or iPad. Its icon is a blue compass. Tap it to open it.</span></li><li><span data-i18n="ins-ios-2">Tap the address bar. On most iPhones it's at the bottom of the screen. On an iPad, it's at the top. Type <b class="addr">tracing-care.com/</b><wbr><b class="addr">healthportal</b> and tap <b>Go</b>.</span></li><li><span data-i18n="ins-ios-3">Find the <b>Share</b> button. It's a square with an arrow pointing up, usually at the bottom of the screen. If you don't see it, tap the three dots <b>•••</b> first, then tap <b>Share</b>.</span></li><li><span data-i18n="ins-ios-4">A list slides up. Slowly scroll down with your finger until you see <b>Add to Home Screen</b>. Tap it.</span></li><li><span data-i18n="ins-ios-5">Tap <b>Add</b> in the top right corner.</span></li><li><span data-i18n="ins-ios-6">Go back to your home screen and look for the Tracing Care icon. Tap it anytime you want to practice.</span></li></ol>
       </div>
       <div class="card install-card" data-device="android">
         <div class="install-head"><h3><span data-i18n="ins-and-h">Android phone or tablet</span></h3><span class="ins-mine" data-i18n="ins-mine">Your device</span></div>
-        <ol><li><span data-i18n="ins-and-1">Find the <b>Chrome</b> app on your phone or tablet. Its icon is a red, yellow, and green circle with a blue dot in the middle. Tap it to open it.</span></li><li><span data-i18n="ins-and-2">Tap the address bar at the top of the screen. Type <b class="addr">tracing-care.com/healthportal</b> and tap <b>Go</b> or the Enter key on your keyboard.</span></li><li><span data-i18n="ins-and-3">Tap the three dots <b>⋮</b> in the top right corner.</span></li><li><span data-i18n="ins-and-4">A menu opens. Look for <b>Add to Home screen</b> or <b>Install app</b>. You may need to scroll down. Tap it.</span></li><li><span data-i18n="ins-and-5">Tap <b>Install</b> or <b>Add</b> to confirm.</span></li><li><span data-i18n="ins-and-6">Go back to your home screen and look for the Tracing Care icon. Tap it anytime you want to practice.</span></li></ol>
+        <ol><li><span data-i18n="ins-and-1">Find the <b>Chrome</b> app on your phone or tablet. Its icon is a red, yellow, and green circle with a blue dot in the middle. Tap it to open it.</span></li><li><span data-i18n="ins-and-2">Tap the address bar at the top of the screen. Type <b class="addr">tracing-care.com/</b><wbr><b class="addr">healthportal</b> and tap <b>Go</b> or the Enter key on your keyboard.</span></li><li><span data-i18n="ins-and-3">Tap the three dots <b>⋮</b> in the top right corner.</span></li><li><span data-i18n="ins-and-4">A menu opens. Look for <b>Add to Home screen</b> or <b>Install app</b>. You may need to scroll down. Tap it.</span></li><li><span data-i18n="ins-and-5">Tap <b>Install</b> or <b>Add</b> to confirm.</span></li><li><span data-i18n="ins-and-6">Go back to your home screen and look for the Tracing Care icon. Tap it anytime you want to practice.</span></li></ol>
       </div>
       <div class="card install-card" data-device="desktop">
         <div class="install-head"><h3><span data-i18n="ins-pc-h">Computer</span></h3><span class="ins-mine" data-i18n="ins-mine">Your device</span></div>
-        <ol><li><span data-i18n="ins-pc-1">Open <b>Google Chrome</b> or <b>Microsoft Edge</b>, the program you use to visit websites. (Don't have either one? You can still practice in any browser. Just bookmark this page.)</span></li><li><span data-i18n="ins-pc-2">Click the address bar at the top of the window. Type <b class="addr">tracing-care.com/healthportal</b> and press the <b>Enter</b> key.</span></li><li><span data-i18n="ins-pc-3">At the right end of the address bar, look for the install icon. It looks like a small screen with a down arrow. Click it. Don't see it? Click the three dots in the top right corner and look for <b>Install</b>.</span></li><li><span data-i18n="ins-pc-4">Click <b>Install</b>.</span></li><li><span data-i18n="ins-pc-5">Tracing Care opens in its own window. Next time, find it with your other programs or on your desktop.</span></li></ol>
+        <ol><li><span data-i18n="ins-pc-1">Open <b>Google Chrome</b> or <b>Microsoft Edge</b>, the program you use to visit websites. (Don't have either one? You can still practice in any browser. Just bookmark this page.)</span></li><li><span data-i18n="ins-pc-2">Click the address bar at the top of the window. Type <b class="addr">tracing-care.com/</b><wbr><b class="addr">healthportal</b> and press the <b>Enter</b> key.</span></li><li><span data-i18n="ins-pc-3">At the right end of the address bar, look for the install icon. It looks like a small screen with a down arrow. Click it. Don't see it? Click the three dots in the top right corner and look for <b>Install</b>.</span></li><li><span data-i18n="ins-pc-4">Click <b>Install</b>.</span></li><li><span data-i18n="ins-pc-5">Tracing Care opens in its own window. Next time, find it with your other programs or on your desktop.</span></li></ol>
       </div>
     </div>
     <p class="install-which" data-i18n="ins-which">Not sure which phone you have? An iPhone has an Apple logo on the back. Most other phones are Android.</p>
@@ -632,21 +633,21 @@ var TC_I18N = {
 "ins-mine": "Your device",
 "ins-ios-h": "iPhone or iPad",
 "ins-ios-1": "Find the <b>Safari</b> app on your iPhone or iPad. Its icon is a blue compass. Tap it to open it.",
-"ins-ios-2": "Tap the address bar. On most iPhones it's at the bottom of the screen. On an iPad, it's at the top. Type <b class=\"addr\">tracing-care.com/healthportal</b> and tap <b>Go</b>.",
+"ins-ios-2": "Tap the address bar. On most iPhones it's at the bottom of the screen. On an iPad, it's at the top. Type <b class=\"addr\">tracing-care.com/</b><wbr><b class=\"addr\">healthportal</b> and tap <b>Go</b>.",
 "ins-ios-3": "Find the <b>Share</b> button. It's a square with an arrow pointing up, usually at the bottom of the screen. If you don't see it, tap the three dots <b>•••</b> first, then tap <b>Share</b>.",
 "ins-ios-4": "A list slides up. Slowly scroll down with your finger until you see <b>Add to Home Screen</b>. Tap it.",
 "ins-ios-5": "Tap <b>Add</b> in the top right corner.",
 "ins-ios-6": "Go back to your home screen and look for the Tracing Care icon. Tap it anytime you want to practice.",
 "ins-and-h": "Android phone or tablet",
 "ins-and-1": "Find the <b>Chrome</b> app on your phone or tablet. Its icon is a red, yellow, and green circle with a blue dot in the middle. Tap it to open it.",
-"ins-and-2": "Tap the address bar at the top of the screen. Type <b class=\"addr\">tracing-care.com/healthportal</b> and tap <b>Go</b> or the Enter key on your keyboard.",
+"ins-and-2": "Tap the address bar at the top of the screen. Type <b class=\"addr\">tracing-care.com/</b><wbr><b class=\"addr\">healthportal</b> and tap <b>Go</b> or the Enter key on your keyboard.",
 "ins-and-3": "Tap the three dots <b>⋮</b> in the top right corner.",
 "ins-and-4": "A menu opens. Look for <b>Add to Home screen</b> or <b>Install app</b>. You may need to scroll down. Tap it.",
 "ins-and-5": "Tap <b>Install</b> or <b>Add</b> to confirm.",
 "ins-and-6": "Go back to your home screen and look for the Tracing Care icon. Tap it anytime you want to practice.",
 "ins-pc-h": "Computer",
 "ins-pc-1": "Open <b>Google Chrome</b> or <b>Microsoft Edge</b>, the program you use to visit websites. (Don't have either one? You can still practice in any browser. Just bookmark this page.)",
-"ins-pc-2": "Click the address bar at the top of the window. Type <b class=\"addr\">tracing-care.com/healthportal</b> and press the <b>Enter</b> key.",
+"ins-pc-2": "Click the address bar at the top of the window. Type <b class=\"addr\">tracing-care.com/</b><wbr><b class=\"addr\">healthportal</b> and press the <b>Enter</b> key.",
 "ins-pc-3": "At the right end of the address bar, look for the install icon. It looks like a small screen with a down arrow. Click it. Don't see it? Click the three dots in the top right corner and look for <b>Install</b>.",
 "ins-pc-4": "Click <b>Install</b>.",
 "ins-pc-5": "Tracing Care opens in its own window. Next time, find it with your other programs or on your desktop.",
@@ -768,21 +769,21 @@ var TC_I18N = {
 "ins-mine": "Su dispositivo",
 "ins-ios-h": "iPhone o iPad",
 "ins-ios-1": "Busque la app <b>Safari</b> en su iPhone o iPad. Su ícono es una brújula azul. Tóquela para abrirla.",
-"ins-ios-2": "Toque la barra de direcciones. En la mayoría de los iPhone está en la parte de abajo de la pantalla. En el iPad, está arriba. Escriba <b class=\"addr\">tracing-care.com/healthportal</b> y toque <b>Ir</b> (Go).",
+"ins-ios-2": "Toque la barra de direcciones. En la mayoría de los iPhone está en la parte de abajo de la pantalla. En el iPad, está arriba. Escriba <b class=\"addr\">tracing-care.com/</b><wbr><b class=\"addr\">healthportal</b> y toque <b>Ir</b> (Go).",
 "ins-ios-3": "Busque el botón <b>Compartir</b> (Share). Es un cuadrado con una flecha hacia arriba, casi siempre abajo en la pantalla. Si no lo ve, toque primero los tres puntos <b>•••</b> y luego <b>Compartir</b>.",
 "ins-ios-4": "Aparece una lista. Baje despacio con el dedo hasta ver <b>Agregar a inicio</b> (Add to Home Screen). Tóquelo.",
 "ins-ios-5": "Toque <b>Agregar</b> (Add) en la esquina de arriba a la derecha.",
 "ins-ios-6": "Vuelva a su pantalla de inicio y busque el ícono de Tracing Care. Tóquelo cuando quiera practicar.",
 "ins-and-h": "Celular o tableta Android",
 "ins-and-1": "Busque la app <b>Chrome</b> en su celular o tableta. Su ícono es un círculo rojo, amarillo y verde con un punto azul en el centro. Tóquela para abrirla.",
-"ins-and-2": "Toque la barra de direcciones arriba en la pantalla. Escriba <b class=\"addr\">tracing-care.com/healthportal</b> y toque <b>Ir</b> o la tecla Enter del teclado.",
+"ins-and-2": "Toque la barra de direcciones arriba en la pantalla. Escriba <b class=\"addr\">tracing-care.com/</b><wbr><b class=\"addr\">healthportal</b> y toque <b>Ir</b> o la tecla Enter del teclado.",
 "ins-and-3": "Toque los tres puntos <b>⋮</b> en la esquina de arriba a la derecha.",
 "ins-and-4": "Se abre un menú. Busque <b>Agregar a la pantalla principal</b> o <b>Instalar app</b> (Add to Home screen o Install app). Puede que tenga que bajar. Tóquelo.",
 "ins-and-5": "Toque <b>Instalar</b> (Install) o <b>Agregar</b> (Add) para confirmar.",
 "ins-and-6": "Vuelva a su pantalla de inicio y busque el ícono de Tracing Care. Tóquelo cuando quiera practicar.",
 "ins-pc-h": "Computadora",
 "ins-pc-1": "Abra <b>Google Chrome</b> o <b>Microsoft Edge</b>, el programa que usa para visitar sitios web. (¿No tiene ninguno? Puede practicar en cualquier navegador. Solo guarde esta página en sus favoritos.)",
-"ins-pc-2": "Haga clic en la barra de direcciones arriba en la ventana. Escriba <b class=\"addr\">tracing-care.com/healthportal</b> y presione la tecla <b>Enter</b>.",
+"ins-pc-2": "Haga clic en la barra de direcciones arriba en la ventana. Escriba <b class=\"addr\">tracing-care.com/</b><wbr><b class=\"addr\">healthportal</b> y presione la tecla <b>Enter</b>.",
 "ins-pc-3": "Al final de la barra de direcciones, busque el ícono de instalar. Parece una pequeña pantalla con una flecha hacia abajo. Haga clic en él. ¿No lo ve? Haga clic en los tres puntos arriba a la derecha y busque <b>Instalar</b> (Install).",
 "ins-pc-4": "Haga clic en <b>Instalar</b> (Install).",
 "ins-pc-5": "Tracing Care se abre en su propia ventana. La próxima vez, búsquelo junto con sus otros programas o en su escritorio.",
@@ -904,21 +905,21 @@ var TC_I18N = {
 "ins-mine": "Seu aparelho",
 "ins-ios-h": "iPhone ou iPad",
 "ins-ios-1": "Procure o app <b>Safari</b> no seu iPhone ou iPad. O ícone é uma bússola azul. Toque nele para abrir.",
-"ins-ios-2": "Toque na barra de endereço. Na maioria dos iPhones ela fica na parte de baixo da tela. No iPad, fica em cima. Digite <b class=\"addr\">tracing-care.com/healthportal</b> e toque em <b>Ir</b> (Go).",
+"ins-ios-2": "Toque na barra de endereço. Na maioria dos iPhones ela fica na parte de baixo da tela. No iPad, fica em cima. Digite <b class=\"addr\">tracing-care.com/</b><wbr><b class=\"addr\">healthportal</b> e toque em <b>Ir</b> (Go).",
 "ins-ios-3": "Procure o botão <b>Compartilhar</b> (Share). É um quadrado com uma seta para cima, quase sempre embaixo na tela. Se não encontrar, toque primeiro nos três pontos <b>•••</b> e depois em <b>Compartilhar</b>.",
 "ins-ios-4": "Uma lista aparece. Role devagar com o dedo até ver <b>Adicionar à Tela de Início</b> (Add to Home Screen). Toque nele.",
 "ins-ios-5": "Toque em <b>Adicionar</b> (Add) no canto de cima, à direita.",
 "ins-ios-6": "Volte para a tela de início e procure o ícone do Tracing Care. Toque nele sempre que quiser praticar.",
 "ins-and-h": "Celular ou tablet Android",
 "ins-and-1": "Procure o app <b>Chrome</b> no seu celular ou tablet. O ícone é um círculo vermelho, amarelo e verde com um ponto azul no meio. Toque nele para abrir.",
-"ins-and-2": "Toque na barra de endereço no alto da tela. Digite <b class=\"addr\">tracing-care.com/healthportal</b> e toque em <b>Ir</b> ou na tecla Enter do teclado.",
+"ins-and-2": "Toque na barra de endereço no alto da tela. Digite <b class=\"addr\">tracing-care.com/</b><wbr><b class=\"addr\">healthportal</b> e toque em <b>Ir</b> ou na tecla Enter do teclado.",
 "ins-and-3": "Toque nos três pontos <b>⋮</b> no canto superior direito.",
 "ins-and-4": "Um menu se abre. Procure <b>Adicionar à tela inicial</b> ou <b>Instalar app</b> (Add to Home screen ou Install app). Talvez precise rolar para baixo. Toque nele.",
 "ins-and-5": "Toque em <b>Instalar</b> (Install) ou <b>Adicionar</b> (Add) para confirmar.",
 "ins-and-6": "Volte para a tela de início e procure o ícone do Tracing Care. Toque nele sempre que quiser praticar.",
 "ins-pc-h": "Computador",
 "ins-pc-1": "Abra o <b>Google Chrome</b> ou o <b>Microsoft Edge</b>, o programa que você usa para visitar sites. (Não tem nenhum dos dois? Você pode praticar em qualquer navegador. É só salvar esta página nos favoritos.)",
-"ins-pc-2": "Clique na barra de endereço no alto da janela. Digite <b class=\"addr\">tracing-care.com/healthportal</b> e aperte a tecla <b>Enter</b>.",
+"ins-pc-2": "Clique na barra de endereço no alto da janela. Digite <b class=\"addr\">tracing-care.com/</b><wbr><b class=\"addr\">healthportal</b> e aperte a tecla <b>Enter</b>.",
 "ins-pc-3": "No fim da barra de endereço, procure o ícone de instalar. Parece uma pequena tela com uma seta para baixo. Clique nele. Não encontrou? Clique nos três pontos no canto superior direito e procure <b>Instalar</b> (Install).",
 "ins-pc-4": "Clique em <b>Instalar</b> (Install).",
 "ins-pc-5": "O Tracing Care abre em uma janela própria. Da próxima vez, procure junto com seus outros programas ou na área de trabalho.",
