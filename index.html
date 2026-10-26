@@ -462,6 +462,26 @@ footer strong { color: rgba(255,255,255,0.7); }
   .progress-grid { grid-template-columns: 1fr; }
   .hero h1 { letter-spacing: -1px; }
 }
+
+/* ---- phone menu button (same on the main and learner pages) ---- */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nav-burger{display:none;width:44px;height:44px;flex-shrink:0;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;cursor:pointer;color:#fff;padding:0}
+.nav-burger:hover{background:rgba(255,255,255,.14)}
+.nav-burger:focus-visible{outline:3px solid #2DD4BF;outline-offset:2px}
+.nav-burger-icon{position:relative;width:20px;height:14px;display:block}
+.nav-burger-icon span{position:absolute;left:0;width:20px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s,opacity .2s,top .2s}
+.nav-burger-icon span:nth-child(1){top:0}.nav-burger-icon span:nth-child(2){top:6px}.nav-burger-icon span:nth-child(3){top:12px}
+.nav-burger[aria-expanded="true"] .nav-burger-icon span:nth-child(1){top:6px;transform:rotate(45deg)}
+.nav-burger[aria-expanded="true"] .nav-burger-icon span:nth-child(2){opacity:0}
+.nav-burger[aria-expanded="true"] .nav-burger-icon span:nth-child(3){top:6px;transform:rotate(-45deg)}
+.nav-menu{position:absolute;top:100%;left:0;right:0;background:#0D2B45;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 18px 40px rgba(0,0,0,.35);padding:8px 0;max-height:calc(100vh - 80px);overflow-y:auto}
+.nav-menu[hidden]{display:none}
+.nav-menu a{display:flex;align-items:center;min-height:52px;padding:0 24px;color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:18px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-menu a:last-child{border-bottom:0}
+.nav-menu a:hover,.nav-menu a:focus-visible{background:rgba(45,212,191,.12);color:#2DD4BF;outline:none}
+@media (prefers-reduced-motion:reduce){.nav-burger-icon span{transition:none}}
+@media (max-width:900px){.nav-burger{display:inline-flex}}
+@media (max-width:600px){.nav-badge{display:none}}
 </style>
 </head>
 <body>
@@ -489,6 +509,20 @@ footer strong { color: rgba(255,255,255,0.7); }
       <button class="lang-btn" onclick="setLang('es')">ES</button>
       <button class="lang-btn" onclick="setLang('pt')">PT</button>
     </div>
+    <button type="button" class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="navMenu">
+      <span class="nav-burger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="sr-only" data-i18n="nav-menu">Menu</span>
+    </button>
+  </div>
+  <div class="nav-menu" id="navMenu" hidden>
+    <a href="#problem" data-i18n="nav-problem">The Need</a>
+    <a href="#solution" data-i18n="nav-solution">How It Works</a>
+    <a href="#screens" data-i18n="nav-platform">Platform</a>
+    <a href="#demo" data-i18n="nav-demo">Try It</a>
+    <a href="#manifesto" data-i18n="nav-philosophy">Our Approach</a>
+    <a href="#progress" data-i18n="nav-progress">Roadmap</a>
+    <a href="#references" data-i18n="nav-sources">Sources</a>
+    <a href="/learn" data-i18n="nav-learners">For Learners</a>
   </div>
 </nav>
 
@@ -1171,6 +1205,7 @@ const translations = {
     "nav-progress": "Roadmap",
     "nav-sources": "Sources",
     "nav-learners": "For Learners",
+    "nav-menu": "Menu",
     "hero-learner-link": "New to health portals? Start with the learner's guide",
     "nav-badge": "In Development",
     "hero-tag": "Training Program · Patient Portal &amp; EHR Practice",
@@ -1347,6 +1382,7 @@ const translations = {
     "nav-progress": "Hoja de ruta",
     "nav-sources": "Fuentes",
     "nav-learners": "Para aprender",
+    "nav-menu": "Menú",
     "hero-learner-link": "¿Nuevo en los portales de salud? Empiece con la guía para aprender",
     "nav-badge": "En Desarrollo",
     "hero-tag": "Programa de capacitación · Práctica de portal del paciente y expediente electrónico",
@@ -1523,6 +1559,7 @@ const translations = {
     "nav-progress": "Roteiro",
     "nav-sources": "Fontes",
     "nav-learners": "Para aprender",
+    "nav-menu": "Menu",
     "hero-learner-link": "Novo em portais de saúde? Comece pelo guia de aprendizagem",
     "nav-badge": "Em Desenvolvimento",
     "hero-tag": "Programa de treinamento · Prática de portal do paciente e prontuário eletrônico",
@@ -1708,5 +1745,23 @@ function setLang(lang) {
 (function () { var l = null; try { l = localStorage.getItem('tc-lang'); } catch (e) {} if (l && l !== 'en' && translations[l]) setLang(l); })();
 </script>
 
+<script>
+// Phone menu: open and close the list of page links
+(function () {
+  var btn = document.getElementById('navBurger'), menu = document.getElementById('navMenu');
+  if (!btn || !menu) return;
+  function setOpen(open, focusBtn) {
+    btn.setAttribute('aria-expanded', open);
+    menu.hidden = !open;
+    if (open) { var first = menu.querySelector('a'); if (first) first.focus(); }
+    else if (focusBtn) btn.focus();
+  }
+  btn.addEventListener('click', function () { setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) setOpen(false, true); });
+  document.addEventListener('click', function (e) { if (!menu.hidden && !menu.contains(e.target) && !btn.contains(e.target)) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 900 && !menu.hidden) setOpen(false); });
+})();
+</script>
 </body>
 </html>
