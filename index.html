@@ -493,6 +493,30 @@ footer strong { color: rgba(255,255,255,0.7); }
 @media (max-width:360px){.nav-logo-mark{width:36px;height:36px}.nav-logo-mark svg{width:30px;height:30px}.nav-wordmark{font-size:16px}.lang-btn{padding:4px 6px}}
 @media (max-width:600px){.nav-logo{margin-right:12px}}
 @media (max-width:380px){.nav-wordmark{font-size:18px}.nav-logo{gap:8px}.lang-btn{padding:4px 8px}.bar .nav-burger{margin-left:8px}}
+
+/* ── phone previews: match the live practice portal ── */
+.phone-screen { position: relative; }
+.ph-strip { margin: 0 -12px; background: #0b1c2e; color: #fff; font-size: 8.5px; font-weight: 700; padding: 6px 12px; display: flex; align-items: center; gap: 5px; }
+.ph-bar { margin: 0 -12px 10px; background: #fff; border-bottom: 1px solid #e6e9ef; padding: 7px 12px; display: flex; align-items: center; gap: 6px; }
+.ph-logo { width: 22px; height: 22px; border-radius: 6px; background: linear-gradient(150deg, #213E76, #172E58); display: grid; place-items: center; flex-shrink: 0; }
+.ph-word { font-family: 'Fredoka', 'Inter', sans-serif; font-weight: 500; font-size: 12px; color: #0f172a; flex: 1; letter-spacing: -0.1px; }
+.ph-word span { background: linear-gradient(90deg, #2F6FD6, #1E9E8A); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.ph-menu { display: inline-flex; align-items: center; gap: 4px; border: 1px solid #cbd5e1; border-radius: 7px; padding: 4px 7px 4px 18px; font-size: 8.5px; font-weight: 700; color: #0f172a; position: relative; }
+.ph-menu i { position: absolute; left: 6px; width: 8px; height: 1.4px; background: #0f172a; border-radius: 2px; }
+.ph-menu i:nth-child(1) { top: 7px; } .ph-menu i:nth-child(2) { top: 10px; } .ph-menu i:nth-child(3) { top: 13px; }
+.ph-hello { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.ph-hello .ph-h { margin-bottom: 1px; }
+.ph-back { display: inline-flex; align-items: center; gap: 4px; border: 1px solid #cbd5e1; background: #fff; border-radius: 7px; padding: 4px 8px; font-size: 8.5px; font-weight: 700; margin-bottom: 8px; }
+.ph-link { color: #2563eb !important; font-weight: 600; text-align: right; margin-top: 4px; font-size: 8.5px; }
+.ph-med { align-items: flex-start; flex-direction: column; gap: 4px; }
+.ph-req { border: 1px solid #cbd5e1; border-radius: 6px; padding: 3px 7px; font-size: 8px !important; font-weight: 700; color: #0f172a !important; background: #fff; }
+.ph-sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #fff; border-top: 2px solid #3b6cf6; border-radius: 16px 16px 0 0; padding: 10px 12px 14px; box-shadow: 0 -8px 22px rgba(15,23,42,.16); }
+.ph-sheet .ph-helper-top b { display: inline-flex; align-items: center; gap: 4px; }
+.ph-tools { display: inline-flex; gap: 4px; border: 0 !important; padding: 0 !important; }
+.ph-tools span { border: 1px solid #cbd5e1; border-radius: 6px; padding: 1px 6px; font-size: 8px; font-weight: 700; }
+.ph-story { font-size: 9.5px; color: #0f172a; background: #f1f5ff; border-left: 3px solid #3b6cf6; border-radius: 6px; padding: 6px 8px; margin: 2px 0 8px; line-height: 1.4; }
+.ph-show { display: flex; align-items: center; justify-content: center; gap: 5px; }
+.ph-safe { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
@@ -866,18 +890,16 @@ footer strong { color: rgba(255,255,255,0.7); }
       <div class="phone-wrap">
         <div class="phone">
           <div class="phone-screen">
-            <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div>
-            <div class="ph-top"><div class="ph-brand">Tracing Care</div><div class="ph-av">RM</div></div>
-            <div class="ph-h">Hello, Robin</div>
-            <div class="ph-mute">3 care actions need attention</div>
-            <div class="ph-warn"><b>2 care actions overdue</b><span>Annual physical · Diabetes A1C check</span></div>
-            <div class="ph-stats"><div><b>4</b>Active Conditions</div><div><b>6</b>Medications</div><div><b>2</b>Upcoming Appts</div><div><b>3</b>Care Actions</div></div>
-            <div class="ph-card"><div class="ph-k">Next Appointment</div><b>Dr. Sarah Chen</b><span>Internal Medicine · Follow-up</span><span class="ph-blue">Next Wednesday · 10:30 AM</span></div>
-            <div class="ph-card"><div class="ph-k">Most Recent Vitals · Last week</div><div class="ph-vitals"><div><span>BP</span><b>128/82</b></div><div><span>Heart</span><b>74 bpm</b></div><div><span>O₂</span><b>98%</b></div></div></div>
+            <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div><div class="ph-strip"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Leave practice</div><div class="ph-bar"><span class="ph-logo"><svg viewBox="0 0 100 100" width="17" height="17" aria-hidden="true"><defs><linearGradient id="phL1" gradientUnits="userSpaceOnUse" x1="14" y1="50" x2="86" y2="50"><stop offset="0" stop-color="#4F8BEA"/><stop offset="1" stop-color="#5CC9B5"/></linearGradient></defs><path d="M84.24 38.88 A36 36 0 1 0 84.24 61.12" fill="none" stroke="url(#phL1)" stroke-width="9" stroke-linecap="round"/><path d="M14 50 H33 L41 28 L49 72 L55 50 H74" fill="none" stroke="url(#phL1)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="10" fill="#7EE8C4"/></svg></span><span class="ph-word">Tracing <span>Care</span></span><span class="ph-menu"><i></i><i></i><i></i>Menu</span></div>
+            <div class="ph-hello"><div><div class="ph-h">Hello, Robin</div><div class="ph-mute">4 care actions need attention</div></div><div class="ph-av">RM</div></div>
+            <div class="ph-warn"><b>3 care actions overdue</b><span>Colonoscopy · Diabetic Foot Exam · Bone Density Scan</span></div>
+            <div class="ph-stats"><div><b>5</b>Active Conditions</div><div><b>7</b>Medications</div><div><b>4</b>Upcoming Appts</div><div><b>4</b>Care Actions</div></div>
+            <div class="ph-card"><div class="ph-k">Next Appointment</div><b>Dr. Sarah Chen</b><span>Internal Medicine · Bayview Community Clinic</span><span class="ph-blue">Next Wednesday · 10:30 AM</span><span class="ph-link">See all visits ›</span></div>
+            <div class="ph-card"><div class="ph-k">Most Recent Vitals · Yesterday</div><div class="ph-vitals"><div><span>BP</span><b>138/82</b></div><div><span>Heart</span><b>72 bpm</b></div><div><span>O₂</span><b>97%</b></div></div></div>
             <div class="ph-card"><div class="ph-k">Recent Test Results · This week</div>
-              <div class="ph-row"><div><b>HbA1c</b><span>Hemoglobin A1c</span></div><div class="ph-r"><b>7.1%</b><em class="amber">Borderline</em></div></div>
-              <div class="ph-row"><div><b>Cholesterol</b><span>Total lipid panel</span></div><div class="ph-r"><b>182 mg/dL</b><em class="green">Normal</em></div></div>
-              <div class="ph-row"><div><b>Vitamin D</b><span>25-hydroxyvitamin D</span></div><div class="ph-r"><b>18 ng/mL</b><em class="red">Low</em></div></div>
+              <div class="ph-row"><div><b>Hemoglobin A1C</b><span>Normal: below 7.0</span></div><div class="ph-r"><b>7.4 %</b><em class="amber">High</em></div></div>
+              <div class="ph-row"><div><b>BNP</b><span>Heart strain · Normal: below 100</span></div><div class="ph-r"><b>310 pg/mL</b><em class="amber">High</em></div></div>
+              <div class="ph-row"><div><b>Potassium</b><span>Normal: 3.5 to 5.0</span></div><div class="ph-r"><b>4.6 mmol/L</b><em class="green">Normal</em></div></div>
             </div>
           </div>
         </div>
@@ -887,22 +909,19 @@ footer strong { color: rgba(255,255,255,0.7); }
       <div class="phone-wrap">
         <div class="phone">
           <div class="phone-screen">
-            <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div>
-            <div class="ph-top"><div><div class="ph-h" style="margin:0">Medications</div><div class="ph-mute">6 active · 2 pending refills</div></div><div class="ph-btn">+ Request</div></div>
-            <div class="ph-stats three"><div><b class="c-blue">6</b>Active</div><div><b class="c-amber">2</b>Pending</div><div><b class="c-green">1</b>Ready</div></div>
-            <div class="ph-warn"><b>Metformin refill pending 4 days.</b><span>Call clinic if urgent: (312) 555-0100</span></div>
+            <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div><div class="ph-strip"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Leave practice</div><div class="ph-bar"><span class="ph-logo"><svg viewBox="0 0 100 100" width="17" height="17" aria-hidden="true"><defs><linearGradient id="phL2" gradientUnits="userSpaceOnUse" x1="14" y1="50" x2="86" y2="50"><stop offset="0" stop-color="#4F8BEA"/><stop offset="1" stop-color="#5CC9B5"/></linearGradient></defs><path d="M84.24 38.88 A36 36 0 1 0 84.24 61.12" fill="none" stroke="url(#phL2)" stroke-width="9" stroke-linecap="round"/><path d="M14 50 H33 L41 28 L49 72 L55 50 H74" fill="none" stroke="url(#phL2)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="10" fill="#7EE8C4"/></svg></span><span class="ph-word">Tracing <span>Care</span></span><span class="ph-menu"><i></i><i></i><i></i>Menu</span></div>
+            <div class="ph-back"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back to Home</div>
+            <div class="ph-h">Medications</div>
+            <div class="ph-mute">7 active · 1 refill requested</div>
+            <div class="ph-stats three"><div><b class="c-blue">7</b>Active</div><div><b class="c-amber">1</b>Refill due soon</div><div><b class="c-green">1</b>Requested</div></div>
+            <div class="ph-warn"><b>Furosemide refill due soon.</b><span>Ask for refills about a week early so you don't run out.</span></div>
             <div class="ph-k" style="margin:8px 2px 4px">Current Medications</div>
             <div class="ph-card tight">
-              <div class="ph-row"><div><b>Metformin 500mg</b><span>Twice daily · Dr. Chen</span></div><em class="amber">⏱ Pending</em></div>
-              <div class="ph-row"><div><b>Lisinopril 10mg</b><span>Once daily · Dr. Chen</span></div><em class="green">✓ Ready</em></div>
-              <div class="ph-row"><div><b>Atorvastatin 20mg</b><span>Once daily at bedtime</span></div><em>Refill next month</em></div>
-              <div class="ph-row"><div><b>Sertraline 50mg</b><span>Once daily · Dr. Patel</span></div><em>Refill in 5 weeks</em></div>
-            </div>
-            <div class="ph-k" style="margin:8px 2px 4px">Vitamins &amp; Supplements</div>
-            <div class="ph-card tight">
-              <div class="ph-row"><div><b>Vitamin D3 2000 IU</b><span>Once daily with food</span></div><em class="green">Active</em></div>
-              <div class="ph-row"><div><b>Magnesium 400mg</b><span>Once at bedtime</span></div><em class="green">Active</em></div>
-              <div class="ph-row"><div><b>Omega-3 1000mg</b><span>Twice daily with meals</span></div><em class="green">Active</em></div>
+              <div class="ph-row ph-med"><div><b>Furosemide 40mg</b><span>Once daily (morning)</span></div><span class="ph-req">Request refill</span></div>
+              <div class="ph-row ph-med"><div><b>Lisinopril 10mg</b><span>Once daily</span></div><span class="ph-req">Request refill</span></div>
+              <div class="ph-row ph-med"><div><b>Carvedilol 12.5mg</b><span>Twice daily</span></div><span class="ph-req">Request refill</span></div>
+              <div class="ph-row ph-med"><div><b>Metformin 500mg</b><span>Twice daily with meals</span></div><em class="green">✓ Refill requested</em></div>
+              <div class="ph-row ph-med"><div><b>Levothyroxine 75mcg</b><span>Once daily (fasting)</span></div><span class="ph-req">Request refill</span></div>
             </div>
           </div>
         </div>
@@ -912,18 +931,21 @@ footer strong { color: rgba(255,255,255,0.7); }
       <div class="phone-wrap">
         <div class="phone">
           <div class="phone-screen">
-            <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div>
-            <div class="ph-top"><div class="ph-brand">Tracing Care</div><div class="ph-av">RM</div></div>
-            <div class="ph-faded"><div class="ph-h">Hello, Robin</div><div class="ph-stats"><div><b>4</b>Conditions</div><div><b>6</b>Meds</div><div><b>2</b>Appts</div><div><b>3</b>Actions</div></div></div>
-            <div class="ph-helper">
-              <div class="ph-helper-top"><b>✦ Guided Practice</b><span>A<big>A</big></span></div>
+            <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div><div class="ph-strip"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Leave practice</div><div class="ph-bar"><span class="ph-logo"><svg viewBox="0 0 100 100" width="17" height="17" aria-hidden="true"><defs><linearGradient id="phL3" gradientUnits="userSpaceOnUse" x1="14" y1="50" x2="86" y2="50"><stop offset="0" stop-color="#4F8BEA"/><stop offset="1" stop-color="#5CC9B5"/></linearGradient></defs><path d="M84.24 38.88 A36 36 0 1 0 84.24 61.12" fill="none" stroke="url(#phL3)" stroke-width="9" stroke-linecap="round"/><path d="M14 50 H33 L41 28 L49 72 L55 50 H74" fill="none" stroke="url(#phL3)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="10" fill="#7EE8C4"/></svg></span><span class="ph-word">Tracing <span>Care</span></span><span class="ph-menu"><i></i><i></i><i></i>Menu</span></div>
+            <div class="ph-faded">
+              <div class="ph-hello"><div><div class="ph-h">Hello, Robin</div><div class="ph-mute">4 care actions need attention</div></div><div class="ph-av">RM</div></div>
+              <div class="ph-warn"><b>3 care actions overdue</b><span>Colonoscopy · Diabetic Foot Exam · Bone Density Scan</span></div>
+              <div class="ph-stats"><div><b>5</b>Conditions</div><div><b>7</b>Meds</div><div><b>4</b>Appts</div><div><b>4</b>Actions</div></div>
+            </div>
+            <div class="ph-sheet">
+              <div class="ph-helper-top"><b><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.9" y1="4.9" x2="7.8" y2="7.8"/><line x1="16.2" y1="16.2" x2="19.1" y2="19.1"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.9" y1="19.1" x2="7.8" y2="16.2"/><line x1="16.2" y1="7.8" x2="19.1" y2="4.9"/></svg> Guided Practice</b><span class="ph-tools"><span>A<big>A</big></span><span>Hide</span></span></div>
               <div class="ph-dots"><i class="now"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
               <div class="ph-k">Task 1 of 7</div>
               <div class="ph-task">Find your next visit</div>
-              <p class="ph-why">Robin has a visit coming up. Can you find the date and time?</p>
-              <div class="ph-choices"><span>Tue, Nov 10 at 1:15 PM</span><span class="pick">Tue, Oct 27 at 10:30 AM</span><span>Tue, Nov 3 at 9:00 AM</span></div>
-              <div class="ph-show">👁 Show me where</div>
-              <div class="ph-safe">🛡 Nothing here is real, so you can't break anything.</div>
+              <p class="ph-story">Robin has a visit coming up. Can you find the date and time?</p>
+              <div class="ph-choices"><span>Friday at 1:15 PM</span><span class="pick">Wednesday at 10:30 AM</span><span>Thursday at 9:00 AM</span></div>
+              <div class="ph-show"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg> Show me where</div>
+              <div class="ph-safe"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Nothing here is real, so you can't break anything.</div>
             </div>
           </div>
         </div>
