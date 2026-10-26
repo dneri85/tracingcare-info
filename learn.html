@@ -15,8 +15,13 @@
 <meta name="twitter:card" content="summary"/>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"/>
-<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-<meta name="theme-color" content="#132447"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"/>
+<meta name="theme-color" content="#0D2B45"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="Tracing Care"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -230,6 +235,22 @@ header{position:sticky}
 @media (max-width:360px){.nav-logo-mark{width:36px;height:36px}.nav-logo-mark svg{width:30px;height:30px}.nav-wordmark{font-size:16px}.lang-btn{padding:4px 6px}}
 @media (max-width:600px){.nav-logo{margin-right:12px}}
 @media (max-width:380px){.nav-wordmark{font-size:18px}.nav-logo{gap:8px}.lang-btn{padding:4px 8px}.bar .nav-burger{margin-left:8px}.bar{padding-left:14px;padding-right:14px}.tc-back .wrap{padding:0 14px}.nav-logo{margin-right:6px}}
+
+/* ---- add to home screen ---- */
+.install-grid .card{display:flex;flex-direction:column}
+.install-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.install-head h3{margin:0}
+.ins-mine{display:none;font-size:13px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#0F5F55;background:#D7F5EE;border-radius:999px;padding:4px 10px}
+.install-card ol{padding-left:24px;display:grid;gap:10px;color:var(--gray);font-size:18px;margin-top:8px}
+.install-card ol b{color:var(--navy)}
+.install-card.is-mine{border-color:var(--teal-400);box-shadow:0 0 0 2px rgba(45,212,191,.35),0 16px 40px rgba(13,43,69,.08)}
+.install-card.is-mine .ins-mine{display:inline-block}
+.install-grid .is-mine{order:-1}
+.install-done{display:flex;align-items:center;gap:10px;margin-top:24px;padding:16px 20px;border-radius:14px;background:#E6F7F1;color:#0F5F55;font-weight:600;font-size:19px}
+.install-done[hidden],.btns[hidden],.install-grid[hidden]{display:none}
+.install-note{margin-top:28px;color:var(--gray);font-size:17px;max-width:780px}
+#installBtn{border:0;cursor:pointer;font-family:inherit}
+@media (max-width:960px){.install-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -264,6 +285,7 @@ header{position:sticky}
     <a href="#learn" data-i18n="nav-learn">What you'll learn</a>
     <a href="#preview" data-i18n="nav-preview">See the portal</a>
     <a href="#how" data-i18n="nav-how">How it works</a>
+    <a href="#install" data-i18n="nav-install">Add to home screen</a>
     <a href="#contact" data-i18n="nav-contact">Contact</a>
   </div>
 </header>
@@ -386,8 +408,38 @@ header{position:sticky}
   </div>
 </section>
 
+<!-- INSTALL -->
+<section id="install">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="eyebrow" data-i18n="ins-eyebrow">Use it like an app</span>
+      <h2 data-i18n="ins-h2">Add Tracing Care to your home screen.</h2>
+      <p class="lead" data-i18n="ins-lead">Put Tracing Care on your phone, tablet, or computer like an app, so you can open it with one tap whenever you want to practice. It's free, and you don't need an app store.</p>
+      <div class="btns" id="installBtnWrap" hidden>
+        <button type="button" class="btn btn-primary" id="installBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><polyline points="7 10 12 15 17 10"/><path d="M5 21h14"/></svg><span data-i18n="ins-btn">Add to my home screen</span></button>
+      </div>
+      <p class="install-done" id="installDone" role="status" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ins-done">You're all set. Tracing Care is on your home screen.</span></p>
+    </div>
+    <div class="grid3 install-grid" id="installSteps">
+      <div class="card install-card" data-device="ios">
+        <div class="install-head"><h3><span data-i18n="ins-ios-h">iPhone or iPad</span></h3><span class="ins-mine" data-i18n="ins-mine">Your device</span></div>
+        <ol><li><span data-i18n="ins-ios-1">Open this page in <b>Safari</b>.</span></li><li><span data-i18n="ins-ios-2">Tap the <b>Share</b> button, a square with an arrow pointing up. On newer iPhones, tap the three dots <b>•••</b> first, then <b>Share</b>.</span></li><li><span data-i18n="ins-ios-3">Scroll down and tap <b>Add to Home Screen</b>.</span></li><li><span data-i18n="ins-ios-4">Tap <b>Add</b> in the top corner.</span></li></ol>
+      </div>
+      <div class="card install-card" data-device="android">
+        <div class="install-head"><h3><span data-i18n="ins-and-h">Android phone or tablet</span></h3><span class="ins-mine" data-i18n="ins-mine">Your device</span></div>
+        <ol><li><span data-i18n="ins-and-1">Open this page in <b>Chrome</b>.</span></li><li><span data-i18n="ins-and-2">Tap the three dots <b>⋮</b> at the top right.</span></li><li><span data-i18n="ins-and-3">Tap <b>Add to Home screen</b> or <b>Install app</b>.</span></li><li><span data-i18n="ins-and-4">Tap <b>Install</b>.</span></li></ol>
+      </div>
+      <div class="card install-card" data-device="desktop">
+        <div class="install-head"><h3><span data-i18n="ins-pc-h">Computer</span></h3><span class="ins-mine" data-i18n="ins-mine">Your device</span></div>
+        <ol><li><span data-i18n="ins-pc-1">Open this page in <b>Google Chrome</b> or <b>Microsoft Edge</b>.</span></li><li><span data-i18n="ins-pc-2">Click the install icon at the right end of the address bar. It looks like a small screen with a down arrow.</span></li><li><span data-i18n="ins-pc-3">Click <b>Install</b>.</span></li></ol>
+      </div>
+    </div>
+    <p class="install-note"><span data-i18n="ins-note">Adding Tracing Care doesn't share any personal information. Everything inside is still made up, and practice works even without internet after your first visit.</span></p>
+  </div>
+</section>
+
 <!-- PROJECT -->
-<section id="project">
+<section id="project" class="alt">
   <div class="wrap">
     <div class="narrow">
       <span class="eyebrow"><span data-i18n="proj-eyebrow">A project in development</span></span>
@@ -402,6 +454,7 @@ header{position:sticky}
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="now-2">Explore Mode: look around Robin's full practice portal</span></li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="now-3">Bigger text with one tap, on a computer, tablet, or phone</span></li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="now-4">Accessibility built into every screen from the start</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137A6B" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="now-5">Add it to your home screen and use it like an app</span></li>
         </ul>
       </div>
       <div class="card">
@@ -565,7 +618,30 @@ var TC_I18N = {
 "fig1-aria": "Sample practice screen: Robin's home page",
 "fig2-aria": "Sample practice screen: Robin's medicines and refills",
 "nav-aria": "Main",
-"title": "Tracing Care, Practice Your Health Portal"
+"title": "Tracing Care, Practice Your Health Portal",
+"ins-eyebrow": "Use it like an app",
+"ins-h2": "Add Tracing Care to your home screen.",
+"ins-lead": "Put Tracing Care on your phone, tablet, or computer like an app, so you can open it with one tap whenever you want to practice. It's free, and you don't need an app store.",
+"ins-btn": "Add to my home screen",
+"ins-done": "You're all set. Tracing Care is on your home screen.",
+"ins-mine": "Your device",
+"ins-ios-h": "iPhone or iPad",
+"ins-ios-1": "Open this page in <b>Safari</b>.",
+"ins-ios-2": "Tap the <b>Share</b> button, a square with an arrow pointing up. On newer iPhones, tap the three dots <b>•••</b> first, then <b>Share</b>.",
+"ins-ios-3": "Scroll down and tap <b>Add to Home Screen</b>.",
+"ins-ios-4": "Tap <b>Add</b> in the top corner.",
+"ins-and-h": "Android phone or tablet",
+"ins-and-1": "Open this page in <b>Chrome</b>.",
+"ins-and-2": "Tap the three dots <b>⋮</b> at the top right.",
+"ins-and-3": "Tap <b>Add to Home screen</b> or <b>Install app</b>.",
+"ins-and-4": "Tap <b>Install</b>.",
+"ins-pc-h": "Computer",
+"ins-pc-1": "Open this page in <b>Google Chrome</b> or <b>Microsoft Edge</b>.",
+"ins-pc-2": "Click the install icon at the right end of the address bar. It looks like a small screen with a down arrow.",
+"ins-pc-3": "Click <b>Install</b>.",
+"ins-note": "Adding Tracing Care doesn't share any personal information. Everything inside is still made up, and practice works even without internet after your first visit.",
+"nav-install": "Add to home screen",
+"now-5": "Add it to your home screen and use it like an app"
 },
 "es": {
 "skip": "Ir al contenido principal",
@@ -670,7 +746,30 @@ var TC_I18N = {
 "fig1-aria": "Pantalla de práctica de ejemplo: página de inicio de Robin",
 "fig2-aria": "Pantalla de práctica de ejemplo: medicinas y resurtidos de Robin",
 "nav-aria": "Principal",
-"title": "Tracing Care, practique con su portal de salud"
+"title": "Tracing Care, practique con su portal de salud",
+"ins-eyebrow": "Úselo como una app",
+"ins-h2": "Agregue Tracing Care a su pantalla de inicio.",
+"ins-lead": "Ponga Tracing Care en su celular, tableta o computadora como una app, para abrirlo con un toque cuando quiera practicar. Es gratis y no necesita una tienda de apps.",
+"ins-btn": "Agregar a mi pantalla de inicio",
+"ins-done": "Listo. Tracing Care ya está en su pantalla de inicio.",
+"ins-mine": "Su dispositivo",
+"ins-ios-h": "iPhone o iPad",
+"ins-ios-1": "Abra esta página en <b>Safari</b>.",
+"ins-ios-2": "Toque el botón <b>Compartir</b> (Share), un cuadrado con una flecha hacia arriba. En los iPhone más nuevos, toque primero los tres puntos <b>•••</b> y luego <b>Compartir</b>.",
+"ins-ios-3": "Baje y toque <b>Agregar a inicio</b> (en inglés: Add to Home Screen).",
+"ins-ios-4": "Toque <b>Agregar</b> (Add) en la esquina de arriba.",
+"ins-and-h": "Celular o tableta Android",
+"ins-and-1": "Abra esta página en <b>Chrome</b>.",
+"ins-and-2": "Toque los tres puntos <b>⋮</b> arriba a la derecha.",
+"ins-and-3": "Toque <b>Agregar a la pantalla principal</b> o <b>Instalar app</b> (en inglés: Add to Home screen o Install app).",
+"ins-and-4": "Toque <b>Instalar</b> (Install).",
+"ins-pc-h": "Computadora",
+"ins-pc-1": "Abra esta página en <b>Google Chrome</b> o <b>Microsoft Edge</b>.",
+"ins-pc-2": "Haga clic en el ícono de instalar al final de la barra de direcciones. Parece una pequeña pantalla con una flecha hacia abajo.",
+"ins-pc-3": "Haga clic en <b>Instalar</b> (Install).",
+"ins-note": "Agregar Tracing Care no comparte ninguna información personal. Todo sigue siendo inventado, y la práctica funciona incluso sin internet después de su primera visita.",
+"nav-install": "Agregar a la pantalla de inicio",
+"now-5": "Agréguelo a su pantalla de inicio y úselo como una app"
 },
 "pt": {
 "skip": "Ir para o conteúdo principal",
@@ -775,7 +874,30 @@ var TC_I18N = {
 "fig1-aria": "Tela de prática de exemplo: página inicial de Robin",
 "fig2-aria": "Tela de prática de exemplo: remédios e renovações de Robin",
 "nav-aria": "Principal",
-"title": "Tracing Care, pratique com seu portal de saúde"
+"title": "Tracing Care, pratique com seu portal de saúde",
+"ins-eyebrow": "Use como um app",
+"ins-h2": "Adicione o Tracing Care à sua tela de início.",
+"ins-lead": "Coloque o Tracing Care no seu celular, tablet ou computador como um app, para abrir com um toque sempre que quiser praticar. É grátis e não precisa de loja de apps.",
+"ins-btn": "Adicionar à minha tela de início",
+"ins-done": "Pronto. O Tracing Care já está na sua tela de início.",
+"ins-mine": "Seu aparelho",
+"ins-ios-h": "iPhone ou iPad",
+"ins-ios-1": "Abra esta página no <b>Safari</b>.",
+"ins-ios-2": "Toque no botão <b>Compartilhar</b> (Share), um quadrado com uma seta para cima. Nos iPhones mais novos, toque primeiro nos três pontos <b>•••</b> e depois em <b>Compartilhar</b>.",
+"ins-ios-3": "Role para baixo e toque em <b>Adicionar à Tela de Início</b> (em inglês: Add to Home Screen).",
+"ins-ios-4": "Toque em <b>Adicionar</b> (Add) no canto de cima.",
+"ins-and-h": "Celular ou tablet Android",
+"ins-and-1": "Abra esta página no <b>Chrome</b>.",
+"ins-and-2": "Toque nos três pontos <b>⋮</b> no canto superior direito.",
+"ins-and-3": "Toque em <b>Adicionar à tela inicial</b> ou <b>Instalar app</b> (em inglês: Add to Home screen ou Install app).",
+"ins-and-4": "Toque em <b>Instalar</b> (Install).",
+"ins-pc-h": "Computador",
+"ins-pc-1": "Abra esta página no <b>Google Chrome</b> ou no <b>Microsoft Edge</b>.",
+"ins-pc-2": "Clique no ícone de instalar no fim da barra de endereço. Parece uma pequena tela com uma seta para baixo.",
+"ins-pc-3": "Clique em <b>Instalar</b> (Install).",
+"ins-note": "Adicionar o Tracing Care não compartilha nenhuma informação pessoal. Tudo continua inventado, e a prática funciona até sem internet depois da primeira visita.",
+"nav-install": "Adicionar à tela de início",
+"now-5": "Adicione à tela de início e use como um app"
 }
 };
 function setLang(lang) {
@@ -817,6 +939,29 @@ document.querySelectorAll('.lang-btn').forEach(function (b) {
   document.addEventListener('click', function (e) { if (!menu.hidden && !menu.contains(e.target) && !btn.contains(e.target)) setOpen(false); });
   window.addEventListener('resize', function () { if (window.innerWidth > 900 && !menu.hidden) setOpen(false); });
 })();
+</script>
+<script>
+// Add to home screen: point out the learner's device, and offer a one-tap button where the browser allows it
+(function () {
+  var ua = navigator.userAgent || '';
+  var ios = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var dev = ios ? 'ios' : (/Android/i.test(ua) ? 'android' : 'desktop');
+  var mine = document.querySelector('.install-card[data-device="' + dev + '"]');
+  if (mine) mine.classList.add('is-mine');
+  var wrap = document.getElementById('installBtnWrap'), btn = document.getElementById('installBtn'), done = document.getElementById('installDone');
+  var app = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+  function installed() { done.hidden = false; wrap.hidden = true; document.getElementById('installSteps').hidden = true; }
+  if (app) { installed(); return; }
+  var deferred = null;
+  window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferred = e; wrap.hidden = false; });
+  btn.addEventListener('click', function () {
+    if (!deferred) return;
+    deferred.prompt();
+    deferred.userChoice.then(function (c) { if (c.outcome === 'accepted') installed(); deferred = null; wrap.hidden = true; });
+  });
+  window.addEventListener('appinstalled', installed);
+})();
+if ('serviceWorker' in navigator) { window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); }); }
 </script>
 </body>
 </html>
