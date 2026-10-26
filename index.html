@@ -60,7 +60,7 @@ display: flex; align-items: center; justify-content: center;
 .nav-badge { background: rgba(45,212,191,0.15); border: 1px solid rgba(45,212,191,0.3); color: var(--teal-400); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px; }
 /* ── LANGUAGE TOGGLE ── */
 .lang-toggle { display: flex; align-items: center; gap: 2px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 3px; }
-.lang-btn { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.5); background: none; border: none; cursor: pointer; padding: 4px 10px; border-radius: 16px; transition: all .2s; letter-spacing: 0.3px; }
+.lang-btn { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.78); background: none; border: none; cursor: pointer; padding: 4px 10px; min-height: 26px; min-width: 36px; border-radius: 16px; transition: all .2s; letter-spacing: 0.3px; }
 .lang-btn:hover { color: var(--white); }
 .lang-btn.active { background: linear-gradient(135deg, var(--blue), var(--teal-400)); color: var(--white); box-shadow: 0 2px 8px rgba(59,130,246,0.35); }
 
@@ -254,17 +254,17 @@ margin-bottom: 20px; box-shadow: 0 4px 14px rgba(59,130,246,0.3);
 .comparison-wrap { margin-top: 56px; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
 .comparison-header { display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--navy); }
 .comp-col-head { padding: 18px 24px; font-size: 13px; font-weight: 700; }
-.comp-col-head.feature { color: rgba(255,255,255,0.5); }
+.comp-col-head.feature { color: rgba(255,255,255,0.78); }
 .comp-col-head.tracing { color: var(--teal-400); display: flex; align-items: center; gap: 8px; }
-.comp-col-head.status-quo { color: rgba(255,255,255,0.4); }
+.comp-col-head.status-quo { color: rgba(255,255,255,0.78); }
 .comp-row { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--border); }
 .comp-row:last-child { border-bottom: none; }
 .comp-row:nth-child(even) { background: #FAFAFA; }
 .comp-cell { padding: 16px 24px; font-size: 13px; }
 .comp-cell.feature-name { font-weight: 600; color: var(--navy); }
-.comp-cell.yes { color: var(--sage); font-weight: 600; display: flex; align-items: center; gap: 6px; }
-.comp-cell.no { color: #9CA3AF; display: flex; align-items: center; gap: 6px; }
-.comp-cell.partial { color: var(--teal); font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.comp-cell.yes { color: #2F6B3D; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.comp-cell.no { color: #6B5B5B; display: flex; align-items: center; gap: 6px; }
+.comp-cell.partial { color: #175C5C; font-weight: 600; display: flex; align-items: center; gap: 6px; }
 
 /* ── MANIFESTO ── */
 .manifesto { background: linear-gradient(135deg, var(--navy) 0%, #0d3b3b 100%); padding: 96px 48px; text-align: center; }
@@ -276,7 +276,7 @@ margin-bottom: 20px; box-shadow: 0 4px 14px rgba(59,130,246,0.3);
 .principle-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 48px; text-align: left; }
 .principle { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 24px; }
 .principle-num { font-size: 28px; font-weight: 900; background: linear-gradient(135deg, var(--blue), var(--teal-400)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 10px; }
-.principle h4 { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.principle h4, .principle h3 { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
 .principle p { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.6; }
 
 /* ── PROGRESS ── */
@@ -288,10 +288,10 @@ margin-bottom: 20px; box-shadow: 0 4px 14px rgba(59,130,246,0.3);
 .progress-card.active { background: #EFF6FF; border-color: #BFDBFE; }
 .progress-card.next { background: var(--white); border-color: var(--border); }
 .progress-status { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
-.status-done { color: var(--sage); }
-.status-active { color: var(--blue); }
+.status-done { color: #2F6B3D; }
+.status-active { color: #1D4ED8; }
 .status-next { color: var(--gray); }
-.progress-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.progress-card h4, .progress-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
 .progress-card p { font-size: 12px; color: var(--gray); line-height: 1.5; }
 .progress-dot { position: absolute; top: 20px; right: 20px; width: 10px; height: 10px; border-radius: 50%; }
 .dot-done { background: var(--sage); }
@@ -300,13 +300,13 @@ margin-bottom: 20px; box-shadow: 0 4px 14px rgba(59,130,246,0.3);
 
 /* ── FOOTER ── */
 footer { background: var(--navy); padding: 48px; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
-footer p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.8; }
+footer p { font-size: 13px; color: rgba(255,255,255,0.72); line-height: 1.8; }
 footer strong { color: rgba(255,255,255,0.7); }
 .footer-logo { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 20px; }
 
 /* ── STAT SOURCE ── */
 .stat-source { margin-top: 8px; }
-.stat-source a { font-size: 10px; color: var(--teal); text-decoration: none; font-weight: 600; border-bottom: 1px dotted var(--teal); transition: color .2s; }
+.stat-source a { display: inline-block; padding: 6px 0; font-size: 11px; color: #175C5C; text-decoration: none; font-weight: 600; border-bottom: 1px dotted var(--teal); transition: color .2s; }
 .stat-source a:hover { color: var(--navy); }
 
 /* ── REFERENCES ── */
@@ -320,9 +320,9 @@ footer strong { color: rgba(255,255,255,0.7); }
 .ref-title { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; line-height: 1.4; }
 .ref-authors { font-size: 12px; color: var(--gray); margin-bottom: 4px; line-height: 1.5; }
 .ref-journal { font-size: 11px; color: var(--teal); font-weight: 600; margin-bottom: 8px; font-style: italic; }
-.ref-link a { font-size: 11px; color: var(--teal); text-decoration: none; border-bottom: 1px dotted var(--teal); word-break: break-all; }
+.ref-link a { display: inline-block; padding: 5px 0; font-size: 12px; color: #175C5C; text-decoration: none; border-bottom: 1px dotted var(--teal); word-break: break-all; }
 .ref-link a:hover { color: var(--navy); }
-.ref-badge { display: inline-block; background: #F0FDF4; border: 1px solid #BBF7D0; color: var(--sage); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-bottom: 10px; }
+.ref-badge { display: inline-block; background: #F0FDF4; border: 1px solid #BBF7D0; color: #2F6B3D; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-bottom: 10px; }
 
 
 /* ── HERO NOTE ── */
@@ -383,7 +383,7 @@ footer strong { color: rgba(255,255,255,0.7); }
 .role-ico { width: 46px; height: 46px; border-radius: 13px; background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(45,212,191,0.18)); display: grid; place-items: center; font-size: 22px; margin-bottom: 16px; }
 .role h3 { font-size: 17px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
 .role p { font-size: 13.5px; color: var(--gray); line-height: 1.6; flex: 1; }
-.role-go { margin-top: 18px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--blue); }
+.role-go { margin-top: 18px; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: #1D4ED8; }
 .practice-cta { margin-top: 24px; display: flex; align-items: center; gap: 24px; background: var(--navy); border-radius: 20px; padding: 30px 32px; color: var(--white); }
 .practice-ico { width: 56px; height: 56px; flex-shrink: 0; border-radius: 16px; background: rgba(45,212,191,0.16); border: 1px solid rgba(45,212,191,0.35); display: grid; place-items: center; font-size: 26px; }
 .practice-txt { flex: 1; }
@@ -406,7 +406,7 @@ footer strong { color: rgba(255,255,255,0.7); }
 /* ── TRAINING PROGRAM ADDITIONS ── */
 .badge-later { background: #F8FAFC; color: #475569; border: 1px solid #E2E8F0; }
 .role-grid.three { grid-template-columns: repeat(3, 1fr); }
-.practice-alt { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.3); padding-bottom: 1px; }
+.practice-alt { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; min-height: 32px; font-size: 14px; font-weight: 700; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.3); padding-bottom: 1px; }
 .practice-alt:hover { border-color: #fff; }
 @media (max-width: 1000px) { .role-grid.three { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .role-grid.three { grid-template-columns: 1fr; } }
@@ -703,7 +703,7 @@ footer strong { color: rgba(255,255,255,0.7); }
           <div class="screen-label" data-i18n="screen-1-label">My Health, Patient Home</div>
           <div class="screen-label-sub" data-i18n="screen-1-sub">Everything in one place: vitals, appointments, conditions, medications, and alerts</div>
         </div>
-        <div class="browser-frame">
+        <div class="browser-frame" role="img" aria-label="Preview of a practice portal screen with made-up information">
           <div class="browser-chrome">
             <div class="browser-dots"><div class="browser-dot dot-red"></div><div class="browser-dot dot-yellow"></div><div class="browser-dot dot-green"></div></div>
             <div class="browser-url">
@@ -813,7 +813,7 @@ footer strong { color: rgba(255,255,255,0.7); }
           <div class="screen-label" data-i18n="screen-2-label">Medications &amp; Refills</div>
           <div class="screen-label-sub" data-i18n="screen-2-sub">Active medications, refill request status, and supplement log</div>
         </div>
-        <div class="browser-frame">
+        <div class="browser-frame" role="img" aria-label="Preview of a practice portal screen with made-up information">
           <div class="browser-chrome">
             <div class="browser-dots"><div class="browser-dot dot-red"></div><div class="browser-dot dot-yellow"></div><div class="browser-dot dot-green"></div></div>
             <div class="browser-url">
@@ -888,7 +888,7 @@ footer strong { color: rgba(255,255,255,0.7); }
       <p class="section-sub" data-i18n="pocket-sub">Learners can practice on a library computer, a tablet at home, or their own phone, with bigger text whenever they need it.</p>
       <div class="phones">
       <div class="phone-wrap">
-        <div class="phone">
+        <div class="phone" role="img" aria-label="Preview of the practice portal on a phone, with made-up information">
           <div class="phone-screen">
             <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div><div class="ph-strip"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Leave practice</div><div class="ph-bar"><span class="ph-logo"><svg viewBox="0 0 100 100" width="17" height="17" aria-hidden="true"><defs><linearGradient id="phL1" gradientUnits="userSpaceOnUse" x1="14" y1="50" x2="86" y2="50"><stop offset="0" stop-color="#4F8BEA"/><stop offset="1" stop-color="#5CC9B5"/></linearGradient></defs><path d="M84.24 38.88 A36 36 0 1 0 84.24 61.12" fill="none" stroke="url(#phL1)" stroke-width="9" stroke-linecap="round"/><path d="M14 50 H33 L41 28 L49 72 L55 50 H74" fill="none" stroke="url(#phL1)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="10" fill="#7EE8C4"/></svg></span><span class="ph-word">Tracing <span>Care</span></span><span class="ph-menu"><i></i><i></i><i></i>Menu</span></div>
             <div class="ph-hello"><div><div class="ph-h">Hello, Robin</div><div class="ph-mute">4 care actions need attention</div></div><div class="ph-av">RM</div></div>
@@ -907,7 +907,7 @@ footer strong { color: rgba(255,255,255,0.7); }
         <div class="screen-label-sub" data-i18n="phone-1-sub">Everything at a glance, vitals, appointments, actions needed</div>
       </div>
       <div class="phone-wrap">
-        <div class="phone">
+        <div class="phone" role="img" aria-label="Preview of the practice portal on a phone, with made-up information">
           <div class="phone-screen">
             <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div><div class="ph-strip"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Leave practice</div><div class="ph-bar"><span class="ph-logo"><svg viewBox="0 0 100 100" width="17" height="17" aria-hidden="true"><defs><linearGradient id="phL2" gradientUnits="userSpaceOnUse" x1="14" y1="50" x2="86" y2="50"><stop offset="0" stop-color="#4F8BEA"/><stop offset="1" stop-color="#5CC9B5"/></linearGradient></defs><path d="M84.24 38.88 A36 36 0 1 0 84.24 61.12" fill="none" stroke="url(#phL2)" stroke-width="9" stroke-linecap="round"/><path d="M14 50 H33 L41 28 L49 72 L55 50 H74" fill="none" stroke="url(#phL2)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="10" fill="#7EE8C4"/></svg></span><span class="ph-word">Tracing <span>Care</span></span><span class="ph-menu"><i></i><i></i><i></i>Menu</span></div>
             <div class="ph-back"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back to Home</div>
@@ -929,7 +929,7 @@ footer strong { color: rgba(255,255,255,0.7); }
         <div class="screen-label-sub" data-i18n="phone-2-sub">Track every medication, request refills, and see exactly what's pending</div>
       </div>
       <div class="phone-wrap">
-        <div class="phone">
+        <div class="phone" role="img" aria-label="Preview of the practice portal on a phone, with made-up information">
           <div class="phone-screen">
             <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>●●●</span></div><div class="ph-strip"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Leave practice</div><div class="ph-bar"><span class="ph-logo"><svg viewBox="0 0 100 100" width="17" height="17" aria-hidden="true"><defs><linearGradient id="phL3" gradientUnits="userSpaceOnUse" x1="14" y1="50" x2="86" y2="50"><stop offset="0" stop-color="#4F8BEA"/><stop offset="1" stop-color="#5CC9B5"/></linearGradient></defs><path d="M84.24 38.88 A36 36 0 1 0 84.24 61.12" fill="none" stroke="url(#phL3)" stroke-width="9" stroke-linecap="round"/><path d="M14 50 H33 L41 28 L49 72 L55 50 H74" fill="none" stroke="url(#phL3)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="10" fill="#7EE8C4"/></svg></span><span class="ph-word">Tracing <span>Care</span></span><span class="ph-menu"><i></i><i></i><i></i>Menu</span></div>
             <div class="ph-faded">
@@ -1032,32 +1032,32 @@ footer strong { color: rgba(255,255,255,0.7); }
     <div class="principle-grid">
       <div class="principle">
         <div class="principle-num">01</div>
-        <h4 data-i18n="p1-title">Safe to make mistakes</h4>
+        <h3 data-i18n="p1-title">Safe to make mistakes</h3>
         <p data-i18n="p1-p">Nothing in Tracing Care is real, so learners can click, explore, and get it wrong without consequences. That's how confidence starts.</p>
       </div>
       <div class="principle">
         <div class="principle-num">02</div>
-        <h4 data-i18n="p2-title">Plain language first</h4>
+        <h3 data-i18n="p2-title">Plain language first</h3>
         <p data-i18n="p2-p">Instructions use everyday words. Medical terms get explained, not assumed.</p>
       </div>
       <div class="principle">
         <div class="principle-num">03</div>
-        <h4 data-i18n="p3-title">Teach finding, not following</h4>
+        <h3 data-i18n="p3-title">Teach finding, not following</h3>
         <p data-i18n="p3-p">Hints point to the menu first, then the button, so learners build skills they can use in any portal.</p>
       </div>
       <div class="principle">
         <div class="principle-num">04</div>
-        <h4 data-i18n="p4-title">Accessible from the start</h4>
+        <h3 data-i18n="p4-title">Accessible from the start</h3>
         <p data-i18n="p4-p">Accessibility shapes every screen from the first sketch: bigger text, strong contrast, large buttons, and phone-friendly layouts. Older adults are the first audience, not an afterthought.</p>
       </div>
       <div class="principle">
         <div class="principle-num">05</div>
-        <h4 data-i18n="p5-title">Real-world habits</h4>
+        <h3 data-i18n="p5-title">Real-world habits</h3>
         <p data-i18n="p5-p">Each task ends with a practical tip, like never paying a bill through a link in a text message.</p>
       </div>
       <div class="principle">
         <div class="principle-num">06</div>
-        <h4 data-i18n="p6-title">Honest about what it is</h4>
+        <h3 data-i18n="p6-title">Honest about what it is</h3>
         <p data-i18n="p6-p">Tracing Care is a practice environment. It is not a medical record, and finishing practice is not a professional certification.</p>
       </div>
     </div>
@@ -1074,67 +1074,67 @@ footer strong { color: rgba(255,255,255,0.7); }
       <div class="progress-card done">
         <div class="progress-dot dot-done"></div>
         <div class="progress-status status-done" data-i18n="prog-status-done">✓ Complete</div>
-        <h4 data-i18n="prog1-h4">Working Demo</h4>
+        <h3 data-i18n="prog1-h4">Working Demo</h3>
         <p data-i18n="prog1-p">Clickable practice platform with four one-click roles (clinical, billing, administrator, patient) across 12 screens.</p>
       </div>
       <div class="progress-card done">
         <div class="progress-dot dot-done"></div>
         <div class="progress-status status-done" data-i18n="prog-status-done">✓ Complete</div>
-        <h4 data-i18n="prog9-h4">Guided Practice &amp; Explore Mode</h4>
+        <h3 data-i18n="prog9-h4">Guided Practice &amp; Explore Mode</h3>
         <p data-i18n="prog9-p">Two ways to learn: seven story-based guided tasks with hints and gentle feedback, or free exploring in a realistic portal.</p>
       </div>
       <div class="progress-card done">
         <div class="progress-dot dot-done"></div>
         <div class="progress-status status-done" data-i18n="prog-status-done">✓ Complete</div>
-        <h4 data-i18n="prog2-h4">Brand &amp; Design</h4>
+        <h3 data-i18n="prog2-h4">Brand &amp; Design</h3>
         <p data-i18n="prog2-p">Visual identity, logo, color palette, and a clear, phone-friendly design system, with readable type and strong contrast built in.</p>
       </div>
       <div class="progress-card done">
         <div class="progress-dot dot-done"></div>
         <div class="progress-status status-done" data-i18n="prog-status-done">✓ Complete</div>
-        <h4 data-i18n="prog10-h4">Install as an App</h4>
+        <h3 data-i18n="prog10-h4">Install as an App</h3>
         <p data-i18n="prog10-p">Add Tracing Care to a phone, tablet, or computer home screen. Practice works offline after the first visit.</p>
       </div>
       <div class="progress-card active">
         <div class="progress-dot dot-active"></div>
         <div class="progress-status status-active" data-i18n="prog-status-ongoing">⬤ Built In, Ongoing</div>
-        <h4 data-i18n="prog7-h4">Accessibility in Every Step</h4>
+        <h3 data-i18n="prog7-h4">Accessibility in Every Step</h3>
         <p data-i18n="prog7-p">Part of every design decision from the start, guided by WCAG 2.2: readable text, strong color contrast, large buttons, and keyboard-friendly controls. Each new screen is checked as it's built, including with a screen reader.</p>
       </div>
       <div class="progress-card active">
         <div class="progress-dot dot-active"></div>
         <div class="progress-status status-active" data-i18n="prog-status-active">⬤ In Progress</div>
-        <h4 data-i18n="prog4-h4">Learner Testing</h4>
+        <h3 data-i18n="prog4-h4">Learner Testing</h3>
         <p data-i18n="prog4-p">Anonymous progress tracking is built in: tasks finished, help needed, and comfort before and after. Next: first sessions with older adult learners.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
-        <h4 data-i18n="prog3-h4">More Patient Lessons</h4>
+        <h3 data-i18n="prog3-h4">More Patient Lessons</h3>
         <p data-i18n="prog3-p">New practice tasks, like reading a bill line by line, checking in for a video visit, and updating a pharmacy.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
-        <h4 data-i18n="prog5-h4">Spanish &amp; Portuguese Practice</h4>
+        <h3 data-i18n="prog5-h4">Spanish &amp; Portuguese Practice</h3>
         <p data-i18n="prog5-p">Guided tasks and the finish screen in Spanish and Portuguese.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-next">→ Up Next</div>
-        <h4 data-i18n="prog6-h4">Workshop Tools</h4>
+        <h3 data-i18n="prog6-h4">Workshop Tools</h3>
         <p data-i18n="prog6-p">Simple tools for library and community workshop leaders, like a printable handout and a quick reset between learners.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-later">◷ Later</div>
-        <h4 data-i18n="prog8-h4">Career Track</h4>
+        <h3 data-i18n="prog8-h4">Career Track</h3>
         <p data-i18n="prog8-p">Guided training on the staff screens for future clinical, billing, and admin professionals.</p>
       </div>
       <div class="progress-card next">
         <div class="progress-dot dot-next"></div>
         <div class="progress-status status-next" data-i18n="prog-status-later">◷ Later</div>
-        <h4 data-i18n="prog11-h4">iPhone &amp; Android Apps</h4>
+        <h3 data-i18n="prog11-h4">iPhone &amp; Android Apps</h3>
         <p data-i18n="prog11-p">Store versions of the practice app for iPhone and Android, built from the same site and tested with learners first.</p>
       </div>
     </div>
@@ -1232,7 +1232,7 @@ footer strong { color: rgba(255,255,255,0.7); }
   </div>
   <p><strong data-i18n="footer-by">An ongoing project by Daniza Neri</strong></p>
   <p style="margin-top:8px" data-i18n="footer-tagline">Hands-on patient portal practice · Built with care · © 2026</p>
-  <p style="margin-top:8px"><a href="mailto:daniza.neri@gmail.com" style="color:rgba(255,255,255,0.4);text-decoration:none;">daniza.neri@gmail.com</a></p>
+  <p style="margin-top:8px"><a href="mailto:daniza.neri@gmail.com" style="color:rgba(255,255,255,0.8);text-decoration:none;">daniza.neri@gmail.com</a></p>
 </footer>
 
 <script>
