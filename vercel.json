@@ -22,5 +22,16 @@
       "source": "/:path*",
       "destination": "https://tracingcare-demo.vercel.app/:path*"
     }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    }
   ]
 }
