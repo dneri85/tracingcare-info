@@ -482,6 +482,17 @@ footer strong { color: rgba(255,255,255,0.7); }
 @media (prefers-reduced-motion:reduce){.nav-burger-icon span{transition:none}}
 @media (max-width:900px){.nav-burger{display:inline-flex}}
 @media (max-width:600px){.nav-badge{display:none}}
+
+/* logo stays on one line with room to breathe */
+@media (max-width:1365px){.nav-links{gap:22px}}
+@media (max-width:1280px){.nav-links{display:none}.nav-burger{display:inline-flex}}
+
+.nav-logo{flex-shrink:0;margin-right:40px}
+.nav-wordmark{white-space:nowrap}
+@media (max-width:340px){nav .nav-logo .nav-wordmark,header .nav-logo .nav-wordmark{display:none}}
+@media (max-width:360px){.nav-logo-mark{width:36px;height:36px}.nav-logo-mark svg{width:30px;height:30px}.nav-wordmark{font-size:16px}.lang-btn{padding:4px 6px}}
+@media (max-width:600px){.nav-logo{margin-right:12px}}
+@media (max-width:380px){.nav-wordmark{font-size:18px}.nav-logo{gap:8px}.lang-btn{padding:4px 8px}.bar .nav-burger{margin-left:8px}}
 </style>
 </head>
 <body>

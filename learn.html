@@ -221,6 +221,15 @@ header{position:sticky}
 .nav-logo-mark svg{display:block}
 .nav-wordmark{font-family:'Fredoka','Inter',system-ui,sans-serif;font-size:20px;font-weight:500;letter-spacing:-0.2px;line-height:normal;color:#fff}
 .nav-wordmark .care{background:linear-gradient(90deg,#4F8BEA,#5CC9B5);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* logo stays on one line with room to breathe */
+@media (max-width:960px){nav{display:none}.nav-burger{display:inline-flex}.bar .lang-toggle{margin-left:auto}.bar .nav-burger{margin-left:10px}}
+.nav-logo{flex-shrink:0;margin-right:40px}
+.nav-wordmark{white-space:nowrap}
+@media (max-width:340px){nav .nav-logo .nav-wordmark,header .nav-logo .nav-wordmark{display:none}}
+@media (max-width:360px){.nav-logo-mark{width:36px;height:36px}.nav-logo-mark svg{width:30px;height:30px}.nav-wordmark{font-size:16px}.lang-btn{padding:4px 6px}}
+@media (max-width:600px){.nav-logo{margin-right:12px}}
+@media (max-width:380px){.nav-wordmark{font-size:18px}.nav-logo{gap:8px}.lang-btn{padding:4px 8px}.bar .nav-burger{margin-left:8px}.bar{padding-left:14px;padding-right:14px}.tc-back .wrap{padding:0 14px}.nav-logo{margin-right:6px}}
 </style>
 </head>
 <body>
